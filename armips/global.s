@@ -18,8 +18,21 @@
 .include "armips/asm/pokedex.s" // code for pokedex expansion, including expanding the save
 .include "armips/asm/overworlds.s" // code for overworlds, specifically repointing gOWTagToFileNum and making dimorphism a byte instead of a halfword.
 .include "armips/asm/y9.s" // add new overlay entries to the y9 table
+.include "armips/asm/swarms.s" // modify swarms
 
 .include "armips/data/starters.s" // data definitions for which species to use for the starter Pokemon
+
+
+//custom asm scripts
+.include "armips/asm/custom/mart_items.s"
+.include "armips/asm/custom/double_battle_music.s"
+.include "armips/asm/custom/vitamins.s"
+.include "armips/asm/custom/title_screen_cry.s"
+.include "armips/asm/custom/shiny_rate.s"
+.include "armips/asm/custom/hp_bar_speed.s"
+.include "armips/asm/custom/hidden_power.s"
+.include "armips/asm/custom/ev_cap.s"
+.include "armips/asm/custom/encounter_rates.s"
 
 .if REUSABLE_TMS == 1
 
