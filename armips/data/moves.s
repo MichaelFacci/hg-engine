@@ -314,7 +314,7 @@ movedata MOVE_WHIRLWIND, "Whirlwind"
     movedescription MOVE_WHIRLWIND, "The foe is blown away,\nto be replaced by\nanother Pokémon\nin its party. In the\nwild, the battle ends."
 
 movedata MOVE_FLY, "Fly"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_FLY
     pss SPLIT_PHYSICAL
     basepower 90
     type TYPE_FLYING
@@ -767,7 +767,7 @@ movedata MOVE_SING, "Sing"
     basepower 0
     type TYPE_NORMAL
     accuracy 70
-    pp 10
+    pp 5
     effectchance 0
     target MOVE_TARGET_SELECTED
     priority 0
@@ -1466,7 +1466,7 @@ movedata MOVE_FISSURE, "EarthShatter"
 	movedescription MOVE_FISSURE, "The user rips open a\ncrevice in the ground\nand drops the foe in.\n33% recoil."
 
 movedata MOVE_DIG, "Dig"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_DIG
     pss SPLIT_PHYSICAL
     basepower 80
     type TYPE_GROUND
@@ -2927,7 +2927,7 @@ movedata MOVE_PROTECT, "Protect"
     basepower 0
     type TYPE_NORMAL
     accuracy 0
-    pp 5
+    pp 1
     effectchance 0
     target MOVE_TARGET_USER
     priority 4
@@ -3167,7 +3167,7 @@ movedata MOVE_DETECT, "Detect"
     basepower 0
     type TYPE_FIGHTING
     accuracy 0
-    pp 5
+    pp 2
     effectchance 0
     target MOVE_TARGET_USER
     priority 4
@@ -3373,7 +3373,7 @@ movedata MOVE_SPARK, "Spark"
 movedata MOVE_FURY_CUTTER, "Fury Cutter"
     battleeffect MOVE_EFFECT_DOUBLE_POWER_EACH_TURN
     pss SPLIT_PHYSICAL
-    basepower 40
+    basepower 35
     type TYPE_BUG
     accuracy 100
     pp 10
@@ -4668,7 +4668,7 @@ movedata MOVE_SECRET_POWER, "Secret Power"
     movedescription MOVE_SECRET_POWER, "The user attacks with\na secret power. Its\nadded effects vary\ndepending on the\nuser’s environment."
 
 movedata MOVE_DIVE, "Dive"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_DIVE
     pss SPLIT_PHYSICAL
     basepower 80
     type TYPE_WATER
@@ -7149,16 +7149,16 @@ movedata MOVE_CAPTIVATE, "Captivate"
     terminatedata
     movedescription MOVE_CAPTIVATE, "If it is the opposite\ngender of the user,\nthe foe is charmed\ninto sharply lowering\nits Sp. Atk stat."
 
-movedata MOVE_STEALTH_ROCK, "Accelerock"
-	battleeffect 103
+movedata MOVE_STEALTH_ROCK, "Stealth Rock"
+	battleeffect MOVE_EFFECT_STEALTH_ROCK
 	pss SPLIT_PHYSICAL
-	basepower 40
+	basepower 0
 	type TYPE_ROCK
-	accuracy 100
-	pp 10
+	accuracy 0
+	pp 3
 	effectchance 0
-	target MOVE_TARGET_SELECTED
-	priority 1
+	target MOVE_TARGET_OPPONENTS_FIELD
+	priority 0
 	flags FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
 	appeal 0x16
 	contesttype CONTEST_SMART
@@ -10646,7 +10646,7 @@ movedata MOVE_BANEFUL_BUNKER, "Baneful Bunker"
     basepower 0
     type TYPE_POISON
     accuracy 0
-    pp 10
+    pp 2
     effectchance 0
     target MOVE_TARGET_USER
     priority 4
@@ -11514,11 +11514,11 @@ movedata MOVE_TEARFUL_LOOK, "Tearful Look"
     effectchance 100
     target MOVE_TARGET_SELECTED
     priority 0
-    flags FLAG_MIRROR_MOVE | FLAG_PROTECT | FLAG_MAGIC_COAT
+    flags FLAG_MIRROR_MOVE | FLAG_MAGIC_COAT
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_TEARFUL_LOOK, "---"
+    movedescription MOVE_TEARFUL_LOOK, "Drops target's\nAtk and Sp. Atk\nby one stage.\n"
 
 movedata MOVE_ZING_ZAP, "Zing Zap"
     battleeffect MOVE_EFFECT_FLINCH_HIT
