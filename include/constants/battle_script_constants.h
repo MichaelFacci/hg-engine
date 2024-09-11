@@ -550,6 +550,7 @@
 #define ADD_STATUS_EFF_AFTER_YOU                       (160)
 #define ADD_STATUS_EFF_QUASH                           (161)
 #define ADD_STATUS_EFF_DRAIN_FULL                      (162)
+#define ADD_STATUS_STRENGTH_SAP                        (163)
 
 
 

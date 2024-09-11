@@ -378,7 +378,10 @@ SUB_SEQ_WEAKEN_MOVES_STRONG_WINDS             equ (372)
 SUB_SEQ_PREVENT_CHANGING_WEATHER              equ (373)
 
 
+SUB_SEQ_HEAL_TARGET_BURN                      equ (374)
 
+SUB_SEQ_REMOVE_ATTACKER_ITEM                  equ (375) //Used for gems, thx dray
+//SUB_SEQ_STRENGTH_SAP                          equ (376) //for strength sap, thx dray
 // add status effect constants--used in battle effect scripts to queue up a subscript through the table in src/moves.c
 
 ADD_STATUS_EFF_START_BATTLE                    equ (  0)
@@ -544,3 +547,4 @@ ADD_STATUS_EFF_SHED_TAIL                       equ (159)
 ADD_STATUS_EFF_AFTER_YOU                       equ (160)
 ADD_STATUS_EFF_QUASH                           equ (161)
 ADD_STATUS_EFF_DRAIN_FULL                      equ (162)
+//ADD_STATUS_STRENGTH_SAP                        equ (163)

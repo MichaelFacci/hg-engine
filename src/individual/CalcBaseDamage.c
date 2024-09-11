@@ -506,6 +506,10 @@ int CalcBaseDamage(void *bw, struct BattleStruct *sp, int moveno, u32 side_cond,
     {
         defense = defense * 150 / 100;
     }
+
+    // handle grass pelt
+    
+
 //from drayano:
     // Handle Eviolite
     if (DefendingMon.item_held_effect == HOLD_EFFECT_EVIOLITE) {
