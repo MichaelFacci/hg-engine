@@ -19130,10 +19130,10 @@ levelup SPECIES_AVALUGG
 
 levelup SPECIES_NOIBAT
     learnset MOVE_ABSORB, 1
-    learnset MOVE_TACKLE, 1
-    learnset MOVE_SCREECH, 1
-    learnset MOVE_SUPERSONIC, 1
-    learnset MOVE_ABSORB, 5
+    learnset MOVE_TACKLE, 3
+    learnset MOVE_TWISTER, 5
+    learnset MOVE_GUST, 7
+    learnset MOVE_SUPERSONIC, 9
     learnset MOVE_GUST, 7
     learnset MOVE_SUPERSONIC, 8
     learnset MOVE_DOUBLE_TEAM, 12
@@ -22911,12 +22911,12 @@ levelup SPECIES_RUNERIGUS
 
 levelup SPECIES_MILCERY
     learnset MOVE_TACKLE, 1
-    learnset MOVE_AROMATIC_MIST, 1
-    learnset MOVE_SWEET_KISS, 4
-    learnset MOVE_SWEET_SCENT, 7
-    learnset MOVE_MEGA_DRAIN, 10
-    learnset MOVE_CONFUSION, 13
-    learnset MOVE_DRAINING_KISS, 16
+    learnset MOVE_DISARMING_VOICE, 3
+    learnset MOVE_SWEET_KISS, 5
+    learnset MOVE_CHARM, 7
+    learnset MOVE_MISTY_EXPLOSION, 9
+    learnset MOVE_CONFUSION, 12
+    learnset MOVE_DRAINING_KISS, 15
     learnset MOVE_MAGICAL_LEAF, 18
     learnset MOVE_AROMATHERAPY, 21
     learnset MOVE_GIGA_DRAIN, 24

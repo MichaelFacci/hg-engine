@@ -1,6 +1,6 @@
 {
 	"frames": {
-		"brains4.1": {
+		"t4x4nflip.1": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -11,13 +11,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 589,
-			"unkBlockUnk1": 267,
+			"unkBlockUnk0": 605,
+			"unkBlockUnk1": 2315,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.10": {
+		"t4x4nflip.2": {
 			"frame": 1,
 			"coordTrans": 0,
 			"color0": 1,
@@ -28,13 +28,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 69,
+			"unkBlockUnk0": 85,
 			"unkBlockUnk1": 3,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.11": {
+		"t4x4nflip.3": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -45,13 +45,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1091,
-			"unkBlockUnk1": 3594,
+			"unkBlockUnk0": 1107,
+			"unkBlockUnk1": 1802,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.12": {
+		"t4x4nflip.4": {
 			"frame": 3,
 			"coordTrans": 0,
 			"color0": 1,
@@ -62,13 +62,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1346,
-			"unkBlockUnk1": 2567,
+			"unkBlockUnk0": 1362,
+			"unkBlockUnk1": 775,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.13": {
+		"t4x4nflip.5": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -79,13 +79,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 577,
-			"unkBlockUnk1": 2054,
+			"unkBlockUnk0": 593,
+			"unkBlockUnk1": 262,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.14": {
+		"t4x4nflip.6": {
 			"frame": 5,
 			"coordTrans": 0,
 			"color0": 1,
@@ -96,30 +96,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1344,
-			"unkBlockUnk1": 2310,
+			"unkBlockUnk0": 1360,
+			"unkBlockUnk1": 518,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.15": {
-			"frame": 4,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 2113,
-			"unkBlockUnk1": 3081,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"brains4.16": {
+		"t4x4nflip.7": {
 			"frame": 6,
 			"coordTrans": 0,
 			"color0": 1,
@@ -130,13 +113,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1088,
-			"unkBlockUnk1": 2824,
+			"unkBlockUnk0": 2129,
+			"unkBlockUnk1": 1289,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.2": {
+		"t4x4nflip.8": {
 			"frame": 7,
 			"coordTrans": 0,
 			"color0": 1,
@@ -147,30 +130,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1856,
-			"unkBlockUnk1": 3337,
+			"unkBlockUnk0": 1104,
+			"unkBlockUnk1": 1032,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.3": {
-			"frame": 0,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 832,
-			"unkBlockUnk1": 3850,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"brains4.4": {
+		"t4x4nflip.9": {
 			"frame": 8,
 			"coordTrans": 0,
 			"color0": 1,
@@ -181,13 +147,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3146,
-			"unkBlockUnk1": 1295,
+			"unkBlockUnk0": 1872,
+			"unkBlockUnk1": 1545,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.5": {
+		"t4x4nflip.10": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -198,13 +164,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3401,
-			"unkBlockUnk1": 782,
+			"unkBlockUnk0": 848,
+			"unkBlockUnk1": 2058,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.6": {
+		"t4x4nflip.11": {
 			"frame": 10,
 			"coordTrans": 0,
 			"color0": 1,
@@ -215,30 +181,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 328,
-			"unkBlockUnk1": 525,
+			"unkBlockUnk0": 3161,
+			"unkBlockUnk1": 2827,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"brains4.7": {
-			"frame": 9,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 3144,
-			"unkBlockUnk1": 1038,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"brains4.8": {
+		"t4x4nflip.12": {
 			"frame": 11,
 			"coordTrans": 0,
 			"color0": 1,
@@ -249,36 +198,19 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 4169,
-			"unkBlockUnk1": 1807,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"brains4.9": {
-			"frame": 2,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 2888,
-			"unkBlockUnk1": 1552,
+			"unkBlockUnk0": 344,
+			"unkBlockUnk1": 2572,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		}
 	},
 	"palettes": {
-		"brains4": {
+		"t4x4nflip": {
 			"offset": 0,
-			"unk0": 53,
+			"unk0": 70,
 			"unk1": 1,
-			"fileName": "brains4.pal"
+			"fileName": "t4x4nflip.pal"
 		}
 	}
 }

@@ -12865,7 +12865,7 @@ movedata MOVE_SCALE_SHOT, "Scale Shot"
     movedescription MOVE_SCALE_SHOT, "---"
 
 movedata MOVE_METEOR_BEAM, "Meteor Beam"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_CHARGE_TURN_DEF_UP
     pss SPLIT_SPECIAL
     basepower 120
     type TYPE_ROCK
@@ -12878,7 +12878,7 @@ movedata MOVE_METEOR_BEAM, "Meteor Beam"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_METEOR_BEAM, "---"
+    movedescription MOVE_METEOR_BEAM, "The user gathers\nspace power on the\nfirst turn to raise\nits Sp. Atk, and then\nattacks on the next."
 
 movedata MOVE_SHELL_SIDE_ARM, "Shell Side Arm"
     battleeffect MOVE_EFFECT_HIT
@@ -14545,7 +14545,7 @@ movedata MOVE_IVY_CUDGEL, "Ivy Cudgel"
     movedescription MOVE_IVY_CUDGEL, "---"
 
 movedata MOVE_ELECTRO_SHOT, "Electro Shot"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_CHARGE_TURN_DEF_UP
     pss SPLIT_SPECIAL
     basepower 130
     type TYPE_ELECTRIC
@@ -14558,7 +14558,7 @@ movedata MOVE_ELECTRO_SHOT, "Electro Shot"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_ELECTRO_SHOT, "---"
+    movedescription MOVE_ELECTRO_SHOT, "The user gathers\nelectricity on the\nfirst turn to raise\nits Sp. Atk, and then\nattacks on the next."
 
 movedata MOVE_TERA_STARSTORM, "Tera Starstorm"
     battleeffect MOVE_EFFECT_HIT

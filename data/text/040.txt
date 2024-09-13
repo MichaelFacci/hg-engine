@@ -39,9 +39,9 @@ Oak’s words echoed...\n{STRVAR_1 3, 0, 0}! There’s a time and\fplace for eve
 Welcome!\nWhat do you need?
                      
 There! All happy and healthy!\nGood luck and take care!
-Mom: {STRVAR_1 3, 0, 0}!\nWelcome home.\rIt sounds like you had quite the\nexperience out there.\rMaybe you should take a quick\nrest so you can relax.\r...\n...
-Mom: Oh, good! You and your\nPokémon are looking great.\rOh, yes, I heard from Professor Elm.\rHe said that a Pokémon’s energy is\nmeasured in HP (Hit Points).\rIf your Pokémon lose their HP,\nyou can restore it at any\fPokémon Center.\rIf you’re going to travel far away,\nthe smart Trainer stocks up on\fPotions at the Pokémon Mart.\rMake me proud, honey!\nTake care!
-Mom: Oh, good! You and your\nPokémon are looking great.\rOh yes, {STRVAR_1 3, 0, 0}, your Pokémon\nwill faint if it runs out of HP.\rIf your Pokémon loses its HP, come\nhome before it faints.\rIt will be healed to full health by\ntaking a rest.\rWell, honey, make me proud!\nTake care!
+Dad: {STRVAR_1 3, 0, 0}!\nBack so soon?\rHAHAHAHAHAH!\nHah! Looks like you wiped.\fTake a nap, loser.\r
+Dad: Go get ’em, tiger.\nScram, skedaddle.
+Dad: Go get ’em, tiger.\nScram, skedaddle.
 First, let’s restore your Pokémon\nto full health.
 Your Pokémon have been healed\nto perfect health.
 Please visit a Pokémon Center when\nyour Pokémon’s HP goes down.\rIf you’re planning to travel any\ndistance, you should stock up on\fPotions at a Pokémon Mart.\rGood luck, Trainer!

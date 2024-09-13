@@ -1,6 +1,6 @@
 {
 	"frames": {
-		"itako_.1": {
+		"t4x4x12.0": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -11,13 +11,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 581,
-			"unkBlockUnk1": 267,
+			"unkBlockUnk0": 589,
+			"unkBlockUnk1": 2572,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.10": {
+		"t4x4x12.1": {
 			"frame": 1,
 			"coordTrans": 0,
 			"color0": 1,
@@ -28,13 +28,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 61,
+			"unkBlockUnk0": 69,
 			"unkBlockUnk1": 3,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.11": {
+		"t4x4x12.2": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -45,13 +45,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1083,
-			"unkBlockUnk1": 3594,
+			"unkBlockUnk0": 1091,
+			"unkBlockUnk1": 2059,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.12": {
+		"t4x4x12.3": {
 			"frame": 3,
 			"coordTrans": 0,
 			"color0": 1,
@@ -62,13 +62,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1338,
-			"unkBlockUnk1": 2567,
+			"unkBlockUnk0": 1346,
+			"unkBlockUnk1": 1032,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.13": {
+		"t4x4x12.4": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -79,13 +79,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 569,
-			"unkBlockUnk1": 2054,
+			"unkBlockUnk0": 1601,
+			"unkBlockUnk1": 519,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.14": {
+		"t4x4x12.5": {
 			"frame": 5,
 			"coordTrans": 0,
 			"color0": 1,
@@ -96,30 +96,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1336,
-			"unkBlockUnk1": 2310,
+			"unkBlockUnk0": 576,
+			"unkBlockUnk1": 262,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.15": {
-			"frame": 4,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 2105,
-			"unkBlockUnk1": 3081,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"itako_.16": {
+		"t4x4x12.6": {
 			"frame": 6,
 			"coordTrans": 0,
 			"color0": 1,
@@ -130,13 +113,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1080,
-			"unkBlockUnk1": 2824,
+			"unkBlockUnk0": 1344,
+			"unkBlockUnk1": 775,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.2": {
+		"t4x4x12.7": {
 			"frame": 7,
 			"coordTrans": 0,
 			"color0": 1,
@@ -147,30 +130,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1848,
-			"unkBlockUnk1": 3337,
+			"unkBlockUnk0": 2369,
+			"unkBlockUnk1": 1546,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.3": {
-			"frame": 0,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 824,
-			"unkBlockUnk1": 3850,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"itako_.4": {
+		"t4x4x12.8": {
 			"frame": 8,
 			"coordTrans": 0,
 			"color0": 1,
@@ -181,13 +147,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3138,
-			"unkBlockUnk1": 1295,
+			"unkBlockUnk0": 1088,
+			"unkBlockUnk1": 1289,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.5": {
+		"t4x4x12.9": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -198,13 +164,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3393,
-			"unkBlockUnk1": 782,
+			"unkBlockUnk0": 2112,
+			"unkBlockUnk1": 1802,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.6": {
+		"t4x4x12.10": {
 			"frame": 10,
 			"coordTrans": 0,
 			"color0": 1,
@@ -215,30 +181,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 320,
-			"unkBlockUnk1": 525,
+			"unkBlockUnk0": 832,
+			"unkBlockUnk1": 2315,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"itako_.7": {
-			"frame": 9,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 3136,
-			"unkBlockUnk1": 1038,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"itako_.8": {
+		"t4x4x12.11": {
 			"frame": 11,
 			"coordTrans": 0,
 			"color0": 1,
@@ -249,36 +198,19 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 4161,
-			"unkBlockUnk1": 1807,
-			"unk0": 0,
-			"unk1": 1,
-			"unk2": 128
-		},
-		"itako_.9": {
-			"frame": 2,
-			"coordTrans": 0,
-			"color0": 1,
-			"format": 3,
-			"height": 32,
-			"width": 32,
-			"flipY": 0,
-			"flipX": 0,
-			"repeatY": 0,
-			"repeatX": 0,
-			"unkBlockUnk0": 2880,
-			"unkBlockUnk1": 1552,
+			"unkBlockUnk0": 328,
+			"unkBlockUnk1": 2828,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		}
 	},
 	"palettes": {
-		"itako_": {
+		"t4x4x12": {
 			"offset": 0,
-			"unk0": 46,
+			"unk0": 53,
 			"unk1": 1,
-			"fileName": "itako_.pal"
+			"fileName": "t4x4x12.pal"
 		}
 	}
 }

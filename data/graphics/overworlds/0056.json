@@ -1,6 +1,6 @@
 {
 	"frames": {
-		"delivery.1": {
+		"babyboy1.1": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -17,7 +17,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.10": {
+		"babyboy1.10": {
 			"frame": 1,
 			"coordTrans": 0,
 			"color0": 1,
@@ -34,7 +34,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.11": {
+		"babyboy1.11": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -51,7 +51,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.12": {
+		"babyboy1.12": {
 			"frame": 3,
 			"coordTrans": 0,
 			"color0": 1,
@@ -68,7 +68,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.13": {
+		"babyboy1.13": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -85,7 +85,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.14": {
+		"babyboy1.14": {
 			"frame": 5,
 			"coordTrans": 0,
 			"color0": 1,
@@ -102,7 +102,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.15": {
+		"babyboy1.15": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -119,7 +119,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.16": {
+		"babyboy1.16": {
 			"frame": 6,
 			"coordTrans": 0,
 			"color0": 1,
@@ -136,7 +136,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.2": {
+		"babyboy1.2": {
 			"frame": 7,
 			"coordTrans": 0,
 			"color0": 1,
@@ -153,7 +153,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.3": {
+		"babyboy1.3": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -170,7 +170,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.4": {
+		"babyboy1.4": {
 			"frame": 8,
 			"coordTrans": 0,
 			"color0": 1,
@@ -187,7 +187,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.5": {
+		"babyboy1.5": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -204,7 +204,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.6": {
+		"babyboy1.6": {
 			"frame": 10,
 			"coordTrans": 0,
 			"color0": 1,
@@ -221,7 +221,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.7": {
+		"babyboy1.7": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -238,7 +238,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.8": {
+		"babyboy1.8": {
 			"frame": 11,
 			"coordTrans": 0,
 			"color0": 1,
@@ -255,7 +255,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"delivery.9": {
+		"babyboy1.9": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -274,11 +274,11 @@
 		}
 	},
 	"palettes": {
-		"delivery": {
+		"babyboy1": {
 			"offset": 0,
-			"unk0": 62,
+			"unk0": 61,
 			"unk1": 1,
-			"fileName": "delivery.pal"
+			"fileName": "babyboy1.pal"
 		}
 	}
 }

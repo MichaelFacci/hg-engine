@@ -1136,11 +1136,11 @@ BOOL btl_scr_cmd_24_jumptocurmoveeffectscript(void *bw UNUSED, struct BattleStru
 
 //ADDED FROM AC
             case MOVE_EFFECT_ALLURING_VOICE:
-            case MOVE_EFFECT_BURNING_JEALOUSY:
-            case MOVE_EFFECT_CEASELESS_EDGE:
-            case MOVE_EFFECT_DIRE_CLAW:
-            case MOVE_EFFECT_SPIRIT_SHACKLE:
-            case MOVE_EFFECT_STONE_AXE:
+            //case MOVE_EFFECT_BURNING_JEALOUSY:
+            //case MOVE_EFFECT_CEASELESS_EDGE:
+            //case MOVE_EFFECT_DIRE_CLAW:
+            //case MOVE_EFFECT_SPIRIT_SHACKLE:
+            //case MOVE_EFFECT_STONE_AXE:
 
                 effect = MOVE_EFFECT_HIT;
                 sp->battlemon[sp->attack_client].sheer_force_flag = 1;

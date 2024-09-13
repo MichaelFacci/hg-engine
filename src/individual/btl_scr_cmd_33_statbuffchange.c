@@ -130,6 +130,11 @@ BOOL btl_scr_cmd_33_statbuffchange(void *bw, struct BattleStruct *sp)
         }
         else
         {
+
+            /**** AURORA CRYSTAL: Set a flag here to track if a stat was raised. ****/
+            /* Allows for the effects of the moves Burning Jealousy and Alluring Voice. */
+            sp->oneTurnFlag[sp->state_client].stats_raised_flag = 1;
+            
             if (sp->addeffect_type == ADD_EFFECT_ABILITY)
             {
                 switch (statchange)

@@ -387,6 +387,8 @@
 #define SUB_SEQ_STRENGTH_SAP                          (376) //for strength sap, thx dray
 #define SUB_SEQ_ATK_AND_SPATK_DOWN                    (377) //for noble roar and tearful look
 #define SUB_SEQ_PARTING_SHOT                          (378) //parting shot 
+#define SUB_SEQ_ELECTRO_SHOT_RAIN                     (379) //for the no powerherb needed in rain 
+
 // add status effect constants--used in battle effect scripts to queue up a subscript through the table in src/moves.c
 
 #define ADD_STATUS_EFF_START_BATTLE                    (  0)
