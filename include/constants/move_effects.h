@@ -326,7 +326,7 @@
 #define MOVE_EFFECT_HIT_AND_PREVENT_HEALING                 320
 #define MOVE_EFFECT_INFERNAL_PARADE                         321
 #define MOVE_EFFECT_BARB_BARRAGE                            322
-
+#define MOVE_EFFECT_ALLURING_VOICE                          323
 
 
 #define MOVE_TARGET_SELECTED             0x0000

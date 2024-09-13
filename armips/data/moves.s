@@ -9153,7 +9153,7 @@ movedata MOVE_TRICK_OR_TREAT, "Trick-or-Treat"
     movedescription MOVE_TRICK_OR_TREAT, "---"
 
 movedata MOVE_NOBLE_ROAR, "Noble Roar"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_SP_ATK_DOWN_2
     pss SPLIT_STATUS
     basepower 0
     type TYPE_NORMAL
@@ -9166,7 +9166,7 @@ movedata MOVE_NOBLE_ROAR, "Noble Roar"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_NOBLE_ROAR, "---"
+    movedescription MOVE_NOBLE_ROAR, "Letting out a roar,\nthe user intimidates\nthe target and lowers\nboth its Attack and\nSp. Atk stats."
 
 movedata MOVE_ION_DELUGE, "Ion Deluge"
     battleeffect MOVE_EFFECT_HIT
@@ -9262,10 +9262,10 @@ movedata MOVE_DISARMING_VOICE, "Disarming Voice"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_DISARMING_VOICE, "---"
+    movedescription MOVE_DISARMING_VOICE, "With a charming cry,\nthe user does\nemotional damage.\nThis attack never\nmisses."
 
 movedata MOVE_PARTING_SHOT, "Parting Shot"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_SP_ATK_DOWN_2
     pss SPLIT_STATUS
     basepower 0
     type TYPE_DARK
@@ -9278,7 +9278,7 @@ movedata MOVE_PARTING_SHOT, "Parting Shot"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_PARTING_SHOT, "---"
+    movedescription MOVE_PARTING_SHOT, "With a threat, the\nuser lowers the foe’s\nAttack and Sp. Atk,\nand then switches\nwith a party Pokémon."
 
 movedata MOVE_TOPSY_TURVY, "Topsy-Turvy"
     battleeffect MOVE_EFFECT_HIT
@@ -9633,7 +9633,7 @@ movedata MOVE_AROMATIC_MIST, "Aromatic Mist"
     movedescription MOVE_AROMATIC_MIST, "---"
 
 movedata MOVE_EERIE_IMPULSE, "Eerie Impulse"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_SP_ATK_DOWN_2
     pss SPLIT_STATUS
     basepower 0
     type TYPE_ELECTRIC
@@ -9646,7 +9646,7 @@ movedata MOVE_EERIE_IMPULSE, "Eerie Impulse"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_EERIE_IMPULSE, "---"
+    movedescription MOVE_EERIE_IMPULSE, "The user generates\nan eerie impulse.\nExposing the foe to\nit harshly lowers the\nfoe’s Sp. Atk stat."
 
 movedata MOVE_VENOM_DRENCH, "Venom Drench"
     battleeffect MOVE_EFFECT_HIT
@@ -11505,7 +11505,7 @@ movedata MOVE_MOONGEIST_BEAM, "Moongeist Beam"
     movedescription MOVE_MOONGEIST_BEAM, "---"
 
 movedata MOVE_TEARFUL_LOOK, "Tearful Look"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_SP_ATK_DOWN_2
     pss SPLIT_STATUS
     basepower 0
     type TYPE_NORMAL
@@ -14689,7 +14689,7 @@ movedata MOVE_DRAGON_CHEER, "Dragon Cheer"
     movedescription MOVE_DRAGON_CHEER, "---"
 
 movedata MOVE_ALLURING_VOICE, "Alluring Voice"
-    battleeffect MOVE_EFFECT_HIT
+    battleeffect MOVE_EFFECT_ALLURING_VOICE
     pss SPLIT_SPECIAL
     basepower 80
     type (FAIRY_TYPE_IMPLEMENTED) ? TYPE_FAIRY : TYPE_NORMAL
@@ -14702,7 +14702,7 @@ movedata MOVE_ALLURING_VOICE, "Alluring Voice"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_ALLURING_VOICE, "---"
+    movedescription MOVE_ALLURING_VOICE, "The user attacks the\nfoe using its angelic\nvoice. This confuses\nthe foe if it boosted\nits stats this turn."
 
 movedata MOVE_TEMPER_FLARE, "Temper Flare"
     battleeffect MOVE_EFFECT_HIT

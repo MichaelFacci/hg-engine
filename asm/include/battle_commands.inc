@@ -1377,4 +1377,9 @@
     .long 251
     .endm
 
+    .macro DidTargetRaiseStat arg_0
+    .long 252
+    .long (((\arg_0 - .) / 4) - 1)
+    .endm
+
 .endif

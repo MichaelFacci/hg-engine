@@ -6826,13 +6826,13 @@ levelup SPECIES_TORCHIC
     learnset MOVE_SCRATCH, 1
     learnset MOVE_GROWL, 1
     learnset MOVE_EMBER, 3
-    learnset MOVE_FLAME_CHARGE, 9
-    learnset MOVE_DETECT, 12
-    learnset MOVE_SAND_ATTACK, 12
+    learnset MOVE_PECK, 5
+    learnset MOVE_DETECT, 7
+    learnset MOVE_FIRE_SPIN, 9
     learnset MOVE_QUICK_ATTACK, 13
     learnset MOVE_PECK, 14
     learnset MOVE_AERIAL_ACE, 18
-    learnset MOVE_FIRE_SPIN, 19
+    learnset MOVE_INCINERATE, 19
     learnset MOVE_BOUNCE, 24
     learnset MOVE_SLASH, 28
     learnset MOVE_FLAME_BURST, 28
@@ -12934,9 +12934,9 @@ levelup SPECIES_SHAYMIN
 levelup SPECIES_ARCEUS
     learnset MOVE_GRASSY_GLIDE, 1
     learnset MOVE_STRENGTH_SAP, 1
-    learnset MOVE_NATURAL_GIFT, 1
-    learnset MOVE_PUNISHMENT, 1
-    learnset MOVE_GRAVITY, 10
+    learnset MOVE_PARTING_SHOT, 1
+    learnset MOVE_NOBLE_ROAR, 1
+    learnset MOVE_TEARFUL_LOOK, 1
     learnset MOVE_EARTH_POWER, 20
     learnset MOVE_HYPER_VOICE, 30
     learnset MOVE_EXTREME_SPEED, 40

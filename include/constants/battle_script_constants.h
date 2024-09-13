@@ -385,6 +385,8 @@
 
 #define SUB_SEQ_REMOVE_ATTACKER_ITEM                  (375) //Used for gems, thx dray
 #define SUB_SEQ_STRENGTH_SAP                          (376) //for strength sap, thx dray
+#define SUB_SEQ_ATK_AND_SPATK_DOWN                    (377) //for noble roar and tearful look
+#define SUB_SEQ_PARTING_SHOT                          (378) //parting shot 
 // add status effect constants--used in battle effect scripts to queue up a subscript through the table in src/moves.c
 
 #define ADD_STATUS_EFF_START_BATTLE                    (  0)
@@ -551,8 +553,8 @@
 #define ADD_STATUS_EFF_QUASH                           (161)
 #define ADD_STATUS_EFF_DRAIN_FULL                      (162)
 #define ADD_STATUS_STRENGTH_SAP                        (163)
-
-
+#define ADD_STATUS_NOBLE_ROAR                          (164)
+#define ADD_STATUS_PARTING_SHOT                        (165)
 
 // additional effect constants
 #define ADD_STATUS_NONE (0)

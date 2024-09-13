@@ -547,4 +547,4 @@ ADD_STATUS_EFF_SHED_TAIL                       equ (159)
 ADD_STATUS_EFF_AFTER_YOU                       equ (160)
 ADD_STATUS_EFF_QUASH                           equ (161)
 ADD_STATUS_EFF_DRAIN_FULL                      equ (162)
-//ADD_STATUS_STRENGTH_SAP                        equ (163)
+

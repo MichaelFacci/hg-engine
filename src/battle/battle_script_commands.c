@@ -92,7 +92,7 @@ u32 LoadCaptureSuccessSPANumEmitters(u32 id);
 
 /**** AURORA CRYSTAL: Additional commands. ****/
 BOOL btl_scr_cmd_FB_strengthsapcalc(void *bw, struct BattleStruct *sp);
-
+BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw, struct BattleStruct *sp);
 
 #ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
 const u8 *BattleScrCmdNames[] =
@@ -384,6 +384,7 @@ const btl_scr_cmd_func NewBattleScriptCmdTable[] =
     [0xFA - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FA_setabilityactivatedflag,
 
     [0xFB - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FB_strengthsapcalc,
+    [0xFC - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FC_didtargetraisestat,
 };
 
 // entries before 0xFFFE are banned for mimic and metronome--after is just banned for metronome.  table ends with 0xFFFF
@@ -1132,6 +1133,15 @@ BOOL btl_scr_cmd_24_jumptocurmoveeffectscript(void *bw UNUSED, struct BattleStru
             case MOVE_EFFECT_FLINCH_MINIMIZE_DOUBLE_HIT:
             case MOVE_EFFECT_RANDOM_PRIMARY_STATUS_HIT:
             case MOVE_EFFECT_HIT_AND_PREVENT_HEALING: // Psychic Noise
+
+//ADDED FROM AC
+            case MOVE_EFFECT_ALLURING_VOICE:
+            case MOVE_EFFECT_BURNING_JEALOUSY:
+            case MOVE_EFFECT_CEASELESS_EDGE:
+            case MOVE_EFFECT_DIRE_CLAW:
+            case MOVE_EFFECT_SPIRIT_SHACKLE:
+            case MOVE_EFFECT_STONE_AXE:
+
                 effect = MOVE_EFFECT_HIT;
                 sp->battlemon[sp->attack_client].sheer_force_flag = 1;
                 break;
@@ -2846,6 +2856,25 @@ BOOL btl_scr_cmd_FB_strengthsapcalc(void *bw UNUSED, struct BattleStruct *sp) {
     damage /= StatBoostModifiers[atkstate][1];
 
     sp->hp_calc_work = -damage;
+
+    return FALSE;
+}
+
+/**
+ *  @brief script command to check if a target raised a stat this turn (for Burning Jealousy and Alluring Voice)
+ *
+ *  @param bw battle work structure
+ *  @param sp global battle structure
+ *  @return FALSE
+ */
+BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw UNUSED, struct BattleStruct *sp) {
+    IncrementBattleScriptPtr(sp, 1);
+
+    int address = read_battle_script_param(sp);
+
+    if (sp->oneTurnFlag[sp->defence_client].stats_raised_flag) {
+       IncrementBattleScriptPtr(sp, address);
+    }
 
     return FALSE;
 }
