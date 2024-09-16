@@ -92,7 +92,7 @@ u32 LoadCaptureSuccessSPANumEmitters(u32 id);
 
 /**** AURORA CRYSTAL: Additional commands. ****/
 BOOL btl_scr_cmd_FB_strengthsapcalc(void *bw, struct BattleStruct *sp);
-BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw, struct BattleStruct *sp);
+//BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw, struct BattleStruct *sp);
 
 #ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
 const u8 *BattleScrCmdNames[] =
@@ -384,7 +384,7 @@ const btl_scr_cmd_func NewBattleScriptCmdTable[] =
     [0xFA - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FA_setabilityactivatedflag,
 
     [0xFB - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FB_strengthsapcalc,
-    [0xFC - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FC_didtargetraisestat,
+    //[0xFC - START_OF_NEW_BTL_SCR_CMDS] = btl_scr_cmd_FC_didtargetraisestat,
 };
 
 // entries before 0xFFFE are banned for mimic and metronome--after is just banned for metronome.  table ends with 0xFFFF
@@ -2866,7 +2866,7 @@ BOOL btl_scr_cmd_FB_strengthsapcalc(void *bw UNUSED, struct BattleStruct *sp) {
  *  @param bw battle work structure
  *  @param sp global battle structure
  *  @return FALSE
- */
+ 
 BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw UNUSED, struct BattleStruct *sp) {
     IncrementBattleScriptPtr(sp, 1);
 
@@ -2878,6 +2878,7 @@ BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw UNUSED, struct BattleStruct *sp)
 
     return FALSE;
 }
+*/
 
 /**
  *  @brief script command to calculate the amount of HP should a client recover by using Moonlight, Morning Sun, or Synthesis

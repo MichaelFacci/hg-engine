@@ -628,7 +628,7 @@ struct __attribute__((packed)) OneTurnEffect
                u32 escape_flag : 2;
                u32 prevent_one_hit_ko_ability : 1; /**< pokémon has damp active */
 
-               u32 stats_raised_flag : 1; /*from dray*/
+
 
                // begin custom flags
                enum ForceExecutionOrder{EXECUTION_ORDER_NORMAL, EXECUTION_ORDER_AFTER_YOU, EXECUTION_ORDER_QUASH} force_execution_order_flag : 2;
