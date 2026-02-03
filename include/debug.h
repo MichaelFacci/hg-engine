@@ -36,7 +36,7 @@
 //#define GUARANTEE_CAPTURES
 
 // Uncomment this when you want to enable all gimmicks while testing
-#define DEBUG_ENABLE_ALL_GIMMICKS
+// #define DEBUG_ENABLE_ALL_GIMMICKS
 
 // DEBUG_SQRT prints debug information for the gpio sqrt function
 //#define DEBUG_SQRT
@@ -82,6 +82,22 @@
 
 // FANCY_PRINT_NICKNAME defines in progress implementations that may not necessarily function.
 // #define FANCY_PRINT_NICKNAME
+
+// DEBUG_ENABLE_UNIMPLEMENTED_MOVES shows debug information if a chosen move is not implemented/dexited
+//#define DEBUG_ENABLE_UNIMPLEMENTED_MOVES
+
+// DEBUG_BOXMONDATA_EDITED_CASES shows debug information for GetBoxMonData/SetBoxMonData when its cases are edited
+//#define DEBUG_BOXMONDATA_EDITED_CASES
+
+// DEBUG_BATTLE_SCENARIOS enables test battle scenario loading system
+// When enabled, overrides any trainer battle parties with test scenarios
+// See src/test_battle.c for scenario definitions
+// recommend turning on DEBUG_AUTO_CONTINUE_GAME for test roms
+//#define DEBUG_BATTLE_SCENARIOS
+
+// DEBUG_AUTO_CONTINUE_GAME skips the title screen and start menu to automatically continue the game
+// when enabled, skips the intro movie and title screen to immediately continue the loaded save
+//#define DEBUG_AUTO_CONTINUE_GAME
 
 // NOCASH_GBA_PRINT swaps from desmume prints with the syscall to NO$GBA-style prints for use with i.e. melonDS
 //#define NOCASH_GBA_PRINT

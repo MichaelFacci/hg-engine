@@ -10,7 +10,7 @@
 .include "asm/include/species.inc"
 
 
-// all the mon personal data.  tm learnsets are specifically in tmlearnset.txt
+// all the mon personal data.  learnsets are specifically in data/mon/learnsets.json
 // basestats and evyields fields are formatted as such:  hp atk def speed spatk spdef
 
 
@@ -11768,7 +11768,7 @@ mondata SPECIES_PURRLOIN, "Purrloin"
     abilities ABILITY_LIMBER, ABILITY_UNBURDEN
     runchance 0
     colorflip BODY_COLOR_PURPLE, 0
-    mondexentry SPECIES_PURRLOIN, "Their cute act is a ruse.\nThey trick people and steal their valuables\njust to see the looks on their faces."
+    mondexentry SPECIES_PURRLOIN, "Their cute act is a ruse. They trick\npeople and steal their valuables\njust to see the looks on their faces."
     mondexclassification SPECIES_PURRLOIN, "Devious Pokémon"
     mondexheight SPECIES_PURRLOIN, "1’04”"
     mondexweight SPECIES_PURRLOIN, "22.3 lbs."

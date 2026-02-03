@@ -2,6 +2,8 @@ Any line that doesn't start with TM/HM/SPECIES is discarded as a comment.
 The TM move specified will automatically be written over the ARM9 entry as well.
 The item icon and palette will still have to be modified, else the original type will be displayed.
 
+//deleted in recent engine changes
+
 TM001: MOVE_FOCUS_PUNCH
     SPECIES_CHARMANDER
     SPECIES_CHARMELEON

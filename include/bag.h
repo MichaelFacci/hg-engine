@@ -1,9 +1,10 @@
 #ifndef POKEHEARTGOLD_BAG_H
 #define POKEHEARTGOLD_BAG_H
 
+#include "types.h"
 #include "constants/item.h"
 //#include "item.h"
-#include "save.h"
+//#include "save.h"
 //#include "heap.h"
 //#include "bag_view.h"
 //#include "bag_cursor.h"
@@ -47,6 +48,19 @@ typedef struct BagData {
     ITEM_SLOT battleItems[NUM_BAG_BATTLE_ITEMS];   // Battle-only items
     u16 registeredItems[2];                        // IDs of registered key items
 } BAG_DATA;
+
+typedef struct BagContext {
+    /* 0x000 */ u8 padding_000[0x2EC];
+    /* 0x2EC */ void *msgPrinter;
+    /* 0x2F0 */ void *unk2F0;
+    /* 0x2F4 */ void *unk2F4;
+} BagContext;
+
+typedef enum TMHMPocketSortPrecedence {
+    SORT_ORDER_TM,
+    SORT_ORDER_TR,
+    SORT_ORDER_HM,
+} TMHMPocketSortPrecedence;
 
 /*
  * u32 Sav2_Bag_sizeof(void)
