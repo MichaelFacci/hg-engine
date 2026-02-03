@@ -5682,7 +5682,7 @@ void SetupStateVariables(struct BattleSystem *bsys, u32 attacker, u32 defender, 
     ai->maxDamageReceived = 0;
     ai->attackerMaxDamageOutputMinRoll = 0;
 
-    speedCalc = CalcSpeed(ctx, ctx, ai->defender, attacker, CALCSPEED_FLAG_NO_PRIORITY); //checks actual turn order with field state considered
+    speedCalc = CalcSpeed(bsys, ctx, ai->defender, attacker, CALCSPEED_FLAG_NO_PRIORITY); //checks actual turn order with field state considered
     //evaluates to 0 if ai->defender > attacker (false)
     //and 1 if ai->defender < attacker (true)
     //if speed tie, then 2.
