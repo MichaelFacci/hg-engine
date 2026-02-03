@@ -26,7 +26,7 @@ Ace Trainer
 Ace Trainer
 Waitress
 Veteran
-Ninja Boy
+Shadow Triad
 Dragon Tamer
 Bird Keeper
 Juggler
@@ -42,21 +42,21 @@ Policeman
 Scientist
 Swimmer♂
 Swimmer♀
-Tuber
-Tuber
+Plasma Grunt
+Plasma Grunt
 Sailor
-Kimono Girl
+₧₦ Trainer
 Ruin Maniac
 Psychic
 Psychic
-PI
+Great Sage
 Guitarist
 Ace Trainer
 Ace Trainer
 Team Rocket
 Skier
 Roughneck
-Clown
+Great Sage
 Worker
 School Kid
 School Kid
@@ -78,12 +78,12 @@ Leader
 Teacher
 Super Nerd
 Sage
-Parasol Lady
+Great Sage
 Waiter
 Medium
 Cameraman
 Reporter
-Idol
+Researcher
 Champion
 Elite Four
 Elite Four
@@ -95,18 +95,18 @@ Elite Four
 ₧₦ Trainer
 ₧₦ Trainer
 ₧₦ Trainer
-Tower Tycoon
+Mastermind
 Leader
-Hall Matron
-Factory Head
-Arcade Star
+Fallen Sage
+Plasma Boss
+Plasma Boss
 Castle Valet
 Leader
 Leader
 Leader
 Leader
-Leader
-Leader
+Henchman
+Henchman
 ₧₦ Trainer
 Leader
 Elder
@@ -118,9 +118,9 @@ Executive
 Executive
 Executive
 Rival
-Mystery Man
-Double Team
-Young Couple
+Great Sage
+Great Sage
+Eerie
 ₧₦ Trainer
 Rocket Boss
 ₧₦ Trainer

@@ -69,13 +69,16 @@ void CheckOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, FieldSystem *fsys)
     // }
 
     // Testing mode
-    if (req->OpenRelearnerCheck) {
-        EventSet_Script(fsys, 2072, NULL); // set up script 2072
+    if(!CheckScriptFlag(2552)){ //If we are in a gauntlet, the flag should be "set" (that is, == 1 == TRUE)
+        if (req->OpenRelearnerCheck) {
+            EventSet_Script(fsys, 2072, NULL); // set up script 2072
+        }
+        if (req->OpenPCCheck) {
+            SetScriptFlag(0x18F); // some random flag that should be set by script 2010 (file 3 script 10)
+            EventSet_Script(fsys, 2010, NULL); // set up script 2010
+        }
     }
-    if (req->OpenPCCheck) {
-        SetScriptFlag(0x18F); // some random flag that should be set by script 2010 (file 3 script 10)
-        EventSet_Script(fsys, 2010, NULL); // set up script 2010
-    }
+
 
     // Don't allow the PC at all if flag 398 hasn't been set
     // if (req->OpenPCCheck && CheckScriptFlag(398)) {

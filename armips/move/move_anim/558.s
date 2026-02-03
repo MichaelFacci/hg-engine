@@ -35,7 +35,10 @@ a010_558:
     waitparticle
 
     unloadparticle 0
+    waitstate
     unloadparticle 1
+    waitstate
+    unloadparticle 2
     waitstate
     end
     

@@ -26,7 +26,7 @@ an Ace Trainer
 an Ace Trainer
 a Waitress
 a Veteran
-a Ninja Boy
+a Shadow Triad
 a Dragon Tamer
 a Bird Keeper
 a Juggler
@@ -98,14 +98,14 @@ a ₧₦ Trainer
 a Tower Tycoon
 a Leader
 a Hall Matron
-a Factory Head
+a Plasma Boss
 an Arcade Star
 a Castle Valet
 a Leader
 a Leader
 a Leader
 a Leader
-a Leader
+a Henchman
 a Leader
 a ₧₦ Trainer
 a Leader

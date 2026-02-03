@@ -1,6 +1,6 @@
 {
 	"frames": {
-		"rotomg.1": {
+		"gsleader1.1": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -11,14 +11,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 581,
+			"unkBlockUnk0": 605,
 			"unkBlockUnk1": 267,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.10": {
-			"frame": 0,
+		"gsleader1.10": {
+			"frame": 1,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -28,14 +28,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 61,
+			"unkBlockUnk0": 85,
 			"unkBlockUnk1": 3,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.11": {
-			"frame": 0,
+		"gsleader1.11": {
+			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -45,14 +45,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1083,
+			"unkBlockUnk0": 1107,
 			"unkBlockUnk1": 3594,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.12": {
-			"frame": 0,
+		"gsleader1.12": {
+			"frame": 3,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -62,14 +62,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1338,
+			"unkBlockUnk0": 1362,
 			"unkBlockUnk1": 2567,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.13": {
-			"frame": 0,
+		"gsleader1.13": {
+			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -79,14 +79,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 569,
+			"unkBlockUnk0": 593,
 			"unkBlockUnk1": 2054,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.14": {
-			"frame": 0,
+		"gsleader1.14": {
+			"frame": 5,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -96,14 +96,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1336,
+			"unkBlockUnk0": 1360,
 			"unkBlockUnk1": 2310,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.15": {
-			"frame": 0,
+		"gsleader1.15": {
+			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -113,14 +113,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 2105,
+			"unkBlockUnk0": 2129,
 			"unkBlockUnk1": 3081,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.16": {
-			"frame": 0,
+		"gsleader1.16": {
+			"frame": 6,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -130,14 +130,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1080,
+			"unkBlockUnk0": 1104,
 			"unkBlockUnk1": 2824,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.2": {
-			"frame": 0,
+		"gsleader1.2": {
+			"frame": 7,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -147,13 +147,13 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 1848,
+			"unkBlockUnk0": 1872,
 			"unkBlockUnk1": 3337,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.3": {
+		"gsleader1.3": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -164,14 +164,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 824,
+			"unkBlockUnk0": 848,
 			"unkBlockUnk1": 3850,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.4": {
-			"frame": 0,
+		"gsleader1.4": {
+			"frame": 8,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -181,14 +181,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3138,
+			"unkBlockUnk0": 3162,
 			"unkBlockUnk1": 1295,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.5": {
-			"frame": 0,
+		"gsleader1.5": {
+			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -198,14 +198,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3393,
+			"unkBlockUnk0": 3417,
 			"unkBlockUnk1": 782,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.6": {
-			"frame": 0,
+		"gsleader1.6": {
+			"frame": 10,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -215,14 +215,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 320,
+			"unkBlockUnk0": 344,
 			"unkBlockUnk1": 525,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.7": {
-			"frame": 0,
+		"gsleader1.7": {
+			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -232,14 +232,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 3136,
+			"unkBlockUnk0": 3160,
 			"unkBlockUnk1": 1038,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.8": {
-			"frame": 0,
+		"gsleader1.8": {
+			"frame": 11,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -249,14 +249,14 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 4161,
+			"unkBlockUnk0": 4185,
 			"unkBlockUnk1": 1807,
 			"unk0": 0,
 			"unk1": 1,
 			"unk2": 128
 		},
-		"rotomg.9": {
-			"frame": 0,
+		"gsleader1.9": {
+			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
 			"format": 3,
@@ -266,7 +266,7 @@
 			"flipX": 0,
 			"repeatY": 0,
 			"repeatX": 0,
-			"unkBlockUnk0": 2880,
+			"unkBlockUnk0": 2904,
 			"unkBlockUnk1": 1552,
 			"unk0": 0,
 			"unk1": 1,
@@ -274,11 +274,11 @@
 		}
 	},
 	"palettes": {
-		"rotomg": {
+		"gsleader1": {
 			"offset": 0,
-			"unk0": 46,
+			"unk0": 69,
 			"unk1": 1,
-			"fileName": "rotomg.pal"
+			"fileName": "gsleader1.pal"
 		}
 	}
 }

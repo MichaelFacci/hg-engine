@@ -93,6 +93,7 @@ scrdef_end
 scr_seq_0003_002:
     play_se SEQ_SE_DP_SELECT
     lockall
+    clearflag 2552
     faceplayer
     get_trcard_stars VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 4

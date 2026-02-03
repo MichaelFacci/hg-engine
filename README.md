@@ -9,6 +9,7 @@
 - [Features](#features)
 - [Setup Instructions (Linux with apt)](#setup-instructions-linux-with-apt)
 - [Setup Instructions (Linux with apk)](#setup-instructions-linux-with-apk)
+- [Setup Instructions (Linux with dnf or yum)](#setup-instructions-linux-with-dnf-or-yum)
 - [Setup Instructions (macOS)](#setup-instructions-macos)
 - [Setup Instructions (Windows on WSL)](#setup-instructions-windows-on-wsl)
 - [Setup Instructions (Windows on MSYS2)](#setup-instructions-windows-on-msys2)
@@ -36,6 +37,8 @@
 
 *A more comprehensive list of features + a roadmap can be found by visiting the [hg-engine wiki](https://github.com/BluRosie/hg-engine/wiki).  Please read this README and the Wiki thoroughly before asking questions.*
 
+If you are looking to contribute to hg-engine, please see the [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Setup Instructions (Linux with apt)
 1. In a Terminal window, run the following commands:
     * ```sudo apt-get install libpng-dev build-essential cmake python3-pip python3-venv git automake autoconf gcc-arm-none-eabi pkg-config```
@@ -47,6 +50,12 @@
     * ```apk add libpng-dev build-base cmake python3 git automake autoconf```
     * Grab your Alpine Linux version using the command `grep PRETTY_NAME /etc/os-release`.  I get `PRETTY_NAME='Alpine Linux v3.14'`, so my version is `v3.14`.  Substitute that into the next command for `[version]`.
     * ```apk add --no-cache binutils-arm-none-eabi gcc-arm-none-eabi newlib-arm-none-eabi --repository http://dl-cdn.alpinelinux.org/alpine/[version]/community```
+2. Continue to [Further Setup Instructions](#further-setup-instructions-all-platforms-continued-from-individual-sections)
+
+
+## Setup Instructions (Linux with dnf or yum)
+1. In a Terminal window, run the following commands (replace `dnf` with `yum` if applicable):
+    * ```sudo dnf install libpng-devel arm-none-eabi-gcc-cs arm-none-eabi-newlib.noarch cmake python3 git automake autoconf make```
 2. Continue to [Further Setup Instructions](#further-setup-instructions-all-platforms-continued-from-individual-sections)
 
 
@@ -63,7 +72,7 @@
 ## Setup Instructions (Windows on WSL)
 1. Open the Windows Command Prompt as Administrator (look up "Command Prompt" on your Start Menu, Right Click -> Run as Administrator). Once you have done that, execute the following command: ```dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all```
     * Once this process finishes, you will have to restart your PC by entering "Y"
-    * If Windows is not cooperating and has issues logging in when your PC reboots, do not worry! You likely just need to enable virtualization in your BIOS. For instructions on that, look [**here**](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html).
+    * If Windows is not cooperating and has issues logging in when your PC reboots, do not worry! You likely just need to enable virtualization in your BIOS. For instructions on that, look [**here**](https://support.microsoft.com/en-gb/windows/enable-virtualization-on-windows-c5578302-6e43-4b4b-a449-8ced115f58e1).
 2. Go to the Microsoft Store and search "Ubuntu". Go to any one of the version's pages in the store and click the blue "Get" button.  It shouldn't matter which you choose.
     * Once Ubuntu finishes installing, launch it from its page in the Microsoft Store so it can finish setting itself up.
     * Once Ubuntu finishes setting itself up, it will ask you to enter a username (in lowercase letters only) and password. After doing so, you can close Ubuntu.
@@ -143,6 +152,7 @@ You will still have to `make clean` and `make clean_code` manually when changing
 * [**PokeDiamond decompilation projects (nitrogfx, msgenc)**][diamond]
 * [**Mikelan98, Nomura (ARM9 Expansion Subroutine )**][ARM9]
 * Rafael Vuijk (ndstool)
+* Come swing by the [Kingdom of DS Hacking](https://discord.gg/zAtqJDW2jC) or [DS Modding Community](https://discord.gg/YBtdN3aXfv) Discord servers for any help with this!
 
 [MONEXPAND]: https://github.com/BluRosie/hgss-monexpansion
 [CFRU]: https://github.com/Skeli789/Complete-Fire-Red-Upgrade

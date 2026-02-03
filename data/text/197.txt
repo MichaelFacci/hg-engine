@@ -1274,9 +1274,9 @@ x{STRVAR_1 51, 0, 0}
 ♀
 {ALN_RIGHT}Lv. {STRVAR_1 52, 1, 0}
 {STRVAR_1 3, 0, 0} got ${STRVAR_1 54, 1, 0} for winning!\nSent some to Mom!\r
-{STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nis reacting to the Key Stone!
+{STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nis reacting to the {STRVAR_1 5, 2, 0}!
 The wild {STRVAR_1 1, 0, 0} set its\n{STRVAR_1 5, 1, 0} on its Looplet!
-The opposing {STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nis reacting to the Key Stone!
+The opposing {STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nis reacting to the {STRVAR_1 5, 2, 0}!
 {STRVAR_1 1, 0, 0}\nhas Mega Evolved into\fMega {STRVAR_1 5, 1, 0}!
 The wild {STRVAR_1 1, 0, 0}\nhas Mega Evolved into\fMega {STRVAR_1 5, 1, 0}!
 The opposing {STRVAR_1 1, 0, 0}\nhas Mega Evolved into\fMega {STRVAR_1 5, 1, 0}!
@@ -1496,7 +1496,7 @@ The wild {STRVAR_1 1, 0, 0}\nshook its head.\fIt seems like it can’t use this 
 The opposing {STRVAR_1 1, 0, 0}\nshook its head.\fIt seems like it can’t use this move...
 {STRVAR_1 1, 0, 0} surrounds itself with\na protective mist!
 The wild {STRVAR_1 1, 0, 0}\nsurrounds itself with\fa protective mist!
-The opposing {STRVAR_1 1, 0, 0}nsurrounds itself with\fa protective mist!
+The opposing {STRVAR_1 1, 0, 0}\nsurrounds itself with\fa protective mist!
 {STRVAR_1 1, 0, 0}’s\nstats were not lowered!
 The wild {STRVAR_1 1, 0, 0}’s\nstats were not lowered!
 The opposing {STRVAR_1 1, 0, 0}’s\nstats were not lowered!
@@ -1554,81 +1554,20 @@ The spikes disappeared from the ground\naround your team!
 The spikes disappeared from the ground\naround the opposing team!
 The sticky web has disappeared from the\nground around you!
 The sticky web has disappeared from the\nground around the opposing team!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The {STRVAR_1 5, 1, 0} strengthened\n{STRVAR_1 8, 2, 0}’s power!
-The {STRVAR_1 5, 1, 0} strengthened\n{STRVAR_1 8, 2, 0}’s power!
-The {STRVAR_1 5, 1, 0} strengthened\n{STRVAR_1 8, 2, 0}’s power!
+{STRVAR_1 1, 0, 0} can’t be hit\nby attacks from its ally Pokémon!
+The wild {STRVAR_1 1, 0, 0} can’t be hit\nby attacks from its ally Pokémon!
+The opposing {STRVAR_1 1, 0, 0} can’t be hit\nby attacks from its ally Pokémon!
+Being hit by {STRVAR_1 8, 1, 0} charged\n{STRVAR_1 1, 0, 0} with power!
+Being hit by {STRVAR_1 8, 1, 0} charged the wild\n{STRVAR_1 1, 0, 0} with power!
+Being hit by {STRVAR_1 8, 1, 0} charged the opposing\n{STRVAR_1 1, 0, 0} with power!
+{STRVAR_1 1, 0, 0} was hurt!
+The wild {STRVAR_1 1, 0, 0} was hurt!
+The opposing {STRVAR_1 1, 0, 0} was hurt!
+{STRVAR_1 6, 0, 0} protected your team!
+{STRVAR_1 6, 0, 0} protected the opposing team!
+{STRVAR_1 6, 1, 0} protected\n{STRVAR_1 1, 0, 0}!
+{STRVAR_1 6, 1, 0} protected\nthe wild {STRVAR_1 1, 0, 0}!
+{STRVAR_1 6, 1, 0} protected\nthe opposing {STRVAR_1 1, 0, 0}!
+{STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nboosted the attack!
+The wild {STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nboosted the attack!
+The opposing {STRVAR_1 1, 0, 0}’s {STRVAR_1 5, 1, 0}\nboosted the attack!

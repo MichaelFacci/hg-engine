@@ -350,6 +350,7 @@ BOOL BattleFormChangeCheck(void *bw, struct BattleStruct *sp, int *seq_no)
         }
 
         // handle Wishiwashi TODO test (also at some point add custom transform text)
+        /*
         if ((sp->battlemon[sp->battlerIdTemp].species == SPECIES_WISHIWASHI)
             && (sp->battlemon[sp->battlerIdTemp].hp)
             && (sp->battlemon[sp->battlerIdTemp].form_no == 0)
@@ -372,6 +373,7 @@ BOOL BattleFormChangeCheck(void *bw, struct BattleStruct *sp, int *seq_no)
             ret = TRUE;
             break;
         }
+        */
     }
 
     return ret;

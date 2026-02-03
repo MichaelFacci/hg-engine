@@ -1,6 +1,6 @@
 {
 	"frames": {
-		"gsleader10.1": {
+		"gsleader14.1": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -17,7 +17,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.10": {
+		"gsleader14.10": {
 			"frame": 1,
 			"coordTrans": 0,
 			"color0": 1,
@@ -34,7 +34,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.11": {
+		"gsleader14.11": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -51,7 +51,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.12": {
+		"gsleader14.12": {
 			"frame": 3,
 			"coordTrans": 0,
 			"color0": 1,
@@ -68,7 +68,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.13": {
+		"gsleader14.13": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -85,7 +85,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.14": {
+		"gsleader14.14": {
 			"frame": 5,
 			"coordTrans": 0,
 			"color0": 1,
@@ -102,7 +102,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.15": {
+		"gsleader14.15": {
 			"frame": 4,
 			"coordTrans": 0,
 			"color0": 1,
@@ -119,7 +119,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.16": {
+		"gsleader14.16": {
 			"frame": 6,
 			"coordTrans": 0,
 			"color0": 1,
@@ -136,7 +136,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.2": {
+		"gsleader14.2": {
 			"frame": 7,
 			"coordTrans": 0,
 			"color0": 1,
@@ -153,7 +153,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.3": {
+		"gsleader14.3": {
 			"frame": 0,
 			"coordTrans": 0,
 			"color0": 1,
@@ -170,7 +170,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.4": {
+		"gsleader14.4": {
 			"frame": 8,
 			"coordTrans": 0,
 			"color0": 1,
@@ -187,7 +187,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.5": {
+		"gsleader14.5": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -204,7 +204,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.6": {
+		"gsleader14.6": {
 			"frame": 10,
 			"coordTrans": 0,
 			"color0": 1,
@@ -221,7 +221,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.7": {
+		"gsleader14.7": {
 			"frame": 9,
 			"coordTrans": 0,
 			"color0": 1,
@@ -238,7 +238,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.8": {
+		"gsleader14.8": {
 			"frame": 11,
 			"coordTrans": 0,
 			"color0": 1,
@@ -255,7 +255,7 @@
 			"unk1": 1,
 			"unk2": 128
 		},
-		"gsleader10.9": {
+		"gsleader14.9": {
 			"frame": 2,
 			"coordTrans": 0,
 			"color0": 1,
@@ -274,11 +274,11 @@
 		}
 	},
 	"palettes": {
-		"gsleader10": {
+		"gsleader14": {
 			"offset": 0,
 			"unk0": 77,
 			"unk1": 1,
-			"fileName": "gsleader10.pal"
+			"fileName": "gsleader14.pal"
 		}
 	}
 }

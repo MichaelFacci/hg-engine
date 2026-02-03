@@ -1,4 +1,3 @@
-#ifndef TRAINER_AI_H
 #define TRAINER_AI_H
 
 #include "battle.h"
@@ -86,5 +85,3 @@ enum {
 
     PLAYER_INPUT_CANCEL = 0xFF,
 };
-
-#endif // TRAINER_AI_H

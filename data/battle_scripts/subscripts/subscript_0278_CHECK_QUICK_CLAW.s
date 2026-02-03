@@ -3,8 +3,6 @@
 .data
 
 _000:
-    CompareMonDataToValue OPCODE_EQU, BATTLER_CATEGORY_ATTACKER, BMON_DATA_MICLE_BERRY_FLAG, 1, _Gem
-
     UpdateVar OPCODE_SET, BSCRIPT_VAR_BATTLER_SPEED_TEMP, 0
     // backup attacker that we use for the message
     UpdateVarFromVar OPCODE_SET, BSCRIPT_VAR_CALC_TEMP, BSCRIPT_VAR_BATTLER_ATTACKER
@@ -36,19 +34,3 @@ _continue:
 _removeCustapBerry:
     RemoveItem BATTLER_CATEGORY_ATTACKER
     GoTo _continue
-
-
-
-_Gem:
-    UpdateMonData OPCODE_SET, BATTLER_CATEGORY_ATTACKER, BMON_DATA_MICLE_BERRY_FLAG, 0
-    /* The flag is set at the start of the turn. We check again here in case the item was removed by Incinerate, Knock Off etc. */
-    CompareMonDataToValue OPCODE_EQU, BATTLER_CATEGORY_ATTACKER, BMON_DATA_HELD_ITEM, 0, _063
-    PlayBattleAnimation BATTLER_CATEGORY_ATTACKER, BATTLE_ANIMATION_HELD_ITEM
-    Wait
-    PrintMessage 2151, TAG_NICKNAME_ITEM_MOVE, BATTLER_CATEGORY_ATTACKER, BATTLER_CATEGORY_ATTACKER, BATTLER_CATEGORY_ATTACKER
-    Wait
-    WaitButtonABTime 30
-    End
-    
-_063:
-    End 

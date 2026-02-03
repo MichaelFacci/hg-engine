@@ -5,39 +5,6 @@
 .include "asm/include/interop_macros.inc"
 .include "asm/include/moves.inc"
 
-.global CT_SwitchInMessageParamMake_hook
-CT_SwitchInMessageParamMake_hook:
-ldr r5, =CT_SwitchInMessageParamMake_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl CT_SwitchInMessageParamMake
-ldr r1, =CT_SwitchInMessageParamMake_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-CT_SwitchInMessageParamMake_return_address:
-.word 0
-
-
-.global CT_EncountSendOutMessageParamMake_hook
-CT_EncountSendOutMessageParamMake_hook:
-ldr r5, =CT_EncountSendOutMessageParamMake_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl CT_EncountSendOutMessageParamMake
-ldr r1, =CT_EncountSendOutMessageParamMake_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-CT_EncountSendOutMessageParamMake_return_address:
-.word 0
-
 //形态变化恢复
 .global TryRevertFormChange_hook
 TryRevertFormChange_hook:
@@ -350,40 +317,6 @@ ldr r2, =0x02263298 | 1
 bx r2
 
 
-.global ServerDoTypeCalcMod_hook
-ServerDoTypeCalcMod_hook:
-ldr r5, =ServerDoTypeCalcMod_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl ServerDoTypeCalcMod
-ldr r1, =ServerDoTypeCalcMod_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-ServerDoTypeCalcMod_return_address:
-.word 0
-
-
-.global AITypeCalc_hook
-AITypeCalc_hook:
-ldr r5, =AITypeCalc_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl AITypeCalc
-ldr r1, =AITypeCalc_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-AITypeCalc_return_address:
-.word 0
-
-
 // r0 is sp, r1, is client already
 .global GrabMoveTypeForConversion2
 GrabMoveTypeForConversion2:
@@ -398,22 +331,6 @@ bx r0
 
 .pool
 
-
-.global CantEscape_hook
-CantEscape_hook:
-ldr r5, =CantEscape_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl CantEscape
-ldr r1, =CantEscape_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-CantEscape_return_address:
-.word 0
 
 .global target_select_inject_illusion_icon
 target_select_inject_illusion_icon:
@@ -453,23 +370,6 @@ bx r1
 
 .pool
 
-.global BattleSystem_CheckMoveEffect_hook
-BattleSystem_CheckMoveEffect_hook:
-ldr r5, =BattleSystem_CheckMoveEffect_return_address
-mov r6, lr
-str r6, [r5]
-pop {r5-r6}
-bl BattleSystem_CheckMoveEffect
-ldr r1, =BattleSystem_CheckMoveEffect_return_address
-ldr r1, [r1]
-mov pc, r1
-
-.pool
-
-BattleSystem_CheckMoveEffect_return_address:
-.word 0
-.word 0
-
 
 .global StruggleCheck_hook
 StruggleCheck_hook:
@@ -503,6 +403,38 @@ mov pc, r1
 
 ov12_02251A28_return_address:
 .word 0
+
+.global ai_switch_ban_for_bind_hook
+ai_switch_ban_for_bind_hook:
+
+// r0 is already bw, r1 is already sp, r6 is battler
+
+push {r0-r3}
+
+add r2, r6, #0
+bl SeeIfBindShouldRestrainSwitch
+cmp r0, #1
+beq _returnTo02220424
+
+pop {r0-r3}
+// else do not return false and just continue the checks, starting with mean look
+//ldr r2, =0x2DB0
+mov r2, #0x2D
+lsl r2, #0x8
+add r2, #0xB0 // fuck you movw
+mov r3, #1
+lsl r3, #26 // 0x04000000 for mean look
+ldr r4, [r5, r2]
+str r0, [sp, #4]
+ldr r7, =0x022203BC | 1
+bx r7
+
+_returnTo02220424:
+pop {r0-r3}
+ldr r0, =0x02220424 | 1
+bx r0
+
+.pool
 
 
 .global load_max_move_num_metronome
