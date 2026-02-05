@@ -350,7 +350,7 @@ arm9 Summary_Entry_Hook 0208D2C4 1
 
 #endif
 
-# arm9 CanUseItemOnMonInParty_hook 020902BC 5 lololol
+arm9 CanUseItemOnMonInParty_hook 020902BC 5
 #ifdef IMPLEMENT_LEVEL_CAP
 
 0012 ImplementLevelCap_hook 02245A28 3
@@ -487,7 +487,7 @@ arm9 GF_AssertFail 0202551C 0
 0010 ai_switch_ban_for_bind_hook 022203B4 2
 
 # hooking item use : 020902D0 + 4 = 020902D4
-arm9 UseItemOnPokemon_hook 020902D4 5 
+# arm9 UseItemOnPokemon_hook 020902D4 5 
 
 # **** Iridium: Added hooks to support the portable relearner. ****
 

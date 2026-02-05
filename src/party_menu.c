@@ -307,7 +307,9 @@ int LONG_CALL PartyMenu_HandleUseItemOnMon(struct PartyMenu *partyMenu)
     }
 
     if (CanUseItemOnMonInParty(partyMenu->args->party, partyMenu->args->itemId, partyMenu->partyMonIndex, 0, HEAP_ID_PARTY_MENU) == TRUE) {
+        debug_printf("In PartyMenu_HandleUseItemOnMon\n");
         Bag_TakeItem(partyMenu->args->bag, partyMenu->args->itemId, 1, HEAP_ID_PARTY_MENU);
+        debug_printf("After Bag_TakeItem\n");
         if (GetItemAttr_PreloadedItemData(itemData, ITEM_PARAM_EVOLUTION)) {
             struct PartyPokemon *mon = Party_GetMonByIndex(partyMenu->args->party, partyMenu->partyMonIndex);
             partyMenu->args->species = GetMonEvolution(NULL, mon, EVOCTX_ITEM_USE, partyMenu->args->itemId, &partyMenu->args->evoMethod);
@@ -315,14 +317,19 @@ int LONG_CALL PartyMenu_HandleUseItemOnMon(struct PartyMenu *partyMenu)
             sys_FreeMemoryEz(itemData);
             return PARTY_MENU_STATE_BEGIN_EXIT;
         } else {
+            debug_printf("before PartyMenu_SetItemUseFuncFromBagSelection\n");
             PartyMenu_SetItemUseFuncFromBagSelection(partyMenu);
+            debug_printf(" after PartyMenu_SetItemUseFuncFromBagSelection\n");
         }
     } else {
+        debug_printf("Cannot use item on mon\n");
         PartyMenu_PrintMessageOnWindow34(partyMenu, 102, TRUE);
         partyMenu->partyMonIndex = 8;
         partyMenu->itemUseCallback = PartyMenu_ItemUseFunc_WaitTextPrinterThenExit;
     }
+    debug_printf("Before sys_FreeMemoryEz\n");
     sys_FreeMemoryEz(itemData);
+    debug_printf("After sys_FreeMemoryEz\n");
     return PARTY_MENU_STATE_ITEM_USE_CB;
 }
 

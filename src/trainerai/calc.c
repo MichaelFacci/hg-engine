@@ -16,6 +16,7 @@
 
 
 // this has been moved to src/battle/other_battle_calculators.c so it can be used in
+/*
 extern const u8 HeldItemPowerUpTable[36][2];
 
 extern const u16 PunchingMovesTable[24];
@@ -27,7 +28,7 @@ extern const u16 MegaLauncherMovesTable[7];
 extern const u16 SharpnessMovesTable[24];
 
 extern const u16 sLowKickWeightToPower[6][2];
-
+*/
 static const u8 StatBoostModifiersTemp[][2] = {
     // numerator, denominator
    { 2, 8 },
@@ -45,7 +46,7 @@ static const u8 StatBoostModifiersTemp[][2] = {
    { 8, 2 },
 };
 
-extern const int typeToBerryMapping[18];
+//extern const int typeToBerryMapping[18];
 
 extern u8 TypeEffectivenessTable[][3];
 
@@ -116,7 +117,7 @@ void LONG_CALL FillDamageStructFromBattleMon(void* bw, struct BattleStruct* sp, 
     monStruct->type2 = BattlePokemonParamGet(sp, numSlot, BATTLE_MON_DATA_TYPE2, NULL);
 
     monStruct->speed = sp->effectiveSpeed[numSlot];
-    monStruct->weight = GetPokemonWeight(bw, sp, numSlot);
+    monStruct->weight = GetPokemonWeight(bw, sp, -1,numSlot);
 
     monStruct->form = sp->battlemon[numSlot].form_no;
     monStruct->attack = BattlePokemonParamGet(sp, numSlot, BATTLE_MON_DATA_ATK, NULL);
@@ -424,7 +425,7 @@ int LONG_CALL BattleAI_CalcBaseDamage(void* bw, struct BattleStruct* sp, int mov
         }
         break;
     case MOVE_KNOCK_OFF:
-        if (CanKnockOffApply(bw, sp)) { //TODO port to AI
+        if (CanKnockOffApply(bw,attackerSlot,defenderSlot)) { //TODO port to AI
             basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_5);
         }
         break;

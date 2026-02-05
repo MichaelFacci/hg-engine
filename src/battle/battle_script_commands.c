@@ -131,7 +131,7 @@ u32 LoadCaptureSuccessSPAStarEmitter(u32 id);
 u32 LoadCaptureSuccessSPANumEmitters(u32 id);
 
 /**** AURORA CRYSTAL: Additional commands. ****/
-BOOL btl_scr_cmd_custom_01_strengthsapcalc(void *bw, struct BattleStruct *sp);
+//BOOL btl_scr_cmd_custom_01_strengthsapcalc(void *bw, struct BattleStruct *sp);
 //BOOL btl_scr_cmd_FC_didtargetraisestat(void *bw, struct BattleStruct *sp);
 
 #ifdef DEBUG_BATTLE_SCRIPT_COMMANDS
@@ -2983,6 +2983,7 @@ BOOL btl_scr_cmd_FA_setabilityactivatedflag(void *bw UNUSED, struct BattleStruct
  *  @param sp global battle structure
  *  @return FALSE
  */
+ /*
 BOOL btl_scr_cmd_custom_01_strengthsapcalc(void *bw UNUSED, struct BattleStruct *sp) {
     IncrementBattleScriptPtr(sp, 1);
 
@@ -3000,6 +3001,7 @@ BOOL btl_scr_cmd_custom_01_strengthsapcalc(void *bw UNUSED, struct BattleStruct 
 
     return FALSE;
 }
+*/
 /**
  *  @brief script command to check if a target raised a stat this turn (for Burning Jealousy and Alluring Voice)
  *

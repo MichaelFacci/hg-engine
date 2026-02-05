@@ -1483,9 +1483,9 @@
     // .macro YourCustomCommand
     // .long (BASE_ENGINE_BTL_SCR_CMDS_MAX + 1)
     // .endm
-    .macro StrengthSapCalc
-    .long (BASE_ENGINE_BTL_SCR_CMDS_MAX + 1)
-    .endm
+    //.macro StrengthSapCalc
+    //.long (BASE_ENGINE_BTL_SCR_CMDS_MAX + 1)
+    //.endm
 
 
 .endif

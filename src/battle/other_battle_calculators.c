@@ -3557,7 +3557,7 @@ void BattleSystem_BufferMessage(struct BattleSystem *bsys, MESSAGE_PARAM *msg) {
 
 
 
-
+/*
  struct PACKED sDamageCalc
  {
      u16 species;
@@ -3671,7 +3671,7 @@ const u16 SharpnessMovesTable[] = {
     MOVE_X_SCISSOR,
 };
 
-
+*/
  
  
 // banlist is handled in original function, no need to include it here

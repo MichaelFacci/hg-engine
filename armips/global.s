@@ -25,7 +25,7 @@
 
 
 //custom asm scripts
-.include "armips/asm/custom/mart_items.s"
+//.include "armips/asm/custom/mart_items.s"
 .include "armips/asm/custom/double_battle_music.s"
 .include "armips/asm/custom/vitamins.s"
 .include "armips/asm/custom/title_screen_cry.s"

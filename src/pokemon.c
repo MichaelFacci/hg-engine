@@ -1147,7 +1147,7 @@ u32 LONG_CALL UseItemMonAttrChangeCheck(struct PartyMenu *wk, void *dat)
 
     return FALSE;
 }
-
+/*
 BOOL LONG_CALL UseItemOnPokemon(struct PartyPokemon *mon, u16 itemID, u16 moveIdx, u16 location, int heapID) {
     s32 stack_data[8];
 #define sp70 stack_data[7]
@@ -1408,6 +1408,7 @@ BOOL LONG_CALL UseItemOnPokemon(struct PartyPokemon *mon, u16 itemID, u16 moveId
     sys_FreeMemoryEz(itemData);
     return hadEffect;
 }
+*/
 #undef sp70
 #undef sp6C
 #undef sp68
@@ -1758,7 +1759,7 @@ u32 LONG_CALL CheckIfMonsAreEqual(struct PartyPokemon *pokemon1, struct PartyPok
  *  @param heapID heap to use for allocations
  *  @return TRUE if can use item, FALSE otherwise
  */
- /*
+ 
 BOOL LONG_CALL CanUseItemOnMonInParty(struct Party *party, u16 itemID, s32 partyIdx, s32 moveIdx, u32 heapID) {
     struct PartyPokemon *mon = Party_GetMonByIndex(party, partyIdx);
 
@@ -1784,7 +1785,7 @@ BOOL LONG_CALL CanUseItemOnMonInParty(struct Party *party, u16 itemID, s32 party
 #endif
     return CanUseItemOnPokemon(mon, itemID, moveIdx, heapID);
 }
-*/
+
 
 /**
  *  @brief get the evolution species for a pokemon.  generalized depending on context

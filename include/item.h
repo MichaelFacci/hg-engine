@@ -257,7 +257,7 @@ u32 LONG_CALL GetItemData(u16 item, u32 param, u32 heap_id);
  *
  * If itemId or attrno is invalid, or if allocation failed, returns NULL
  */
-struct ItemData* LONG_CALL LoadItemDataOrGfx(u16 itemId, int attrno, u32 heapId);
+//struct ItemData* LONG_CALL LoadItemDataOrGfx(u16 itemId, int attrno, u32 heapId);
 
 
 /*
@@ -270,7 +270,7 @@ struct ItemData* LONG_CALL LoadItemDataOrGfx(u16 itemId, int attrno, u32 heapId)
  *
  * @returns: Integer attribute value
  */
-s32 LONG_CALL GetItemAttr_PreloadedItemData(struct ItemData *itemData, u16 attrno);
+//s32 LONG_CALL GetItemAttr_PreloadedItemData(struct ItemData *itemData, u16 attrno);
 
 
 /*

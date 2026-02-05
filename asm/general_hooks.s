@@ -90,23 +90,23 @@ mov pc, r1
 Bag_HasItem_return_address:
 .word 0
 
-.global UseItemOnPokemon_hook
-UseItemOnPokemon_hook:
-ldr r5, =UseItemOnPokemon_return_address
+.global CanUseItemOnMonInParty_hook
+CanUseItemOnMonInParty_hook:
+ldr r5, =CanUseItemOnMonInParty_return_address
 mov r6, lr
 str r6, [r5]
 pop {r5-r6}
-bl UseItemOnPokemon
-ldr r1, =UseItemOnPokemon_return_address
+bl CanUseItemOnMonInParty
+ldr r1, =CanUseItemOnMonInParty_return_address
 ldr r1, [r1]
 mov pc, r1
 
 .pool
 
-UseItemOnPokemon_return_address:
-.word 0
 CanUseItemOnMonInParty_return_address:
 .word 0
+//CanUseItemOnMonInParty_return_address:
+//.word 0
 
 .global PartyMenu_ItemUseFunc_LevelUpLearnMovesLoop_Case6_hook
 PartyMenu_ItemUseFunc_LevelUpLearnMovesLoop_Case6_hook:

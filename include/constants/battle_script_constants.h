@@ -713,17 +713,14 @@
 #define ADD_STATUS_EFF_REMOVE_USER_FIRE_TYPE           (212)
 #define ADD_STATUS_EFF_REMOVE_USER_ELECTRIC_TYPE       (213)
 
-<<<<<<< HEAD
-#define ADD_STATUS_NOBLE_ROAR                          (192) //moved after battle engine upgrade
-#define ADD_STATUS_PARTING_SHOT                        (193)
-#define ADD_STATUS_STRENGTH_SAP                        (194)
+//#define ADD_STATUS_NOBLE_ROAR                          (192) //moved after battle engine upgrade
+//#define ADD_STATUS_PARTING_SHOT                        (193)
+//#define ADD_STATUS_STRENGTH_SAP                        (194)
 
-=======
 #define MAX_BASE_SUBSCRIPT_PTR_NUM (213)
 
 // define your custom subscripts below like this
 // #define MOVE_SUBSCRIPT_PTR_CUSTOM_1 (MAX_BASE_SUBSCRIPT_PTR_NUM + 1)
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 // additional effect constants
 #define ADD_STATUS_NONE (0)

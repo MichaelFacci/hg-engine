@@ -1,7 +1,7 @@
 # Makefile
 
 ROMNAME = rom.nds
-BUILDROM = withLevelCapToggle.nds
+BUILDROM = testingIridiaMines.nds
 
 define n
 

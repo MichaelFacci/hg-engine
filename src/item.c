@@ -569,6 +569,7 @@ BOOL MoveIsHM(u16 moveId) {
 }
 
 s32 LONG_CALL GetItemAttr_PreloadedItemData(ITEMDATA *itemData, u16 attrno) {
+    //debug_printf("In GetItemAttr_PreloadedItemData\n");
     switch (attrno) {
     case ITEM_PARAM_PRICE:
         return (u32)((itemData)->price) | ((u32)((itemData)->price_high) << 16);

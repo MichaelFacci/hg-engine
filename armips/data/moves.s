@@ -6724,15 +6724,9 @@ movedata MOVE_AVALANCHE, "Avalanche"
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
-<<<<<<< HEAD
     priority 0
-    flags FLAG_KINGS_ROCK | FLAG_MIRROR_MOVE | FLAG_PROTECT | FLAG_CONTACT
-    appeal 0x0F
-=======
-    priority -4
     flags FLAG_MIRROR_MOVE | FLAG_PROTECT | FLAG_CONTACT
     appeal APPEAL_DOUBLE_ON_FINALE
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     contesttype CONTEST_COOL
     terminatedata
     movedescription MOVE_AVALANCHE, "An attack move that\ninflicts double the\ndamage if the user\nhas been hurt by the\nfoe in the same turn."
@@ -8012,11 +8006,7 @@ movedata MOVE_ROUND, "Round"
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_UNUSABLE_UNIMPLEMENTED
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
@@ -8032,11 +8022,7 @@ movedata MOVE_ECHOED_VOICE, "Echoed Voice"
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_UNUSABLE_UNIMPLEMENTED
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
@@ -8052,11 +8038,7 @@ movedata MOVE_CHIP_AWAY, "Chip Away"
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_CONTACT | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_CONTACT | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_UNUSABLE_IN_GEN_8 | FLAG_UNUSABLE_IN_GEN_9
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_TOUGH
     terminatedata
@@ -8072,11 +8054,7 @@ movedata MOVE_CLEAR_SMOG, "Clear Smog"
     effectchance 100
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_UNUSABLE_UNIMPLEMENTED
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
@@ -8092,11 +8070,7 @@ movedata MOVE_STORED_POWER, "Stored Power"
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_PROTECT | FLAG_MIRROR_MOVE
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_SMART
     terminatedata
@@ -8487,11 +8461,7 @@ movedata MOVE_FROST_BREATH, "Frost Breath"
     movedescription MOVE_FROST_BREATH, "The user blows\ncold air at the foe.\nIt always results in\na critical hit."
 
 movedata MOVE_DRAGON_TAIL, "Dragon Tail"
-<<<<<<< HEAD
-    battleeffect 321
-=======
     battleeffect MOVE_EFFECT_FORCE_SWITCH_HIT
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     pss SPLIT_PHYSICAL
     basepower 60
     type TYPE_DRAGON
@@ -9160,11 +9130,7 @@ movedata MOVE_PHANTOM_FORCE, "Phantom Force"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_PHANTOM_FORCE, "Invulnerable on\nturn 1.\nBreaks protect on\nturn 2."
-=======
     movedescription MOVE_PHANTOM_FORCE, "The user disappears,\nthen strikes the foe\non the second turn.\nIt hits even if the\nfoe protects itself."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_TRICK_OR_TREAT, "Trick-or-Treat"
     battleeffect MOVE_EFFECT_ADD_THIRD_TYPE_GHOST
@@ -9228,11 +9194,7 @@ movedatalongname MOVE_PARABOLIC_CHARGE, "ParabolicCharge", "Parabolic Charge"
     appeal 0x00
     contesttype CONTEST_SMART
     terminatedata
-<<<<<<< HEAD
     movedescription MOVE_PARABOLIC_CHARGE, "Guzzles HP from\nopponents. 50%\nHP recovery.\nbzzzzt bzzzzt."
-=======
-    movedescription MOVE_PARABOLIC_CHARGE, "An energy-draining\nshockwave. The user’s\nHP is restored by\nhalf the damage taken\nby those hit."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_FORESTS_CURSE, "Forest’s Curse"
     battleeffect MOVE_EFFECT_ADD_THIRD_TYPE_GRASS
@@ -9299,11 +9261,7 @@ movedata MOVE_DISARMING_VOICE, "Disarming Voice"
     movedescription MOVE_DISARMING_VOICE, "Letting out a charming\ncry, the user does\nemotional damage to\nopposing Pokémon. This\nattack never misses."
 
 movedata MOVE_PARTING_SHOT, "Parting Shot"
-<<<<<<< HEAD
-    battleeffect MOVE_EFFECT_SP_ATK_DOWN_2
-=======
     battleeffect MOVE_EFFECT_PARTING_SHOT
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     pss SPLIT_STATUS
     basepower 0
     type TYPE_DARK
@@ -9348,11 +9306,7 @@ movedata MOVE_DRAINING_KISS, "Draining Kiss"
     appeal 0x00
     contesttype CONTEST_CUTE
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_DRAINING_KISS, "Guzzles the HP of\nthe opponent.\n50% HP recovery."
-=======
-    movedescription MOVE_DRAINING_KISS, "An energy-stealing\nkiss. The user’s\nHP is restored by\nhalf the damage taken\nby the target."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
+    movedescription MOVE_DRAINING_KISS, "Guzzles the HP of\nthe opponent.\n75% HP recovery."
 
 movedata MOVE_CRAFTY_SHIELD, "Crafty Shield"
     battleeffect MOVE_EFFECT_PROTECT_USER_SIDE
@@ -9416,11 +9370,7 @@ movedata MOVE_MISTY_TERRAIN, "Misty Terrain"
     appeal APPEAL_BASIC
     contesttype CONTEST_BEAUTY
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_MISTY_TERRAIN, "Prevents status\non grounded\nPokemon."
-=======
     movedescription MOVE_MISTY_TERRAIN, "Sets a Misty Terrain\nfor five turns. This\nprevents status\nailments and weakens\nDragon-Type moves."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_ELECTRIFY, "Electrify"
     battleeffect MOVE_EFFECT_HIT
@@ -9580,11 +9530,7 @@ movedata MOVE_DIAMOND_STORM, "Diamond Storm"
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_DIAMOND_STORM, "Shoots a flurry\nof diamonds at\nthe foes.\n50% chance to\nraise defense."
-=======
     movedescription MOVE_DIAMOND_STORM, "A storm of diamonds\nwhips opposing\nPokémon. This may also\nsharply boost the\nuser's Defense stat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_STEAM_ERUPTION, "Steam Eruption"
     battleeffect MOVE_EFFECT_THAW_AND_BURN_HIT
@@ -9616,11 +9562,7 @@ movedata MOVE_HYPERSPACE_HOLE, "Hyperspace Hole"
     appeal 0x00
     contesttype CONTEST_SMART
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_HYPERSPACE_HOLE, "Sucks the foe\ninto a space\nhole. Breaks protect."
-=======
     movedescription MOVE_HYPERSPACE_HOLE, "Using a hyperspace\nhole, the user strikes\nfrom far away. This\ncan hit a target using\nProtect or Detect."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_WATER_SHURIKEN, "Water Shuriken"
     battleeffect MOVE_EFFECT_MULTI_HIT
@@ -9700,11 +9642,7 @@ movedata MOVE_EERIE_IMPULSE, "Eerie Impulse"
     appeal 0x00
     contesttype CONTEST_SMART
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_EERIE_IMPULSE, "The user generates\nan eerie impulse.\nExposing the foe to\nit harshly lowers the\nfoe’s Sp. Atk stat."
-=======
     movedescription MOVE_EERIE_IMPULSE, "The user emits an\neerie impulse from its\nbody, harshly lowering\nthe target's Sp. Atk\nstat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_VENOM_DRENCH, "Venom Drench"
     battleeffect MOVE_EFFECT_VENOM_DRENCH
@@ -9752,11 +9690,7 @@ movedata MOVE_GEOMANCY, "Geomancy"
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_GEOMANCY, "Double boosts\nuser's Sp. Atk,\nSp. Def, and Speed\non turn 2."
-=======
     movedescription MOVE_GEOMANCY, "The user absorbs energy\nand sharply boosts its\nSp. Atk, Sp. Def, and\nSpeed stats on the next\nturn."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_MAGNETIC_FLUX, "Magnetic Flux"
     battleeffect MOVE_EFFECT_HIT
@@ -9804,11 +9738,7 @@ movedatalongname MOVE_ELECTRIC_TERRAIN, "ElectricTerrain", "Electric Terrain"
     appeal APPEAL_BASIC
     contesttype CONTEST_SMART
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_ELECTRIC_TERRAIN, "Prevents sleep on\ngrounded Pokemon\nfor 5 turns.\nBoosts electric moves.\n"
-=======
     movedescription MOVE_ELECTRIC_TERRAIN, "For five turns, Pokémon\non the ground have\npowered up Electric-type\nmoves and can no longer\nfall asleep."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_DAZZLING_GLEAM, "Dazzling Gleam"
     battleeffect MOVE_EFFECT_HIT
@@ -9872,11 +9802,7 @@ movedata MOVE_BABY_DOLL_EYES, "Baby-Doll Eyes"
     appeal 0x00
     contesttype CONTEST_CUTE
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_BABY_DOLL_EYES, "User becomes cute.\n-1 Atk.\n+1 priority."
-=======
     movedescription MOVE_BABY_DOLL_EYES, "The user stares at\nthe target with its\nbaby-eyes, lowering\nits Attack stat.\nAlways goes first."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_NUZZLE, "Nuzzle"
     battleeffect MOVE_EFFECT_PARALYZE_HIT
@@ -9892,11 +9818,7 @@ movedata MOVE_NUZZLE, "Nuzzle"
     appeal 0x00
     contesttype CONTEST_CUTE
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_NUZZLE, "Paralyzes foe.\nJust better than\nThunder Wave."
-=======
     movedescription MOVE_NUZZLE, "The user nuzzles its\nelectrified cheeks\nagainst the target.\nThis also leaves the\ntarget with paralysis."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_HOLD_BACK, "Hold Back"
     battleeffect MOVE_EFFECT_LEAVE_WITH_1_HP
@@ -9960,11 +9882,7 @@ movedata MOVE_OBLIVION_WING, "Oblivion Wing"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
     movedescription MOVE_OBLIVION_WING, "Yveltal uses its\nwings to suck HP\nfrom the foe.\nIdk how this works."
-=======
-    movedescription MOVE_OBLIVION_WING, "The user absorbs the\ntarget's HP. The user's\nHP is restored by over\nhalf the damage taken\nby the target."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_THOUSAND_ARROWS, "Thousand Arrows"
     battleeffect MOVE_EFFECT_HIT
@@ -10076,11 +9994,7 @@ movedata MOVE_DRAGON_ASCENT, "Dragon Ascent"
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
-<<<<<<< HEAD
     movedescription MOVE_DRAGON_ASCENT, "Rayquaza obliterates\nthe opponent.\n-1 Def/Sp.Def for\nthe user."
-=======
-    movedescription MOVE_DRAGON_ASCENT, "The user attacks by\ndropping out of the sky\nat high speed. This also\nlowers the user's\nDefense and Sp. Def."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_HYPERSPACE_FURY, "Hyperspace Fury"
     battleeffect MOVE_EFFECT_USER_DEF_DOWN_HIT_REMOVE_PROTECT
@@ -10096,11 +10010,7 @@ movedata MOVE_HYPERSPACE_FURY, "Hyperspace Fury"
     appeal 0x00
     contesttype CONTEST_TOUGH
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_HYPERSPACE_FURY, "Outer space hurts\nthe opponent.\nCan't miss!"
-=======
     movedescription MOVE_HYPERSPACE_FURY, "The user unleashes a\nbarrage that ignores the\neffects of protection\nmoves. This also lowers\nthe user's Defense."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 // Contest types after this point are purely speculative due to the lack of contests since Generation VII.
 // Moves introduced in Generation VII:
@@ -11158,11 +11068,7 @@ movedata MOVE_CORE_ENFORCER, "Core Enforcer"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_CORE_ENFORCER, "Enforces the core."
-=======
     movedescription MOVE_CORE_ENFORCER, "If a target has already\nused their move this\nturn, this move\neliminates the effects\nof their Ability."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_TROP_KICK, "Trop Kick"
     battleeffect MOVE_EFFECT_LOWER_ATTACK_HIT
@@ -11534,11 +11440,7 @@ movedata MOVE_LIQUIDATION, "Liquidation"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_LIQUIDATION, "May lower opponent's\nDefense on hit."
-=======
     movedescription MOVE_LIQUIDATION, "The user slams into\nthe target using a\nblast of water. This\nmay also lower the\ntarget's Defense stat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_PRISMATIC_LASER, "Prismatic Laser"
     battleeffect MOVE_EFFECT_RECHARGE_AFTER
@@ -11618,11 +11520,7 @@ movedata MOVE_TEARFUL_LOOK, "Tearful Look"
     appeal 0x00
     contesttype CONTEST_CUTE
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_TEARFUL_LOOK, "Drops target's\nAtk and Sp. Atk\nby one stage.\n"
-=======
     movedescription MOVE_TEARFUL_LOOK, "The user tears up,\nlowering the target's\nAttack and Sp. Atk\nstats.\nBypasses Protect."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_ZING_ZAP, "Zing Zap"
     battleeffect MOVE_EFFECT_FLINCH_HIT
@@ -11750,11 +11648,7 @@ movedatalongname MOVE_LIGHT_THAT_BURNS_THE_SKY, "LightBurnSky", "Light That Burn
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_LIGHT_THAT_BURNS_THE_SKY, "Light that burns\nmy eyes."
-=======
     movedescription MOVE_LIGHT_THAT_BURNS_THE_SKY, "Necrozma inflicts damage\nusing Attack or Sp. Atk-\nwhichever is higher.\nThis move ignores the\ntarget's Ability."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedatalongname MOVE_SEARING_SUNRAZE_SMASH, "Sunraze Smash", "Searing Sunraze Smash"
     battleeffect MOVE_EFFECT_HIT
@@ -12058,11 +11952,7 @@ movedatalongname MOVE_DOUBLE_IRON_BASH, "Double IronBash", "Double Iron Bash"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_DOUBLE_IRON_BASH, "May flinch opponent.\nHits twice."
-=======
     movedescription MOVE_DOUBLE_IRON_BASH, "The user spins on its\nnut, striking the target\nwith its arms twice in a\nrow. This may also make\nthe target flinch."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 // Moves introduced in Generation VIII:
 movedata MOVE_MAX_GUARD, "Max Guard"
@@ -12608,11 +12498,7 @@ movedata MOVE_BODY_PRESS, "Body Press"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_BODY_PRESS, "Uses user's Def\nstat for damage."
-=======
     movedescription MOVE_BODY_PRESS, "The user slams its\nbody into the target.\nThe higher the user's\nDefense stat, the\ngreater the damage."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_DECORATE, "Decorate"
     battleeffect MOVE_EFFECT_DECORATE
@@ -12788,11 +12674,7 @@ movedata MOVE_APPLE_ACID, "Apple Acid"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_APPLE_ACID, "Guaranteed to\nlower foe's Sp. Def\nby 2 stages."
-=======
     movedescription MOVE_APPLE_ACID, "The user attacks with an\nacidic liquid created\nfrom tart apples. This\nalso lowers the target's\nSp. Def stat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_GRAV_APPLE, "Grav Apple"
     battleeffect MOVE_EFFECT_LOWER_DEFENSE_HIT // Damage portion handled in CalcBaseDamage.c.
@@ -12824,11 +12706,7 @@ movedata MOVE_SPIRIT_BREAK, "Spirit Break"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_SPIRIT_BREAK, "Lowers opponent's\nSp. Atk. by one\nstage."
-=======
     movedescription MOVE_SPIRIT_BREAK, "The user attacks with\nenough force to break\nthe target's spirit.\nThis also lowers the\ntarget's Sp. Atk stat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_STRANGE_STEAM, "Strange Steam"
     battleeffect MOVE_EFFECT_CONFUSE_HIT
@@ -12956,11 +12834,7 @@ movedata MOVE_EXPANDING_FORCE, "Expanding Force"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_EXPANDING_FORCE, "Boosted damage\nand spread move\non Psychic Terrain."
-=======
     movedescription MOVE_EXPANDING_FORCE, "The user attacks with\nits psychic power. This\nmove's power goes up and\ndamages all opponents on\nPsychic Terrain."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_STEEL_ROLLER, "Steel Roller"
     battleeffect MOVE_EFFECT_END_TERRAIN
@@ -13040,11 +12914,7 @@ movedata MOVE_MISTY_EXPLOSION, "Misty Explosion"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_MISTY_EXPLOSION, "KABOOM!"
-=======
     movedescription MOVE_MISTY_EXPLOSION, "The user attacks\neverything around it\nand faints. This move's\npower is boosted on\nMisty Terrain."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_GRASSY_GLIDE, "Grassy Glide"
     battleeffect MOVE_EFFECT_HIT // Priority handled in other_battle_calculators.c.
@@ -13332,11 +13202,7 @@ movedata MOVE_DRAGON_ENERGY, "Dragon Energy"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
     movedescription MOVE_DRAGON_ENERGY, "Regidrago wanted\nto use Water Spout\nbut got this\ninstead."
-=======
-    movedescription MOVE_DRAGON_ENERGY, "The user converts its\nlife-force into power.\nThe lower the user's\nHP, the lower the\nmove's power."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_FREEZING_GLARE, "Freezing Glare"
     battleeffect MOVE_EFFECT_FREEZE_HIT
@@ -13384,11 +13250,7 @@ movedata MOVE_THUNDEROUS_KICK, "Thunderous Kick"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_THUNDEROUS_KICK, "100% chance to\nlower target's Def."
-=======
     movedescription MOVE_THUNDEROUS_KICK, "With lightning-like\nmovement, the user\ndelivers a kick. This\nalso lowers the\ntarget's Defense stat."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_GLACIAL_LANCE, "Glacial Lance"
     battleeffect MOVE_EFFECT_HIT
@@ -13517,11 +13379,7 @@ movedatalongname MOVE_SPRINGTIDE_STORM, "SpringtideStorm", "Springtide Storm"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_SPRINGTIDE_STORM, "Spring is here!\nGoodbye Atk stat!"
-=======
     movedescription MOVE_SPRINGTIDE_STORM, "The user wraps foes in\nfierce winds brimming\nwith love and hate.\nThis may also lower\ntheir Attack stats."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_MYSTICAL_POWER, "Mystical Power"
     battleeffect MOVE_EFFECT_RAISE_SP_ATK_HIT
@@ -13569,11 +13427,7 @@ movedata MOVE_WAVE_CRASH, "Wave Crash"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_WAVE_CRASH, "Recoils user\nby 1/3 of damage\ndealt."
-=======
     movedescription MOVE_WAVE_CRASH, "The user shrouds\nitself in water and\nslams into the target.\nThis also damages the\nuser quite a lot."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_CHLOROBLAST, "Chloroblast"
     battleeffect MOVE_EFFECT_HIT
@@ -13874,11 +13728,7 @@ movedata MOVE_AXE_KICK, "Axe Kick"
     effectchance 30
     target RANGE_SINGLE_TARGET
     priority 0
-<<<<<<< HEAD
-    flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_KINGS_ROCK
-=======
     flags FLAG_KEEP_HP_BAR | FLAG_PROTECT | FLAG_MIRROR_MOVE | FLAG_CONTACT
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
@@ -14636,11 +14486,7 @@ movedata MOVE_MAGICAL_TORQUE, "Magical Torque"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_MAGICAL_TORQUE, "Very magic."
-=======
     movedescription MOVE_MAGICAL_TORQUE, "The user rams into the\ntarget with a fae-like\nforce. This may also\nconfuse the target."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_BLOOD_MOON, "Blood Moon"
     battleeffect MOVE_EFFECT_HIT
@@ -14864,11 +14710,7 @@ movedata MOVE_ALLURING_VOICE, "Alluring Voice"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-<<<<<<< HEAD
-    movedescription MOVE_ALLURING_VOICE, "The user attacks the\nfoe using its angelic\nvoice. This confuses\nthe foe if it boosted\nits stats this turn."
-=======
     movedescription MOVE_ALLURING_VOICE, "The user attacks using\nits angelic voice. This\nalso confuses the target\nif its stats have been\nboosted during the turn."
->>>>>>> 03550f9a185482a89fe17aaeaa73c28993dea30e
 
 movedata MOVE_TEMPER_FLARE, "Temper Flare"
     battleeffect MOVE_EFFECT_HIT

@@ -668,7 +668,7 @@ const u16 HarassmentFlagList[] = {//also included in harassment flag are all sta
 
 const u16 CheckHPFlagList_1[] = {
     MOVE_EFFECT_RESTORE_HALF_HP,
-    MOVE_EFFECT_HEAL_HALF_MORE_IN_SUN,
+    MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER,
     MOVE_EFFECT_KO_MON_THAT_DEFEATED_USER,
     MOVE_EFFECT_INCREASE_POWER_WITH_LESS_HP,
     MOVE_EFFECT_FAINT_AND_ATK_SP_ATK_DOWN_2,
@@ -1150,7 +1150,7 @@ int BasicFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext 
 
     /*Handle recovery moves*/
     else if((ai->attackerMoveEffect == MOVE_EFFECT_RESTORE_HALF_HP || 
-        ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_MORE_IN_SUN ||
+        ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER ||
         ai->attackerMoveEffect == MOVE_EFFECT_SWALLOW || 
         ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_REMOVE_FLYING_TYPE) &&
         ai->attackerHP == ai->attackerMaxHP){
@@ -2289,7 +2289,7 @@ int ExpertFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext
     /*Recovery Moves*/
     /*IRIDIUM: heavily modified this logic*/
     else if(ai->attackerMoveEffect == MOVE_EFFECT_RESTORE_HALF_HP ||
-        ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_MORE_IN_SUN ||
+        ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER ||
         ai->attackerMoveEffect == MOVE_EFFECT_SWALLOW ||
         ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_REMOVE_FLYING_TYPE){
             if(ai->attackerPercentHP >= 80){
@@ -2306,7 +2306,7 @@ int ExpertFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext
                 }
             }
 
-            if(ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_MORE_IN_SUN){
+            if(ai->attackerMoveEffect == MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER){
                 if(ctx->field_condition & WEATHER_SANDSTORM_ANY ||
                     ctx->field_condition & WEATHER_RAIN_ANY ||
                     ctx->field_condition & WEATHER_HAIL_ANY ||
@@ -3182,7 +3182,7 @@ int ExpertFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext
         if(BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_RECOVER_DAMAGE_SLEEP, ai) ||
         BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_RESTORE_HALF_HP, ai) ||
         BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_HEAL_HALF_REMOVE_FLYING_TYPE, ai) ||
-        BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_HEAL_HALF_MORE_IN_SUN, ai) ||
+        BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_HEAL_HALF_DIFFERENT_IN_WEATHER, ai) ||
         BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_RECOVER_HEALTH_AND_SLEEP, ai) ||
         BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_SWALLOW, ai) ||
         BattlerHasMoveEffect(bsys, ai->defender, MOVE_EFFECT_RECOVER_HALF_DAMAGE_DEALT, ai) ||

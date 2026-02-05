@@ -114,7 +114,7 @@ u32 LONG_CALL MoveHitUTurnHeldItemEffectCheck(void *bw, struct BattleStruct *sp,
         seq_no[0] = SUB_SEQ_ITEM_GIVE_STICKY_BARB;
         ret = TRUE;
     }
-
+    /*
     if
     (
         // Gems, which are still held until the move successfully connects.
@@ -128,6 +128,7 @@ u32 LONG_CALL MoveHitUTurnHeldItemEffectCheck(void *bw, struct BattleStruct *sp,
         seq_no[0] = SUB_SEQ_REMOVE_ATTACKER_ITEM;
         ret = TRUE;
     }
+    */
     return ret;
 }
 
@@ -223,7 +224,7 @@ u32 LONG_CALL ServerWazaHitAfterCheckAct(void *bw, struct BattleStruct *sp)
             }
             sp->swhac_seq_no++;
             break;
-
+/*
         case SHWAC_HELD_ITEM_GEM:
             if
             (
@@ -242,7 +243,7 @@ u32 LONG_CALL ServerWazaHitAfterCheckAct(void *bw, struct BattleStruct *sp)
             };
             sp->swhac_seq_no++;
             break;
-
+*/
         case SWHAC_END:
             sp->swhac_seq_no = 0;
             sp->swhac_work = 0;

@@ -669,7 +669,7 @@ ov12_0224BC2C = 0x0224BC2C | 1;
 ov12_02263D14 = 0x02263D14 | 1;
 SelectPartyMonAndLearnMove = 0x0203E6D4 | 1;
 TryModEV = 0x02090A84 | 1;
-GetItemAttr_PreloadedItemData = 0x02077DAC | 1;
+//GetItemAttr_PreloadedItemData = 0x02077DAC | 1;
 LoadItemDataOrGfx = 0x02077CE8 | 1;
 AddMonData = 0x0206F558 |1;
 BoostMonMovePpUpBy = 0x0209099C | 1;
@@ -691,7 +691,7 @@ GetNaturalGiftType = 0x022558A4 | 1;
 BattleContext_CheckMoveImprisoned = 0x02252C74 | 1;
 BattleContext_CheckMoveUnuseableInGravity = 0x02252DC4 | 1;
 
-
+CanUseItemOnPokemon = 0x0208FD9C | 1;
 
 BagApp_GetSaveRoamers = 0x021F992C | 1;
 
