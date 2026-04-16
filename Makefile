@@ -1,6 +1,6 @@
 # Makefile
 
-ROMNAME = rom.nds
+ROMNAME = rom_reboot.nds
 BUILDROM = testingIridiaMines.nds
 
 define n
