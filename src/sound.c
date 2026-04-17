@@ -2,31 +2,181 @@
 #include "../include/config.h"
 #include "../include/debug.h"
 #include "../include/sound.h"
+#include "../include/NWAVPlayer.h"
+
+
+
+int firstWavID; //put nwav into base/root/waves folder, build hg-e, check in tinke
+
+
+
+void LONG_CALL NNS_SndInit_Hook(void){
+    firstWavID = 533;
+    NNS_SndInit_Original();
+    NWAVPlayer_init();
+    //debug_printf("[NNS_SndInit_Hook] Initializing sound system.\n");
+}
+
+void LONG_CALL NNS_SndMain_Hook(void){
+    NNS_SndMain_Original();
+    NWAVPlayer_updateFade();
+    //Works, spams prints to console :D
+}
+
+/*
+void LONG_CALL NNS_SndPlayerSetTempoRatio_Hook(int handle, int tempo){
+    NNS_SndPlayerSetTempoRatio_Original(handle, tempo);
+    //debug_printf("[NNS_SndPlayerSetTempoRatio_Hook] Setting tempo ratio to %d.\n", tempo);
+    //this still needs to be tested.
+    //NWAVPlayer_setSpeed(tempo << 12 >> 8);
+}
+*/
+
+
+void LONG_CALL GF_SndHandleMoveVolume_Hook(int param1, int volume, int frames)
+{
+    GF_SndHandleMoveVolume_Original(param1, volume, frames);
+    //debug_printf("[GF_SndHandleMoveVolume_Hook] Handling move volume with params: %d, %d, %d.\n", param1, volume, frames);
+    //param 1 could be the player ID? only update volume for bgm, not cries or sfx
+    
+    if (param1 == 0)
+    {
+        NWAVPlayer_setVolume(volume, frames);
+        //debug_printf("Player is BGM (GF wrapper).\n");
+
+    }
+}
+
+void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
+{
+    NNS_SndPlayerPauseByPlayerNo_Original(playerID, paused);
+    //debug_printf("Setting pause for player %d to %d.\n", playerID, paused);
+    
+    if(playerID == 0 || playerID == 1 || playerID == 7){
+        NWAVPlayer_setPaused(paused);
+    }
+    
+}
+
+void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
+{
+    NNS_SndPlayerStopSeqByPlayerNo_Original(playerID, fadeFrame);
+    //debug_printf("Stopping sequence for player %d with fade frame %d.\n", playerID, fadeFrame);
+    if(playerID == 0 || playerID == 1 || playerID == 7){
+        NWAVPlayer_stop(fadeFrame);
+    }
+}
+
+
+static BOOL GetIfSequenced(int seqID)
+{
+    int wavID = firstWavID + seqID; //firstWavID is the index in NWAVPlayer.h
+    FSFile file;
+    FS_InitFile(&file);
+
+    void* romArchive = FS_FindArchive("rom", 3);
+
+    if (FS_OpenFileFast(&file, romArchive, wavID))
+    {
+        int magic;
+        int readSize = FS_ReadFile(&file, &magic, 4);
+        if(readSize == 4 && magic == NWAV)
+        {
+            FS_CloseFile(&file);
+            return FALSE;
+
+        }
+        FS_CloseFile(&file);
+    }
+    return TRUE;
+}
+
+
+
+//replace the play function
+void LONG_CALL PlayBGM_Hook(u16 seqno)
+{
+
+/*
+    NNS_SndPlayerStopSeqByPlayerNo_Hook(0, 0);
+    NWAVPlayer_play(firstWavID);
+    NWAVPlayer_setVolume(127, 0); 
+    NWAVPlayer_setSpeed(0x1000);
+*/
+
+    static u16 current_seq = 0xFFFF;
+    static BOOL current_is_nwav = FALSE;
+
+    if (current_seq == seqno) {
+        return;
+    }//do nothing if same song
+
+    BOOL next_is_seq = GetIfSequenced(seqno);
+
+
+    if(current_is_nwav){
+        NWAVPlayer_stop(0);
+        if (next_is_seq) {
+            struct SND_WORK *work = GetSoundDataPointer();
+            if (work) {
+                work->currentSeqNo = 0xFFFF; 
+            }
+            PlayBGM_Original(seqno);
+            current_is_nwav = FALSE;
+        } else {
+            int wavID = firstWavID + seqno;
+            NWAVPlayer_play(wavID);
+            NWAVPlayer_setVolume(127, 0);
+            NWAVPlayer_setSpeed(0x1000);
+            current_is_nwav = TRUE;
+        }
+    }
+    else 
+    {
+        if (next_is_seq) {
+            PlayBGM_Original(seqno);
+            current_is_nwav = FALSE;
+        } else {
+            NNS_SndPlayerStopSeqByPlayerNo_Original(0, 20);
+            
+            int wavID = firstWavID + seqno;
+            NWAVPlayer_play(wavID);
+            NWAVPlayer_setVolume(127, 0);
+            NWAVPlayer_setSpeed(0x1000);
+            current_is_nwav = TRUE;
+        }
+    }
+    current_seq = seqno;
+}
+
 
 
 BOOL LONG_CALL GF_Snd_LoadSeq(int seqNo) {
     BOOL ret;
     struct SND_WORK *work;
-
-    work = GetSoundDataPointer();
-    ret = NNS_SndArcLoadSeq(seqNo, work->heap);
-    GF_SndHeapGetFreeSize();
+    if (TRUE)//GetIfSequenced(seqNo)) 
+    {
+        
+        work = GetSoundDataPointer();
+        ret = NNS_SndArcLoadSeq(seqNo, work->heap);
+        GF_SndHeapGetFreeSize();
 
 #ifdef DEBUG_SOUND_SSEQ_LOADS
-    if (!ret)
-    {
-        u8 buf[200];
-        sprintf(buf, "[GF_Snd_LoadSeq] Failed to load song %d.  There are 0x%x bytes left in the sound heap.\n", seqNo, SoundHeapFreeSize);
-        debugsyscall(buf);
-    }
-    else
-    {
-        u8 buf[200];
-        sprintf(buf, "[GF_Snd_LoadSeq] Loaded song %d.  There are 0x%x bytes left in the sound heap.\n", seqNo, SoundHeapFreeSize);
-        debugsyscall(buf);
-    }
+        if (!ret)
+        {
+            u8 buf[200];
+            sprintf(buf, "[GF_Snd_LoadSeq] Failed to load song %d.  There are 0x%x bytes left in the sound heap.\n", seqNo, SoundHeapFreeSize);
+            debugsyscall(buf);
+        }
+        else
+        {
+            u8 buf[200];
+            sprintf(buf, "[GF_Snd_LoadSeq] Loaded song %d.  There are 0x%x bytes left in the sound heap.\n", seqNo, SoundHeapFreeSize);
+            debugsyscall(buf);
+        }
+    
 #endif // DEBUG_SOUND_SSEQ_LOADS
-
+    }
     return ret;
 }
 
@@ -234,3 +384,4 @@ int LONG_CALL NNSi_SndArcLoadBank(int bankNo, u32 loadFlag, void *heap, BOOL bSe
 
     return NNS_SND_ARC_LOAD_SUCCESS;
 }
+

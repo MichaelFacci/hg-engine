@@ -10,23 +10,22 @@
 
 .create "build/move/move_anim/0_806", 0
 
-//grassy glide (combination of needle arm and vine whip)
+//Grassy Glide (wood hammer + tackle)
+
 a010_806:
-    loadparticlefromspa 0, 320
-    waitparticle
-    loadparticlefromspa 1, 53
+    loadparticlefromspa 0, 470
     waitparticle
 
-    callfunction 52, 3, 3, 24, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
+    playsepan 1833, 117
+    callfunction 57, 4, 2, 14, -8, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
     waitstate
-    callfunction 52, 3, 3, -24, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
+    addparticle 0, 1, 4
     addparticle 0, 0, 4
     addparticle 0, 2, 4
     addparticle 0, 3, 4
-    wait 2
-    repeatse 1926, 117, 2, 8
-    wait 40
-    addparticle 1, 1, 4
+    callfunction 36, 5, 1, 0, 1, 2, 264, "NaN", "NaN", "NaN", "NaN", "NaN"
+    callfunction 57, 4, 2, -14, 8, 258, "NaN", "NaN", "NaN", "NaN", "NaN", "NaN"
+    playsepan 1874, 117
     waitparticle
 
     unloadparticle 0

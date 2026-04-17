@@ -4,3 +4,11 @@
 
 # arm hook at func+4
 arm9 NNSi_SndArcLoadBank_hook 020CA058 5
+
+# Streamed Audio hooks
+arm9 NNS_SndInit_ASM                            020C78D0 0
+arm9 NNS_SndMain_ASM                            020C7958 0
+#arm9 NNS_SndPlayerSetTempoRatio_ASM             020C82DC 2
+arm9 NNS_SndPlayerStopSeqByPlayerNo_ASM         020C8068 2
+arm9 NNS_SndPlayerPauseByPlayerNo_ASM           020C816C 2
+
