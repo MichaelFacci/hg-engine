@@ -1,7 +1,7 @@
 # Makefile
 
 ROMNAME = rom_reboot.nds
-BUILDROM = nggg.nds
+BUILDROM = new_music_test_file.nds
 
 define n
 

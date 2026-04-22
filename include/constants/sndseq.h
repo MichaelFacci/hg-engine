@@ -1,9 +1,41 @@
 #ifndef POKEHEARTGOLD_CONSTANTS_SNDSEQ_H
 #define POKEHEARTGOLD_CONSTANTS_SNDSEQ_H
 
-#define SEQ_PV001                               1
-#define SEQ_PV                                  2
-#define SEQ_PV_END                              3
+//#define SEQ_PV001                               1
+//#define SEQ_PV                                  2
+//#define SEQ_PV_END                              3
+#define NWAV_HOMETOWN                           0
+#define NWAV_IRIS_NETWORK                       1
+#define NWAV_CHAIN_ATTACK                       2
+#define NWAV_YOU_WILL_KNOW_OUR_NAMES_XC3        3
+#define NWAV_MECHANICAL_RHYTHM                  4
+#define NWAV_INCOMING                           5
+#define NWAV_BATTLE_TORNA_GOLDEN                6
+#define NWAV_IMMEDIATE_THREAT                   7
+#define NWAV_DEATHMATCH_WITH_TORNA              8
+#define NWAV_ZANZA_THE_DIVINE                   9
+#define NWAV_YOU_WILL_KNOW_OUR_NAMES_XC1DE     10
+#define NWAV_BATTLE_XC2                        11
+#define NWAV_COLONY_9                          12
+#define NWAV_MAKTHA_WILDWOOD                   13
+#define NWAV_KEVES_COLONY                      14
+#define NWAV_RIBBI_FLATS                       15
+#define NWAV_ALFETO_VALLEY                     16
+#define NWAV_EAGUS_WILDERNESS                  17
+#define NWAV_URAYAN_TUNNELS                    18
+#define NWAV_TORIGOTH_NIGHT                    19
+#define NWAV_ERYTHIA_SEA                       20
+#define NWAV_SPIRIT_CRUCIBLE                   21
+#define NWAV_DANNAGH_DESERT                    22
+#define NWAV_ROAMING_THE_WASTES                23
+#define NWAV_AGNUS_COLONY                      24
+#define NWAV_TANTAL_DAY                        25
+#define NWAV_TANTAL_NIGHT                      26
+#define NWAV_YZANA_PLAINS                      27
+#define NWAV_YGGDRASIL                         28
+#define NWAV_MECHONIS_FIELD                    29
+#define NWAV_TORIGOTH_DAY                      30
+#define NWAV_FEELINGS_RISEN_TO_THE_SKY         31
 #define SEQ_DUMMY                            1000
 #define SEQ_SILENCE_FIELD                    1001
 #define SEQ_SILENCE_DUNGEON                  1002
@@ -1532,7 +1564,7 @@ enum {
     ANIM_MUSIC_COMBO_BROKEN,
     ANIM_MUSIC_COMBO_HANNAH,
     ANIM_MUSIC_COMBO_BLUE,
-    ANIM_MUSIC_COMBO_WILL,
+    ANIM_MUSIC_COMBO_GALACTIC,
     ANIM_MUSIC_COMBO_KOGA,
     ANIM_MUSIC_COMBO_BRUNO,
     ANIM_MUSIC_COMBO_KAREN,
@@ -1547,8 +1579,8 @@ enum {
     ANIM_MUSIC_COMBO_MEWTWO_LATI_TWINS,
     ANIM_MUSIC_COMBO_COLRESS,
     ANIM_MUSIC_SHADOW_TRIAD,
-    ANIM_MUSIC_COMBO_SATURN,
-    ANIM_MUSIC_COMBO_DUSKNOIR,
+    ANIM_MUSIC_COMBO_CYRUS,
+    ANIM_MUSIC_COMBO_ROUGHNECK,
     ANIM_MUSIC_COMBO_LANCE,
     ANIM_MUSIC_COMBO_GIOVANNI,
     ANIM_MUSIC_COMBO_JOHTO_TRAINER_1,
@@ -1556,11 +1588,11 @@ enum {
     ANIM_MUSIC_COMBO_JOHTO_TRAINER_3,
     ANIM_MUSIC_COMBO_JOHTO_WILD_BATTLE_38,
     ANIM_MUSIC_COMBO_GHETSIS,
-    ANIM_MUSIC_COMBO_GYM_LEADER_38,
+    ANIM_MUSIC_COMBO_GALACTIC_ADMIN,
     ANIM_MUSIC_COMBO_JOHTO_TRAINER,
     ANIM_MUSIC_COMBO_JOHTO_WILD_THEME,
     ANIM_MUSIC_COMBO_TRAINER_N,
-    ANIM_MUSIC_COMBO_RED,
+    ANIM_MUSIC_COMBO_IRIS,
     ANIM_MUSIC_COMBO_MINIBOSS,
 };
 
