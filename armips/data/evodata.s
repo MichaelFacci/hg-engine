@@ -2256,7 +2256,7 @@ evodata SPECIES_POLITOED
     terminateevodata
 
 evodata SPECIES_HOPPIP
-    evolution EVO_LEVEL, 12, SPECIES_SKIPLOOM
+    evolution EVO_LEVEL, 13, SPECIES_SKIPLOOM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3204,7 +3204,7 @@ evodata SPECIES_WURMPLE
     terminateevodata
 
 evodata SPECIES_SILCOON
-    evolution EVO_LEVEL, 15, SPECIES_BEAUTIFLY
+    evolution EVO_LEVEL, 14, SPECIES_BEAUTIFLY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3228,7 +3228,7 @@ evodata SPECIES_BEAUTIFLY
     terminateevodata
 
 evodata SPECIES_CASCOON
-    evolution EVO_LEVEL, 15, SPECIES_DUSTOX
+    evolution EVO_LEVEL, 14, SPECIES_DUSTOX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE

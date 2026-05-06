@@ -5,8 +5,8 @@
 //#define SEQ_PV                                  2
 //#define SEQ_PV_END                              3
 #define NWAV_HOMETOWN                           0
-#define NWAV_IRIS_NETWORK                       1
-#define NWAV_CHAIN_ATTACK                       2
+#define NWAV_CHAIN_ATTACK                       1
+#define NWAV_IRIS_NETWORK                       2
 #define NWAV_YOU_WILL_KNOW_OUR_NAMES_XC3        3
 #define NWAV_MECHANICAL_RHYTHM                  4
 #define NWAV_INCOMING                           5
@@ -25,7 +25,7 @@
 #define NWAV_URAYAN_TUNNELS                    18
 #define NWAV_TORIGOTH_NIGHT                    19
 #define NWAV_ERYTHIA_SEA                       20
-#define NWAV_SPIRIT_CRUCIBLE                   21
+#define NWAV_SPIRIT_CRUCIBLE_DNE                   21
 #define NWAV_DANNAGH_DESERT                    22
 #define NWAV_ROAMING_THE_WASTES                23
 #define NWAV_AGNUS_COLONY                      24
@@ -35,7 +35,9 @@
 #define NWAV_YGGDRASIL                         28
 #define NWAV_MECHONIS_FIELD                    29
 #define NWAV_TORIGOTH_DAY                      30
-#define NWAV_FEELINGS_RISEN_TO_THE_SKY         31
+#define NWAV_FEELINGS_RISEN_TO_THE_SKY_DNE         31
+#define NWAV_MILLICK_MEADOWS                   32
+#define NWAV_KEVES_BATTLE                      33
 #define SEQ_DUMMY                            1000
 #define SEQ_SILENCE_FIELD                    1001
 #define SEQ_SILENCE_DUNGEON                  1002

@@ -698,10 +698,9 @@ int LONG_CALL BattleAI_CalcBaseDamage(void* bw, struct BattleStruct* sp, int mov
     }
 
     // handle Gems
-    /*
     if (IS_ITEM_GEM(attacker->item) && attacker->item_power == movetype)
         basePowerModifier = QMul_RoundUp(basePowerModifier, UQ412__1_3);
-    */
+    
 
     // handle Punching Glove
     if ((attacker->item_held_effect == HOLD_EFFECT_INCREASE_PUNCHING_MOVE_DMG) && IsElementInArray(PunchingMovesTable, (u16*)&moveno, NELEMS(PunchingMovesTable), sizeof(PunchingMovesTable[0])))
