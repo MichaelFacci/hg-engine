@@ -708,7 +708,7 @@ evodata SPECIES_PRIMEAPE
     terminateevodata
 
 evodata SPECIES_GROWLITHE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 30, SPECIES_ARCANINE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2748,7 +2748,7 @@ evodata SPECIES_SKARMORY
     terminateevodata
 
 evodata SPECIES_HOUNDOUR
-    evolution EVO_LEVEL, 100, SPECIES_HOUNDOOM
+    evolution EVO_LEVEL, 27, SPECIES_HOUNDOOM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3876,7 +3876,7 @@ evodata SPECIES_WAILORD
     terminateevodata
 
 evodata SPECIES_NUMEL
-    evolution EVO_LEVEL, 100, SPECIES_CAMERUPT
+    evolution EVO_LEVEL, 29, SPECIES_CAMERUPT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8164,7 +8164,7 @@ evodata SPECIES_BRAVIARY
     terminateevodata
 
 evodata SPECIES_VULLABY
-    evolution EVO_LEVEL, 100, SPECIES_MANDIBUZZ
+    evolution EVO_LEVEL, 30, SPECIES_MANDIBUZZ
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10938,7 +10938,7 @@ evodata SPECIES_IMPIDIMP
 terminateevodata
 
 evodata SPECIES_MORGREM
-    evolution EVO_LEVEL, 100, SPECIES_GRIMMSNARL
+    evolution EVO_LEVEL, 36, SPECIES_GRIMMSNARL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11923,7 +11923,7 @@ evodata SPECIES_KILOWATTREL
 terminateevodata
 
 evodata SPECIES_MASCHIFF
-    evolution EVO_LEVEL, 30, SPECIES_MABOSSTIFF
+    evolution EVO_LEVEL, 28, SPECIES_MABOSSTIFF
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE

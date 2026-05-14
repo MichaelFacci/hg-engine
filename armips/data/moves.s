@@ -8335,9 +8335,9 @@ movedata MOVE_BESTOW, "Bestow"
 movedata MOVE_INFERNO, "Inferno"
     battleeffect MOVE_EFFECT_BURN_HIT
     pss SPLIT_SPECIAL
-    basepower 100
+    basepower 90
     type TYPE_FIRE
-    accuracy 50
+    accuracy 70
     pp 5
     effectchance 100
     target RANGE_SINGLE_TARGET
