@@ -415,7 +415,7 @@ movedata MOVE_MEGA_KICK, "Mega Kick"
     pss SPLIT_PHYSICAL
     basepower 110
     type TYPE_NORMAL
-    accuracy 85
+    accuracy 90
     pp 5
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -3661,7 +3661,7 @@ movedata MOVE_ENCORE, "Encore"
 movedata MOVE_PURSUIT, "Pursuit"
     battleeffect MOVE_EFFECT_HIT_BEFORE_SWITCH
     pss SPLIT_PHYSICAL
-    basepower 40
+    basepower 45
     type TYPE_DARK
     accuracy 100
     pp 10
@@ -5568,7 +5568,7 @@ movedata MOVE_CALM_MIND, "Calm Mind"
     basepower 0
     type TYPE_PSYCHIC
     accuracy 0
-    pp 2
+    pp 3
     effectchance 0
     target RANGE_USER
     priority 0
