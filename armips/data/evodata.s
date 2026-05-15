@@ -312,7 +312,7 @@ evodata SPECIES_ARBOK
     terminateevodata
 
 evodata SPECIES_PIKACHU
-    evolution EVO_LEVEL, 100, SPECIES_RAICHU
+    evolution EVO_LEVEL, 28, SPECIES_RAICHU
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -984,7 +984,7 @@ evodata SPECIES_SLOWBRO
     terminateevodata
 
 evodata SPECIES_MAGNEMITE
-    evolution EVO_LEVEL, 28, SPECIES_MAGNETON
+    evolution EVO_LEVEL, 25, SPECIES_MAGNETON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1512,7 +1512,7 @@ evodata SPECIES_JYNX
     terminateevodata
 
 evodata SPECIES_ELECTABUZZ
-    evolution EVO_TRADE_ITEM, ITEM_ELECTIRIZER, SPECIES_ELECTIVIRE
+    evolution EVO_LEVEL, 41, SPECIES_ELECTIVIRE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2172,7 +2172,7 @@ evodata SPECIES_MAREEP
     terminateevodata
 
 evodata SPECIES_FLAAFFY
-    evolution EVO_LEVEL, 100, SPECIES_AMPHAROS
+    evolution EVO_LEVEL, 31, SPECIES_AMPHAROS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2880,7 +2880,7 @@ evodata SPECIES_SMOOCHUM
     terminateevodata
 
 evodata SPECIES_ELEKID
-    evolution EVO_LEVEL, 100, SPECIES_ELECTABUZZ
+    evolution EVO_LEVEL, 26, SPECIES_ELECTABUZZ
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3720,7 +3720,7 @@ evodata SPECIES_MEDICHAM
     terminateevodata
 
 evodata SPECIES_ELECTRIKE
-    evolution EVO_LEVEL, 100, SPECIES_MANECTRIC
+    evolution EVO_LEVEL, 28, SPECIES_MANECTRIC
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7840,7 +7840,7 @@ evodata SPECIES_KLINKLANG
     terminateevodata
 
 evodata SPECIES_TYNAMO
-    evolution EVO_LEVEL, 17, SPECIES_EELEKTRIK
+    evolution EVO_LEVEL, 22, SPECIES_EELEKTRIK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7852,7 +7852,7 @@ evodata SPECIES_TYNAMO
     terminateevodata
 
 evodata SPECIES_EELEKTRIK
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 37, SPECIES_JIRACHI
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11671,7 +11671,7 @@ evodata SPECIES_LOKIX
 terminateevodata
 
 evodata SPECIES_PAWMI
-    evolution EVO_LEVEL, 18, SPECIES_PAWMO
+    evolution EVO_LEVEL, 14, SPECIES_PAWMO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11683,7 +11683,7 @@ evodata SPECIES_PAWMI
 terminateevodata
 
 evodata SPECIES_PAWMO
-    evolution EVO_LETS_GO, 0, SPECIES_PAWMOT // TODO: program steps evolution
+    evolution EVO_LEVEL, 30, SPECIES_PAWMOT // TODO: program steps evolution
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
