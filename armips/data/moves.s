@@ -3823,7 +3823,7 @@ movedata MOVE_CROSS_CHOP, "Cross Chop"
     pss SPLIT_PHYSICAL
     basepower 100
     type TYPE_FIGHTING
-    accuracy 80
+    accuracy 90
     pp 5
     effectchance 0
     target RANGE_SINGLE_TARGET
