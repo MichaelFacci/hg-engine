@@ -4272,7 +4272,7 @@ evodata SPECIES_BANETTE
     terminateevodata
 
 evodata SPECIES_DUSKULL
-    evolution EVO_LEVEL, 100, SPECIES_DUSCLOPS
+    evolution EVO_LEVEL, 40, SPECIES_DUSCLOPS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4284,7 +4284,7 @@ evodata SPECIES_DUSKULL
     terminateevodata
 
 evodata SPECIES_DUSCLOPS
-    evolution EVO_TRADE_ITEM, ITEM_REAPER_CLOTH, SPECIES_DUSKNOIR
+    evolution EVO_LEVEL, 48, SPECIES_DUSKNOIR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10866,7 +10866,7 @@ evodata SPECIES_GRAPPLOCT
 terminateevodata
 
 evodata SPECIES_SINISTEA
-    evolution EVO_STONE, ITEM_CRACKED_POT, SPECIES_POLTEAGEIST
+    evolution EVO_LEVEL, 37, SPECIES_POLTEAGEIST
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11971,7 +11971,7 @@ evodata SPECIES_GRAFAIAI
 terminateevodata
 
 evodata SPECIES_BRAMBLIN
-    evolution EVO_LETS_GO, 0, SPECIES_BRAMBLEGHAST // TODO: program steps evolution
+    evolution EVO_LEVEL, 30, SPECIES_BRAMBLEGHAST // TODO: program steps evolution
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -15957,7 +15957,7 @@ evodata SPECIES_ARCANINE_HISUIAN
 terminateevodata
 
 evodata SPECIES_VOLTORB_HISUIAN
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 28, SPECIES_ELECTRODE_HISUIAN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
