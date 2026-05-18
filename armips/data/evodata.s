@@ -684,7 +684,7 @@ evodata SPECIES_GOLDUCK
     terminateevodata
 
 evodata SPECIES_MANKEY
-    evolution EVO_LEVEL, 34, SPECIES_PRIMEAPE
+    evolution EVO_LEVEL, 28, SPECIES_PRIMEAPE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -696,7 +696,7 @@ evodata SPECIES_MANKEY
     terminateevodata
 
 evodata SPECIES_PRIMEAPE
-    evolution EVO_NONE, 100, SPECIES_ANNIHILAPE // TODO: program rage fist counter in battle
+    evolution EVO_LEVEL, 44, SPECIES_ANNIHILAPE // TODO: program rage fist counter in battle
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2844,9 +2844,9 @@ evodata SPECIES_SMEARGLE
     terminateevodata
 
 evodata SPECIES_TYROGUE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
-    evolution EVO_NONE, 0, SPECIES_NONE
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_HAS_MOVE, MOVE_RAPID_SPIN, SPECIES_HITMONTOP
+    evolution EVO_HAS_MOVE, MOVE_MEGA_KICK, SPECIES_HITMONLEE
+    evolution EVO_HAS_MOVE, MOVE_MEGA_PUNCH, SPECIES_HITMONCHAN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3564,7 +3564,7 @@ evodata SPECIES_EXPLOUD
     terminateevodata
 
 evodata SPECIES_MAKUHITA
-    evolution EVO_LEVEL, 100, SPECIES_HARIYAMA
+    evolution EVO_LEVEL, 26, SPECIES_HARIYAMA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5376,7 +5376,7 @@ evodata SPECIES_MUNCHLAX
     terminateevodata
 
 evodata SPECIES_RIOLU
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 31, SPECIES_JIRACHI
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7000,7 +7000,7 @@ evodata SPECIES_AUDINO
     terminateevodata
 
 evodata SPECIES_TIMBURR
-    evolution EVO_LEVEL, 24, SPECIES_GURDURR
+    evolution EVO_LEVEL, 20, SPECIES_GURDURR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7012,7 +7012,7 @@ evodata SPECIES_TIMBURR
     terminateevodata
 
 evodata SPECIES_GURDURR
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 34, SPECIES_CONKELDURR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7324,7 +7324,7 @@ evodata SPECIES_CRUSTLE
     terminateevodata
 
 evodata SPECIES_SCRAGGY
-    evolution EVO_LEVEL, 100, SPECIES_SCRAFTY
+    evolution EVO_LEVEL, 33, SPECIES_SCRAFTY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8044,7 +8044,7 @@ evodata SPECIES_STUNFISK
     terminateevodata
 
 evodata SPECIES_MIENFOO
-    evolution EVO_LEVEL, 100, SPECIES_MIENSHAO
+    evolution EVO_LEVEL, 35, SPECIES_MIENSHAO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8248,7 +8248,7 @@ evodata SPECIES_HYDREIGON
     terminateevodata
 
 evodata SPECIES_LARVESTA
-    evolution EVO_LEVEL, 100, SPECIES_VOLCARONA
+    evolution EVO_LEVEL, 39, SPECIES_VOLCARONA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8704,7 +8704,7 @@ evodata SPECIES_GOGOAT
 terminateevodata
 
 evodata SPECIES_PANCHAM
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 31, SPECIES_PANGORO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
