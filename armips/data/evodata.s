@@ -24,7 +24,7 @@ evodata SPECIES_NONE
     terminateevodata
 
 evodata SPECIES_BULBASAUR
-    evolution EVO_LEVEL, 16, SPECIES_IVYSAUR
+    evolution EVO_LEVEL, 14, SPECIES_IVYSAUR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -36,7 +36,7 @@ evodata SPECIES_BULBASAUR
     terminateevodata
 
 evodata SPECIES_IVYSAUR
-    evolution EVO_LEVEL, 100, SPECIES_VENUSAUR
+    evolution EVO_LEVEL, 35, SPECIES_VENUSAUR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -60,7 +60,7 @@ evodata SPECIES_VENUSAUR
     terminateevodata
 
 evodata SPECIES_CHARMANDER
-    evolution EVO_LEVEL, 16, SPECIES_CHARMELEON
+    evolution EVO_LEVEL, 14, SPECIES_CHARMELEON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -72,7 +72,7 @@ evodata SPECIES_CHARMANDER
     terminateevodata
 
 evodata SPECIES_CHARMELEON
-    evolution EVO_LEVEL, 100, SPECIES_CHARIZARD
+    evolution EVO_LEVEL, 35, SPECIES_CHARIZARD
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -96,7 +96,7 @@ evodata SPECIES_CHARIZARD
     terminateevodata
 
 evodata SPECIES_SQUIRTLE
-    evolution EVO_LEVEL, 16, SPECIES_WARTORTLE
+    evolution EVO_LEVEL, 14, SPECIES_WARTORTLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -108,7 +108,7 @@ evodata SPECIES_SQUIRTLE
     terminateevodata
 
 evodata SPECIES_WARTORTLE
-    evolution EVO_LEVEL, 100, SPECIES_BLASTOISE
+    evolution EVO_LEVEL, 35, SPECIES_BLASTOISE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -336,7 +336,7 @@ evodata SPECIES_RAICHU
     terminateevodata
 
 evodata SPECIES_SANDSHREW
-    evolution EVO_LEVEL, 29, SPECIES_SANDSLASH
+    evolution EVO_LEVEL, 25, SPECIES_SANDSLASH
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -372,7 +372,7 @@ evodata SPECIES_NIDORAN_F
     terminateevodata
 
 evodata SPECIES_NIDORINA
-    evolution EVO_LEVEL, 100, SPECIES_NIDOQUEEN
+    evolution EVO_LEVEL, 31, SPECIES_NIDOQUEEN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -408,7 +408,7 @@ evodata SPECIES_NIDORAN_M
     terminateevodata
 
 evodata SPECIES_NIDORINO
-    evolution EVO_LEVEL, 100, SPECIES_NIDOKING
+    evolution EVO_LEVEL, 31, SPECIES_NIDOKING
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -540,7 +540,7 @@ evodata SPECIES_ODDISH
     terminateevodata
 
 evodata SPECIES_GLOOM
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 34, SPECIES_VILEPLUME
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -708,7 +708,7 @@ evodata SPECIES_PRIMEAPE
     terminateevodata
 
 evodata SPECIES_GROWLITHE
-    evolution EVO_LEVEL, 30, SPECIES_ARCANINE
+    evolution EVO_LEVEL, 37, SPECIES_ARCANINE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -780,7 +780,7 @@ evodata SPECIES_ABRA
     terminateevodata
 
 evodata SPECIES_KADABRA
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 44, SPECIES_ALAKAZAM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -900,7 +900,7 @@ evodata SPECIES_TENTACRUEL
     terminateevodata
 
 evodata SPECIES_GEODUDE
-    evolution EVO_LEVEL, 23, SPECIES_GRAVELER
+    evolution EVO_LEVEL, 24, SPECIES_GRAVELER
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -912,7 +912,7 @@ evodata SPECIES_GEODUDE
     terminateevodata
 
 evodata SPECIES_GRAVELER
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 38, SPECIES_GOLEM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1020,7 +1020,7 @@ evodata SPECIES_FARFETCHD
     terminateevodata
 
 evodata SPECIES_DODUO
-    evolution EVO_LEVEL, 100, SPECIES_DODRIO
+    evolution EVO_LEVEL, 30, SPECIES_DODRIO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1092,7 +1092,7 @@ evodata SPECIES_MUK
     terminateevodata
 
 evodata SPECIES_SHELLDER
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 32, SPECIES_CLOYSTER
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1152,7 +1152,7 @@ evodata SPECIES_GENGAR
     terminateevodata
 
 evodata SPECIES_ONIX
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 27, SPECIES_STEELIX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1344,7 +1344,7 @@ evodata SPECIES_WEEZING
     terminateevodata
 
 evodata SPECIES_RHYHORN
-    evolution EVO_LEVEL, 100, SPECIES_RHYDON
+    evolution EVO_LEVEL, 29, SPECIES_RHYDON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1356,7 +1356,7 @@ evodata SPECIES_RHYHORN
     terminateevodata
 
 evodata SPECIES_RHYDON
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_LEVEL, 50, SPECIES_RHYPERIOR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1524,7 +1524,7 @@ evodata SPECIES_ELECTABUZZ
     terminateevodata
 
 evodata SPECIES_MAGMAR
-    evolution EVO_TRADE_ITEM, ITEM_MAGMARIZER, SPECIES_MAGMORTAR
+    evolution EVO_LEVEL, 41, SPECIES_MAGMORTAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1560,7 +1560,7 @@ evodata SPECIES_TAUROS
     terminateevodata
 
 evodata SPECIES_MAGIKARP
-    evolution EVO_LEVEL, 100, SPECIES_GYARADOS
+    evolution EVO_LEVEL, 18, SPECIES_GYARADOS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1656,7 +1656,7 @@ evodata SPECIES_FLAREON
     terminateevodata
 
 evodata SPECIES_PORYGON
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 35, SPECIES_PORYGON2
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1776,7 +1776,7 @@ evodata SPECIES_MOLTRES
     terminateevodata
 
 evodata SPECIES_DRATINI
-    evolution EVO_LEVEL, 30, SPECIES_DRAGONAIR
+    evolution EVO_LEVEL, 27, SPECIES_DRAGONAIR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1788,7 +1788,7 @@ evodata SPECIES_DRATINI
     terminateevodata
 
 evodata SPECIES_DRAGONAIR
-    evolution EVO_LEVEL, 100, SPECIES_DRAGONITE
+    evolution EVO_LEVEL, 45, SPECIES_DRAGONITE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1836,7 +1836,7 @@ evodata SPECIES_MEW
     terminateevodata
 
 evodata SPECIES_CHIKORITA
-    evolution EVO_LEVEL, 16, SPECIES_BAYLEEF
+    evolution EVO_LEVEL, 14, SPECIES_BAYLEEF
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1848,7 +1848,7 @@ evodata SPECIES_CHIKORITA
     terminateevodata
 
 evodata SPECIES_BAYLEEF
-    evolution EVO_LEVEL, 100, SPECIES_MEGANIUM
+    evolution EVO_LEVEL, 35, SPECIES_MEGANIUM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1872,7 +1872,7 @@ evodata SPECIES_MEGANIUM
     terminateevodata
 
 evodata SPECIES_CYNDAQUIL
-    evolution EVO_LEVEL, 16, SPECIES_QUILAVA
+    evolution EVO_LEVEL, 14, SPECIES_QUILAVA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1884,7 +1884,7 @@ evodata SPECIES_CYNDAQUIL
     terminateevodata
 
 evodata SPECIES_QUILAVA
-    evolution EVO_LEVEL, 100, SPECIES_TYPHLOSION
+    evolution EVO_LEVEL, 35, SPECIES_TYPHLOSION
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1908,7 +1908,7 @@ evodata SPECIES_TYPHLOSION
     terminateevodata
 
 evodata SPECIES_TOTODILE
-    evolution EVO_LEVEL, 16, SPECIES_CROCONAW
+    evolution EVO_LEVEL, 14, SPECIES_CROCONAW
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1920,7 +1920,7 @@ evodata SPECIES_TOTODILE
     terminateevodata
 
 evodata SPECIES_CROCONAW
-    evolution EVO_LEVEL, 100, SPECIES_FERALIGATR
+    evolution EVO_LEVEL, 35, SPECIES_FERALIGATR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -1968,7 +1968,7 @@ evodata SPECIES_FURRET
     terminateevodata
 
 evodata SPECIES_HOOTHOOT
-    evolution EVO_LEVEL, 29, SPECIES_NOCTOWL
+    evolution EVO_LEVEL, 24, SPECIES_NOCTOWL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2016,7 +2016,7 @@ evodata SPECIES_LEDIAN
     terminateevodata
 
 evodata SPECIES_SPINARAK
-    evolution EVO_LEVEL, 19, SPECIES_ARIADOS
+    evolution EVO_LEVEL, 22, SPECIES_ARIADOS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2268,7 +2268,7 @@ evodata SPECIES_HOPPIP
     terminateevodata
 
 evodata SPECIES_SKIPLOOM
-    evolution EVO_LEVEL, 100, SPECIES_JUMPLUFF
+    evolution EVO_LEVEL, 26, SPECIES_JUMPLUFF
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2292,7 +2292,7 @@ evodata SPECIES_JUMPLUFF
     terminateevodata
 
 evodata SPECIES_AIPOM
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 25, SPECIES_AMBIPOM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2328,7 +2328,7 @@ evodata SPECIES_SUNFLORA
     terminateevodata
 
 evodata SPECIES_YANMA
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 29, SPECIES_YANMEGA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2388,7 +2388,7 @@ evodata SPECIES_UMBREON
     terminateevodata
 
 evodata SPECIES_MURKROW
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 34, SPECIES_HONCHKROW
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2496,7 +2496,7 @@ evodata SPECIES_DUNSPARCE
     terminateevodata
 
 evodata SPECIES_GLIGAR
-    evolution EVO_ITEM_NIGHT, ITEM_RAZOR_FANG, SPECIES_GLISCOR
+    evolution EVO_LEVEL_NIGHT, 31, SPECIES_GLISCOR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2604,7 +2604,7 @@ evodata SPECIES_SNEASEL
     terminateevodata
 
 evodata SPECIES_TEDDIURSA
-    evolution EVO_LEVEL, 100, SPECIES_URSARING
+    evolution EVO_LEVEL, 30, SPECIES_URSARING
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2616,8 +2616,8 @@ evodata SPECIES_TEDDIURSA
     terminateevodata
 
 evodata SPECIES_URSARING
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_HAS_MOVE, MOVE_HEADLONG_RUSH, SPECIES_URSALUNA
+    evolutionwithform EVO_LEVEL_NIGHT, 45, SPECIES_URSALUNA, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2808,7 +2808,7 @@ evodata SPECIES_DONPHAN
     terminateevodata
 
 evodata SPECIES_PORYGON2
-    evolution EVO_TRADE_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z
+    evolution EVO_LEVEL, 50, SPECIES_PORYGON_Z
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2892,7 +2892,7 @@ evodata SPECIES_ELEKID
     terminateevodata
 
 evodata SPECIES_MAGBY
-    evolution EVO_LEVEL, 100, SPECIES_MAGMAR
+    evolution EVO_LEVEL, 26, SPECIES_MAGMAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -2976,7 +2976,7 @@ evodata SPECIES_LARVITAR
     terminateevodata
 
 evodata SPECIES_PUPITAR
-    evolution EVO_LEVEL, 100, SPECIES_TYRANITAR
+    evolution EVO_LEVEL, 44, SPECIES_TYRANITAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3036,7 +3036,7 @@ evodata SPECIES_CELEBI
     terminateevodata
 
 evodata SPECIES_TREECKO
-    evolution EVO_LEVEL, 16, SPECIES_GROVYLE
+    evolution EVO_LEVEL, 14, SPECIES_GROVYLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3048,7 +3048,7 @@ evodata SPECIES_TREECKO
     terminateevodata
 
 evodata SPECIES_GROVYLE
-    evolution EVO_LEVEL, 100, SPECIES_SCEPTILE
+    evolution EVO_LEVEL, 35, SPECIES_SCEPTILE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3072,7 +3072,7 @@ evodata SPECIES_SCEPTILE
     terminateevodata
 
 evodata SPECIES_TORCHIC
-    evolution EVO_LEVEL, 16, SPECIES_COMBUSKEN
+    evolution EVO_LEVEL, 14, SPECIES_COMBUSKEN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3084,7 +3084,7 @@ evodata SPECIES_TORCHIC
     terminateevodata
 
 evodata SPECIES_COMBUSKEN
-    evolution EVO_LEVEL, 100, SPECIES_BLAZIKEN
+    evolution EVO_LEVEL, 35, SPECIES_BLAZIKEN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3108,7 +3108,7 @@ evodata SPECIES_BLAZIKEN
     terminateevodata
 
 evodata SPECIES_MUDKIP
-    evolution EVO_LEVEL, 16, SPECIES_MARSHTOMP
+    evolution EVO_LEVEL, 14, SPECIES_MARSHTOMP
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3120,7 +3120,7 @@ evodata SPECIES_MUDKIP
     terminateevodata
 
 evodata SPECIES_MARSHTOMP
-    evolution EVO_LEVEL, 100, SPECIES_SWAMPERT
+    evolution EVO_LEVEL, 35, SPECIES_SWAMPERT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3252,7 +3252,7 @@ evodata SPECIES_DUSTOX
     terminateevodata
 
 evodata SPECIES_LOTAD
-    evolution EVO_LEVEL, 14, SPECIES_LOMBRE
+    evolution EVO_LEVEL, 13, SPECIES_LOMBRE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3300,7 +3300,7 @@ evodata SPECIES_SEEDOT
     terminateevodata
 
 evodata SPECIES_NUZLEAF
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 27, SPECIES_SHIFTRY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3324,7 +3324,7 @@ evodata SPECIES_SHIFTRY
     terminateevodata
 
 evodata SPECIES_TAILLOW
-    evolution EVO_LEVEL, 100, SPECIES_SWELLOW
+    evolution EVO_LEVEL, 25, SPECIES_SWELLOW
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -3432,7 +3432,7 @@ evodata SPECIES_MASQUERAIN
     terminateevodata
 
 evodata SPECIES_SHROOMISH
-    evolution EVO_LEVEL, 100, SPECIES_BRELOOM
+    evolution EVO_LEVEL, 24, SPECIES_BRELOOM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4200,7 +4200,7 @@ evodata SPECIES_ARMALDO
     terminateevodata
 
 evodata SPECIES_FEEBAS
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 18, SPECIES_MILOTIC
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4656,7 +4656,7 @@ evodata SPECIES_DEOXYS
     terminateevodata
 
 evodata SPECIES_TURTWIG
-    evolution EVO_LEVEL, 16, SPECIES_GROTLE
+    evolution EVO_LEVEL, 14, SPECIES_GROTLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4668,7 +4668,7 @@ evodata SPECIES_TURTWIG
     terminateevodata
 
 evodata SPECIES_GROTLE
-    evolution EVO_LEVEL, 100, SPECIES_TORTERRA
+    evolution EVO_LEVEL, 35, SPECIES_TORTERRA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4692,7 +4692,7 @@ evodata SPECIES_TORTERRA
     terminateevodata
 
 evodata SPECIES_CHIMCHAR
-    evolution EVO_LEVEL, 16, SPECIES_MONFERNO
+    evolution EVO_LEVEL, 14, SPECIES_MONFERNO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4704,7 +4704,7 @@ evodata SPECIES_CHIMCHAR
     terminateevodata
 
 evodata SPECIES_MONFERNO
-    evolution EVO_LEVEL, 100, SPECIES_INFERNAPE
+    evolution EVO_LEVEL, 35, SPECIES_INFERNAPE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4728,7 +4728,7 @@ evodata SPECIES_INFERNAPE
     terminateevodata
 
 evodata SPECIES_PIPLUP
-    evolution EVO_LEVEL, 16, SPECIES_PRINPLUP
+    evolution EVO_LEVEL, 14, SPECIES_PRINPLUP
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4740,7 +4740,7 @@ evodata SPECIES_PIPLUP
     terminateevodata
 
 evodata SPECIES_PRINPLUP
-    evolution EVO_LEVEL, 100, SPECIES_EMPOLEON
+    evolution EVO_LEVEL, 35, SPECIES_EMPOLEON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4776,7 +4776,7 @@ evodata SPECIES_STARLY
     terminateevodata
 
 evodata SPECIES_STARAVIA
-    evolution EVO_LEVEL, 100, SPECIES_STARAPTOR
+    evolution EVO_LEVEL, 30, SPECIES_STARAPTOR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -4860,7 +4860,7 @@ evodata SPECIES_SHINX
     terminateevodata
 
 evodata SPECIES_LUXIO
-    evolution EVO_LEVEL, 100, SPECIES_LUXRAY
+    evolution EVO_LEVEL, 30, SPECIES_LUXRAY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5028,7 +5028,7 @@ evodata SPECIES_PACHIRISU
     terminateevodata
 
 evodata SPECIES_BUIZEL
-    evolution EVO_LEVEL, 100, SPECIES_FLOATZEL
+    evolution EVO_LEVEL, 29, SPECIES_FLOATZEL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5136,7 +5136,7 @@ evodata SPECIES_DRIFBLIM
     terminateevodata
 
 evodata SPECIES_BUNEARY
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 27, SPECIES_LOPUNNY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5184,7 +5184,7 @@ evodata SPECIES_HONCHKROW
     terminateevodata
 
 evodata SPECIES_GLAMEOW
-    evolution EVO_LEVEL, 100, SPECIES_PURUGLY
+    evolution EVO_LEVEL, 27, SPECIES_PURUGLY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5220,7 +5220,7 @@ evodata SPECIES_CHINGLING
     terminateevodata
 
 evodata SPECIES_STUNKY
-    evolution EVO_LEVEL, 100, SPECIES_SKUNTANK
+    evolution EVO_LEVEL, 31, SPECIES_SKUNTANK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5244,7 +5244,7 @@ evodata SPECIES_SKUNTANK
     terminateevodata
 
 evodata SPECIES_BRONZOR
-    evolution EVO_LEVEL, 100, SPECIES_BRONZONG
+    evolution EVO_LEVEL, 33, SPECIES_BRONZONG
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5328,7 +5328,7 @@ evodata SPECIES_SPIRITOMB
     terminateevodata
 
 evodata SPECIES_GIBLE
-    evolution EVO_LEVEL, 30, SPECIES_GABITE
+    evolution EVO_LEVEL, 28, SPECIES_GABITE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5340,7 +5340,7 @@ evodata SPECIES_GIBLE
     terminateevodata
 
 evodata SPECIES_GABITE
-    evolution EVO_LEVEL, 100, SPECIES_GARCHOMP
+    evolution EVO_LEVEL, 48, SPECIES_GARCHOMP
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5364,7 +5364,7 @@ evodata SPECIES_GARCHOMP
     terminateevodata
 
 evodata SPECIES_MUNCHLAX
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 38, SPECIES_SNORLAX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5376,7 +5376,7 @@ evodata SPECIES_MUNCHLAX
     terminateevodata
 
 evodata SPECIES_RIOLU
-    evolution EVO_LEVEL, 31, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 31, SPECIES_LUCARIO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5424,7 +5424,7 @@ evodata SPECIES_HIPPOWDON
     terminateevodata
 
 evodata SPECIES_SKORUPI
-    evolution EVO_LEVEL, 40, SPECIES_DRAPION
+    evolution EVO_LEVEL, 35, SPECIES_DRAPION
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -5448,7 +5448,7 @@ evodata SPECIES_DRAPION
     terminateevodata
 
 evodata SPECIES_CROAGUNK
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 32, SPECIES_TOXICROAK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6556,7 +6556,7 @@ evodata SPECIES_VICTINI
     terminateevodata
 
 evodata SPECIES_SNIVY
-    evolution EVO_LEVEL, 16, SPECIES_SERVINE
+    evolution EVO_LEVEL, 14, SPECIES_SERVINE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6568,7 +6568,7 @@ evodata SPECIES_SNIVY
     terminateevodata
 
 evodata SPECIES_SERVINE
-    evolution EVO_LEVEL, 100, SPECIES_SERPERIOR
+    evolution EVO_LEVEL, 35, SPECIES_SERPERIOR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6592,7 +6592,7 @@ evodata SPECIES_SERPERIOR
     terminateevodata
 
 evodata SPECIES_TEPIG
-    evolution EVO_LEVEL, 16, SPECIES_PIGNITE
+    evolution EVO_LEVEL, 14, SPECIES_PIGNITE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6604,7 +6604,7 @@ evodata SPECIES_TEPIG
     terminateevodata
 
 evodata SPECIES_PIGNITE
-    evolution EVO_LEVEL, 100, SPECIES_EMBOAR
+    evolution EVO_LEVEL, 35, SPECIES_EMBOAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6628,7 +6628,7 @@ evodata SPECIES_EMBOAR
     terminateevodata
 
 evodata SPECIES_OSHAWOTT
-    evolution EVO_LEVEL, 16, SPECIES_DEWOTT
+    evolution EVO_LEVEL, 14, SPECIES_DEWOTT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6640,7 +6640,7 @@ evodata SPECIES_OSHAWOTT
     terminateevodata
 
 evodata SPECIES_DEWOTT
-    evolution EVO_LEVEL, 100, SPECIES_SAMUROTT
+    evolution EVO_LEVEL, 35, SPECIES_SAMUROTT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6856,7 +6856,7 @@ evodata SPECIES_PIDOVE
     terminateevodata
 
 evodata SPECIES_TRANQUILL
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 29, SPECIES_UNFEZANT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -6916,7 +6916,7 @@ evodata SPECIES_ROGGENROLA
     terminateevodata
 
 evodata SPECIES_BOLDORE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 38, SPECIES_GIGALITH
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7108,7 +7108,7 @@ evodata SPECIES_SEWADDLE
     terminateevodata
 
 evodata SPECIES_SWADLOON
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 29, SPECIES_LEAVANNY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7168,7 +7168,7 @@ evodata SPECIES_SCOLIPEDE
     terminateevodata
 
 evodata SPECIES_COTTONEE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 30, SPECIES_WHIMSICOTT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7240,7 +7240,7 @@ evodata SPECIES_SANDILE
     terminateevodata
 
 evodata SPECIES_KROKOROK
-    evolution EVO_LEVEL, 100, SPECIES_KROOKODILE
+    evolution EVO_LEVEL, 39, SPECIES_KROOKODILE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7300,7 +7300,7 @@ evodata SPECIES_MARACTUS
     terminateevodata
 
 evodata SPECIES_DWEBBLE
-    evolution EVO_LEVEL, 100, SPECIES_CRUSTLE
+    evolution EVO_LEVEL, 30, SPECIES_CRUSTLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7576,7 +7576,7 @@ evodata SPECIES_REUNICLUS
     terminateevodata
 
 evodata SPECIES_DUCKLETT
-    evolution EVO_LEVEL, 100, SPECIES_SWANNA
+    evolution EVO_LEVEL, 27, SPECIES_SWANNA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7696,7 +7696,7 @@ evodata SPECIES_ESCAVALIER
     terminateevodata
 
 evodata SPECIES_FOONGUS
-    evolution EVO_LEVEL, 100, SPECIES_AMOONGUSS
+    evolution EVO_LEVEL, 39, SPECIES_AMOONGUSS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7756,7 +7756,7 @@ evodata SPECIES_ALOMOMOLA
     terminateevodata
 
 evodata SPECIES_JOLTIK
-    evolution EVO_LEVEL, 100, SPECIES_GALVANTULA
+    evolution EVO_LEVEL, 30, SPECIES_GALVANTULA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7816,7 +7816,7 @@ evodata SPECIES_KLINK
     terminateevodata
 
 evodata SPECIES_KLANG
-    evolution EVO_LEVEL, 100, SPECIES_KLINKLANG
+    evolution EVO_LEVEL, 38, SPECIES_KLINKLANG
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7852,7 +7852,7 @@ evodata SPECIES_TYNAMO
     terminateevodata
 
 evodata SPECIES_EELEKTRIK
-    evolution EVO_LEVEL, 37, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 37, SPECIES_EELEKTROSS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7912,7 +7912,7 @@ evodata SPECIES_LITWICK
     terminateevodata
 
 evodata SPECIES_LAMPENT
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 39, SPECIES_CHANDELURE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7936,7 +7936,7 @@ evodata SPECIES_CHANDELURE
     terminateevodata
 
 evodata SPECIES_AXEW
-    evolution EVO_LEVEL, 30, SPECIES_FRAXURE
+    evolution EVO_LEVEL, 27, SPECIES_FRAXURE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7948,7 +7948,7 @@ evodata SPECIES_AXEW
     terminateevodata
 
 evodata SPECIES_FRAXURE
-    evolution EVO_LEVEL, 100, SPECIES_HAXORUS
+    evolution EVO_LEVEL, 49, SPECIES_HAXORUS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -7972,7 +7972,7 @@ evodata SPECIES_HAXORUS
     terminateevodata
 
 evodata SPECIES_CUBCHOO
-    evolution EVO_LEVEL, 100, SPECIES_BEARTIC
+    evolution EVO_LEVEL, 36, SPECIES_BEARTIC
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8104,7 +8104,7 @@ evodata SPECIES_GOLURK
     terminateevodata
 
 evodata SPECIES_PAWNIARD
-    evolution EVO_LEVEL, 100, SPECIES_BISHARP
+    evolution EVO_LEVEL, 30, SPECIES_BISHARP
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8116,7 +8116,7 @@ evodata SPECIES_PAWNIARD
     terminateevodata
 
 evodata SPECIES_BISHARP
-    evolution EVO_FORM_ARGUMENT, 3, SPECIES_KINGAMBIT // When leveled up after defeating three Bisharp that hold a Leader's Crest.  TODO: properly implement evolution with leaders crest
+    evolution EVO_LEVEL, 50, SPECIES_KINGAMBIT // When leveled up after defeating three Bisharp that hold a Leader's Crest.  TODO: properly implement evolution with leaders crest
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8140,7 +8140,7 @@ evodata SPECIES_BOUFFALANT
     terminateevodata
 
 evodata SPECIES_RUFFLET
-    evolution EVO_LEVEL, 100, SPECIES_BRAVIARY
+    evolution EVO_LEVEL, 30, SPECIES_BRAVIARY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8212,7 +8212,7 @@ evodata SPECIES_DURANT
     terminateevodata
 
 evodata SPECIES_DEINO
-    evolution EVO_LEVEL, 30, SPECIES_ZWEILOUS
+    evolution EVO_LEVEL, 27, SPECIES_ZWEILOUS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8224,7 +8224,7 @@ evodata SPECIES_DEINO
     terminateevodata
 
 evodata SPECIES_ZWEILOUS
-    evolution EVO_LEVEL, 100, SPECIES_HYDREIGON
+    evolution EVO_LEVEL, 49, SPECIES_HYDREIGON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8416,7 +8416,7 @@ evodata SPECIES_GENESECT
     terminateevodata
 
 evodata SPECIES_CHESPIN
-    evolution EVO_LEVEL, 16, SPECIES_QUILLADIN
+    evolution EVO_LEVEL, 14, SPECIES_QUILLADIN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8428,7 +8428,7 @@ evodata SPECIES_CHESPIN
 terminateevodata
 
 evodata SPECIES_QUILLADIN
-    evolution EVO_LEVEL, 100, SPECIES_CHESNAUGHT
+    evolution EVO_LEVEL, 35, SPECIES_CHESNAUGHT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8452,7 +8452,7 @@ evodata SPECIES_CHESNAUGHT
 terminateevodata
 
 evodata SPECIES_FENNEKIN
-    evolution EVO_LEVEL, 16, SPECIES_BRAIXEN
+    evolution EVO_LEVEL, 14, SPECIES_BRAIXEN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8464,7 +8464,7 @@ evodata SPECIES_FENNEKIN
 terminateevodata
 
 evodata SPECIES_BRAIXEN
-    evolution EVO_LEVEL, 36, SPECIES_DELPHOX
+    evolution EVO_LEVEL, 35, SPECIES_DELPHOX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8488,7 +8488,7 @@ evodata SPECIES_DELPHOX
 terminateevodata
 
 evodata SPECIES_FROAKIE
-    evolution EVO_LEVEL, 16, SPECIES_FROGADIER
+    evolution EVO_LEVEL, 14, SPECIES_FROGADIER
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8500,7 +8500,7 @@ evodata SPECIES_FROAKIE
 terminateevodata
 
 evodata SPECIES_FROGADIER
-    evolution EVO_LEVEL, 100, SPECIES_GRENINJA
+    evolution EVO_LEVEL, 35, SPECIES_GRENINJA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8560,7 +8560,7 @@ evodata SPECIES_FLETCHLING
 terminateevodata
 
 evodata SPECIES_FLETCHINDER
-    evolution EVO_LEVEL, 100, SPECIES_TALONFLAME
+    evolution EVO_LEVEL, 28, SPECIES_TALONFLAME
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8644,7 +8644,7 @@ evodata SPECIES_PYROAR
 terminateevodata
 
 evodata SPECIES_FLABEBE
-    evolution EVO_LEVEL, 12, SPECIES_FLOETTE
+    evolution EVO_LEVEL, 13, SPECIES_FLOETTE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8656,7 +8656,7 @@ evodata SPECIES_FLABEBE
 terminateevodata
 
 evodata SPECIES_FLOETTE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 30, SPECIES_FLORGES
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8800,7 +8800,7 @@ evodata SPECIES_AEGISLASH
 terminateevodata
 
 evodata SPECIES_SPRITZEE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 26, SPECIES_AROMATISSE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -8824,7 +8824,7 @@ evodata SPECIES_AROMATISSE
 terminateevodata
 
 evodata SPECIES_SWIRLIX
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 26, SPECIES_SLURPUFF
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9064,7 +9064,7 @@ evodata SPECIES_CARBINK
 terminateevodata
 
 evodata SPECIES_GOOMY
-    evolution EVO_LEVEL, 30, SPECIES_SLIGGOO
+    evolution EVO_LEVEL, 25, SPECIES_SLIGGOO
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9076,7 +9076,7 @@ evodata SPECIES_GOOMY
 terminateevodata
 
 evodata SPECIES_SLIGGOO
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 50, SPECIES_GOODRA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9184,7 +9184,7 @@ evodata SPECIES_AVALUGG
 terminateevodata
 
 evodata SPECIES_NOIBAT
-    evolution EVO_LEVEL, 100, SPECIES_NOIVERN
+    evolution EVO_LEVEL, 34, SPECIES_NOIVERN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9280,7 +9280,7 @@ evodata SPECIES_VOLCANION
 terminateevodata
 
 evodata SPECIES_ROWLET
-    evolution EVO_LEVEL, 16, SPECIES_DARTRIX
+    evolution EVO_LEVEL, 14, SPECIES_DARTRIX
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9292,7 +9292,7 @@ evodata SPECIES_ROWLET
 terminateevodata
 
 evodata SPECIES_DARTRIX
-    evolution EVO_LEVEL, 100, SPECIES_DECIDUEYE
+    evolution EVO_LEVEL, 35, SPECIES_DECIDUEYE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9316,7 +9316,7 @@ evodata SPECIES_DECIDUEYE
 terminateevodata
 
 evodata SPECIES_LITTEN
-    evolution EVO_LEVEL, 17, SPECIES_TORRACAT
+    evolution EVO_LEVEL, 14, SPECIES_TORRACAT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9328,7 +9328,7 @@ evodata SPECIES_LITTEN
 terminateevodata
 
 evodata SPECIES_TORRACAT
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 35, SPECIES_INCINEROAR
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9352,7 +9352,7 @@ evodata SPECIES_INCINEROAR
 terminateevodata
 
 evodata SPECIES_POPPLIO
-    evolution EVO_LEVEL, 17, SPECIES_BRIONNE
+    evolution EVO_LEVEL, 14, SPECIES_BRIONNE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9364,7 +9364,7 @@ evodata SPECIES_POPPLIO
 terminateevodata
 
 evodata SPECIES_BRIONNE
-    evolution EVO_LEVEL, 100, SPECIES_PRIMARINA
+    evolution EVO_LEVEL, 35, SPECIES_PRIMARINA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -9544,9 +9544,9 @@ evodata SPECIES_RIBOMBEE
 terminateevodata
 
 evodata SPECIES_ROCKRUFF
-    evolutionwithform EVO_LEVEL_DAY, 100, SPECIES_LYCANROC, 3
-    evolutionwithform EVO_LEVEL_NIGHT, 100, SPECIES_LYCANROC, 1
-    //evolutionwithform EVO_LEVEL_DUSK, 25, SPECIES_LYCANROC, 2 // only for own tempo rockruff
+    evolution EVO_LEVEL_DAY, 32, SPECIES_LYCANROC
+    evolutionwithform EVO_LEVEL_NIGHT, 32, SPECIES_LYCANROC, 1
+    evolutionwithform EVO_STONE, ITEM_DUSK_STONE, SPECIES_LYCANROC, 2 // only for own tempo rockruff
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10001,7 +10001,7 @@ evodata SPECIES_DHELMISE
 terminateevodata
 
 evodata SPECIES_JANGMO_O
-    evolution EVO_LEVEL, 35, SPECIES_HAKAMO_O
+    evolution EVO_LEVEL, 27, SPECIES_HAKAMO_O
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10013,7 +10013,7 @@ evodata SPECIES_JANGMO_O
 terminateevodata
 
 evodata SPECIES_HAKAMO_O
-    evolution EVO_LEVEL, 45, SPECIES_KOMMO_O
+    evolution EVO_LEVEL, 50, SPECIES_KOMMO_O
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10337,7 +10337,7 @@ evodata SPECIES_MELMETAL
 terminateevodata
 
 evodata SPECIES_GROOKEY
-    evolution EVO_LEVEL, 16, SPECIES_THWACKEY
+    evolution EVO_LEVEL, 14, SPECIES_THWACKEY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10349,7 +10349,7 @@ evodata SPECIES_GROOKEY
 terminateevodata
 
 evodata SPECIES_THWACKEY
-    evolution EVO_LEVEL, 100, SPECIES_RILLABOOM
+    evolution EVO_LEVEL, 35, SPECIES_RILLABOOM
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10373,7 +10373,7 @@ evodata SPECIES_RILLABOOM
 terminateevodata
 
 evodata SPECIES_SCORBUNNY
-    evolution EVO_LEVEL, 16, SPECIES_RABOOT
+    evolution EVO_LEVEL, 14, SPECIES_RABOOT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10385,7 +10385,7 @@ evodata SPECIES_SCORBUNNY
 terminateevodata
 
 evodata SPECIES_RABOOT
-    evolution EVO_LEVEL, 100, SPECIES_CINDERACE
+    evolution EVO_LEVEL, 35, SPECIES_CINDERACE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10409,7 +10409,7 @@ evodata SPECIES_CINDERACE
 terminateevodata
 
 evodata SPECIES_SOBBLE
-    evolution EVO_LEVEL, 16, SPECIES_DRIZZILE
+    evolution EVO_LEVEL, 14, SPECIES_DRIZZILE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10421,7 +10421,7 @@ evodata SPECIES_SOBBLE
 terminateevodata
 
 evodata SPECIES_DRIZZILE
-    evolution EVO_LEVEL, 100, SPECIES_INTELEON
+    evolution EVO_LEVEL, 35, SPECIES_INTELEON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10481,7 +10481,7 @@ evodata SPECIES_ROOKIDEE
 terminateevodata
 
 evodata SPECIES_CORVISQUIRE
-    evolution EVO_LEVEL, 100, SPECIES_CORVIKNIGHT
+    evolution EVO_LEVEL, 30, SPECIES_CORVIKNIGHT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10517,7 +10517,7 @@ evodata SPECIES_BLIPBUG
 terminateevodata
 
 evodata SPECIES_DOTTLER
-    evolution EVO_LEVEL, 100, SPECIES_ORBEETLE
+    evolution EVO_LEVEL, 30, SPECIES_ORBEETLE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10541,7 +10541,7 @@ evodata SPECIES_ORBEETLE
 terminateevodata
 
 evodata SPECIES_NICKIT
-    evolution EVO_LEVEL, 23, SPECIES_THIEVUL
+    evolution EVO_LEVEL, 20, SPECIES_THIEVUL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10577,7 +10577,7 @@ evodata SPECIES_GOSSIFLEUR
 terminateevodata
 
 evodata SPECIES_ELDEGOSS
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10637,7 +10637,7 @@ evodata SPECIES_DREDNAW
 terminateevodata
 
 evodata SPECIES_YAMPER
-    evolution EVO_LEVEL, 100, SPECIES_BOLTUND
+    evolution EVO_LEVEL, 25, SPECIES_BOLTUND
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10661,7 +10661,7 @@ evodata SPECIES_BOLTUND
 terminateevodata
 
 evodata SPECIES_ROLYCOLY
-    evolution EVO_LEVEL, 18, SPECIES_CARKOL
+    evolution EVO_LEVEL, 20, SPECIES_CARKOL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10673,7 +10673,7 @@ evodata SPECIES_ROLYCOLY
 terminateevodata
 
 evodata SPECIES_CARKOL
-    evolution EVO_LEVEL, 100, SPECIES_COALOSSAL
+    evolution EVO_LEVEL, 39, SPECIES_COALOSSAL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10697,9 +10697,9 @@ evodata SPECIES_COALOSSAL
 terminateevodata
 
 evodata SPECIES_APPLIN
-    evolution EVO_NONE, 0, SPECIES_NONE
-    evolution EVO_NONE, 0, SPECIES_NONE
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_STONE, ITEM_TART_APPLE, SPECIES_FLAPPLE
+    evolution EVO_STONE, ITEM_SWEET_APPLE, SPECIES_APPLETUN
+    evolution EVO_STONE, ITEM_SYRUPY_APPLE, SPECIES_DIPPLIN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10733,7 +10733,7 @@ evodata SPECIES_APPLETUN
 terminateevodata
 
 evodata SPECIES_SILICOBRA
-    evolution EVO_LEVEL, 100, SPECIES_SANDACONDA
+    evolution EVO_LEVEL, 33, SPECIES_SANDACONDA
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10793,8 +10793,8 @@ evodata SPECIES_BARRASKEWDA
 terminateevodata
 
 evodata SPECIES_TOXEL
-    evolution EVO_NONE, 0, SPECIES_NONE
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_LEVEL_PID_LO, 29, SPECIES_TOXTRICITY
+    evolution EVO_LEVEL_PID_HI, 29, SPECIES_TOXTRICITY_LOW_KEY
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -10818,7 +10818,7 @@ evodata SPECIES_TOXTRICITY
 terminateevodata
 
 evodata SPECIES_SIZZLIPEDE
-    evolution EVO_LEVEL, 100, SPECIES_CENTISKORCH
+    evolution EVO_LEVEL, 31, SPECIES_CENTISKORCH
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11034,15 +11034,15 @@ evodata SPECIES_RUNERIGUS
 terminateevodata
 
 evodata SPECIES_MILCERY
-    evolution EVO_SPIN_CLOCKWISE_LESS_THAN_5_SECONDS_DAY, 0, SPECIES_ALCREMIE                       // Vanilla Cream
-    evolutionwithform EVO_SPIN_COUNTERCLOCKWISE_LESS_THAN_5_SECONDS_DAY, 0, SPECIES_ALCREMIE, 1     // Ruby Cream
-    evolutionwithform EVO_SPIN_CLOCKWISE_LESS_THAN_5_SECONDS_NIGHT, 0, SPECIES_ALCREMIE, 2          // Matcha Cream
-    evolutionwithform EVO_SPIN_COUNTERCLOCKWISE_MORE_THAN_5_SECONDS_NIGHT, 0, SPECIES_ALCREMIE, 3   // Mint Cream
-    evolutionwithform EVO_SPIN_CLOCKWISE_MORE_THAN_5_SECONDS_NIGHT, 0, SPECIES_ALCREMIE, 4          // Lemon Cream
-    evolutionwithform EVO_SPIN_COUNTERCLOCKWISE_LESS_THAN_5_SECONDS_NIGHT, 0, SPECIES_ALCREMIE, 5   // Salted Cream
-    evolutionwithform EVO_SPIN_COUNTERCLOCKWISE_MORE_THAN_5_SECONDS_DAY, 0, SPECIES_ALCREMIE, 6     // Ruby Swirl
-    evolutionwithform EVO_SPIN_CLOCKWISE_MORE_THAN_5_SECONDS_DAY, 0, SPECIES_ALCREMIE, 7            // Caramel Swirl
-    evolutionwithform EVO_SPIN_MORE_THAN_10_SECONDS_EVENING, 0, SPECIES_ALCREMIE, 8                 // Rainbow Swirl
+    evolution EVO_LEVEL, 29, SPECIES_ALCREMIE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_NONE, 0, SPECIES_NONE               // Rainbow Swirl
 terminateevodata
 
 evodata SPECIES_ALCREMIE
@@ -11082,7 +11082,7 @@ evodata SPECIES_PINCURCHIN
 terminateevodata
 
 evodata SPECIES_SNOM
-    evolution EVO_LEVEL, 34, SPECIES_FROSMOTH
+    evolution EVO_LEVEL, 30, SPECIES_FROSMOTH
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11238,7 +11238,7 @@ evodata SPECIES_DURALUDON
 terminateevodata
 
 evodata SPECIES_DREEPY
-    evolution EVO_LEVEL, 30, SPECIES_DRAKLOAK
+    evolution EVO_LEVEL, 28, SPECIES_DRAKLOAK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11250,7 +11250,7 @@ evodata SPECIES_DREEPY
 terminateevodata
 
 evodata SPECIES_DRAKLOAK
-    evolution EVO_LEVEL, 100, SPECIES_DRAGAPULT
+    evolution EVO_LEVEL, 48, SPECIES_DRAGAPULT
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -11899,7 +11899,7 @@ evodata SPECIES_BELLIBOLT
 terminateevodata
 
 evodata SPECIES_WATTREL
-    evolution EVO_LEVEL, 100, SPECIES_KILOWATTREL
+    evolution EVO_LEVEL, 28, SPECIES_KILOWATTREL
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12307,7 +12307,7 @@ evodata SPECIES_FLAMIGO
 terminateevodata
 
 evodata SPECIES_CETODDLE
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 32, SPECIES_CETITAN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -12607,7 +12607,7 @@ evodata SPECIES_BAXCALIBUR
 terminateevodata
 
 evodata SPECIES_GIMMIGHOUL
-    evolution EVO_FORM_ARGUMENT, 999, SPECIES_GHOLDENGO // When leveled up while the player has 999 Gimmighoul Coins TODO: proper gimmighoul coins implementation
+    evolution EVO_LEVEL, 46, SPECIES_GHOLDENGO // When leveled up while the player has 999 Gimmighoul Coins TODO: proper gimmighoul coins implementation
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -13569,7 +13569,7 @@ evodata SPECIES_RAICHU_ALOLAN
 terminateevodata
 
 evodata SPECIES_SANDSHREW_ALOLAN
-    evolutionwithform EVO_LEVEL, 30, SPECIES_SANDSLASH, 1
+    evolutionwithform EVO_LEVEL, 25, SPECIES_SANDSLASH, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -13593,7 +13593,7 @@ evodata SPECIES_SANDSLASH_ALOLAN
 terminateevodata
 
 evodata SPECIES_VULPIX_ALOLAN
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 35, SPECIES_NINETALES_ALOLAN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -13665,7 +13665,7 @@ evodata SPECIES_PERSIAN_ALOLAN
 terminateevodata
 
 evodata SPECIES_GEODUDE_ALOLAN
-    evolutionwithform EVO_LEVEL, 23, SPECIES_GRAVELER, 1
+    evolutionwithform EVO_LEVEL, 24, SPECIES_GRAVELER, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -13677,7 +13677,7 @@ evodata SPECIES_GEODUDE_ALOLAN
 terminateevodata
 
 evodata SPECIES_GRAVELER_ALOLAN
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolutionwithform EVO_LEVEL, 38, SPECIES_GOLEM, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14049,7 +14049,7 @@ evodata SPECIES_CORSOLA_GALARIAN
 terminateevodata
 
 evodata SPECIES_ZIGZAGOON_GALARIAN
-    evolutionwithform EVO_LEVEL, 23, SPECIES_LINOONE, 1
+    evolutionwithform EVO_LEVEL, 25, SPECIES_LINOONE, 1
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14061,7 +14061,7 @@ evodata SPECIES_ZIGZAGOON_GALARIAN
 terminateevodata
 
 evodata SPECIES_LINOONE_GALARIAN
-    evolution EVO_LEVEL, 100, SPECIES_OBSTAGOON
+    evolution EVO_LEVEL, 36, SPECIES_OBSTAGOON
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14433,7 +14433,7 @@ evodata SPECIES_DARMANITAN_ZEN_MODE_GALARIAN
 terminateevodata
 
 evodata SPECIES_DEERLING_SUMMER
-    evolution EVO_LEVEL, 100, SPECIES_SAWSBUCK
+    evolution EVO_LEVEL, 30, SPECIES_SAWSBUCK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14445,7 +14445,7 @@ evodata SPECIES_DEERLING_SUMMER
 terminateevodata
 
 evodata SPECIES_DEERLING_AUTUMN
-    evolution EVO_LEVEL, 100, SPECIES_SAWSBUCK
+    evolution EVO_LEVEL, 30, SPECIES_SAWSBUCK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -14457,7 +14457,7 @@ evodata SPECIES_DEERLING_AUTUMN
 terminateevodata
 
 evodata SPECIES_DEERLING_WINTER
-    evolution EVO_LEVEL, 100, SPECIES_SAWSBUCK
+    evolution EVO_LEVEL, 30, SPECIES_SAWSBUCK
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
@@ -15933,7 +15933,7 @@ evodata SPECIES_ENAMORUS_THERIAN
 terminateevodata
 
 evodata SPECIES_GROWLITHE_HISUIAN
-    evolution EVO_LEVEL, 100, SPECIES_JIRACHI
+    evolution EVO_LEVEL, 37, SPECIES_ARCANINE_HISUIAN
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
