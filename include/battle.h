@@ -2395,7 +2395,50 @@ int LONG_CALL BattleWorkClientNoGet(void *bw, int client_type);
 void LONG_CALL DistributeEffortValues(struct Party *party, u32 slot, u32 species, u32 form);
 
 
+// 3D background begin----------------------------------------------------------------------------------------
+int LONG_CALL BattleSystem_GetBackgroundId(struct BattleSystem *bsys);
+void LONG_CALL BattleSystem_SetBackground_Original(int param1);
+BOOL LONG_CALL Battle_Run_Original(struct BattleSystem *bsys, int *battleState, int unused3, int unused4);
 
+// NNS G3D 
+void  LONG_CALL NNS_G3dResDefaultSetup(void *nsbmd);                                          // 020C26C0
+void* LONG_CALL NNS_G3dGetMdlSet(void *nsbmd);                                                // 020C3B40
+void  LONG_CALL NNS_G3dRenderObjInit(void *renderObj, void *model);                           // 020BE120
+void  LONG_CALL NNS_G3dRenderObjAddAnmObj(void *renderObj, void *anmObj);                     // 020BE294
+void* LONG_CALL NNS_G3dAllocAnmObj(void *allocator, void *anim, void *model);                 // 020C2B7C
+void  LONG_CALL NNS_G3dFreeAnmObj(void *allocator, void *anmObj);                             // 020C2BA0
+void  LONG_CALL NNS_G3dAnmObjInit(void *anmObj, void *anim, void *model, void *texRes);       // 020BE008
+void* LONG_CALL NNS_G3dGetAnmByIdx(void *animRes, u32 idx);                                   // 020C3B90
+void* LONG_CALL NNS_G3dGetTex(void *modelRes);                                                // 020C3B50
+void  LONG_CALL NNS_G3dDraw(void *renderObj);                                                 // 020BFCC8
+                                      // need address
+
+// NARC
+void* LONG_CALL AllocAndReadWholeNarcMemberByIdPair(u32 narcIdx, u32 memberIdx, u32 heapID);   // 02007524
+
+// Heap
+void  LONG_CALL HeapExp_FndInitAllocator(void *allocator, u32 heapID, u32 align);              // 0201AC14
+void  LONG_CALL Heap_Free(void *ptr);                                                          // 0201AB0C
+
+// Camera
+void* LONG_CALL Camera_New(u32 heapID);                                                        // 02023114
+void  LONG_CALL Camera_Delete(void *camera);                                                   // 02023120
+void  LONG_CALL Camera_Init_FromTargetAndPos(VecFx32 *target, VecFx32 *pos,
+                    u32 fov, u32 projType, BOOL param5, void *camera);                         // 02023308
+void  LONG_CALL Camera_SetPerspectiveClippingPlane(fx32 near, fx32 far, void *camera);         // 02023240
+void  LONG_CALL Camera_ApplyPerspectiveType(u32 projType, void *camera);                       // 020233D8
+void  LONG_CALL Camera_PushLookAtToNNSGlb(void *camera);                                       // 02023154
+
+void  LONG_CALL DC_FlushAll();
+
+void* LONG_CALL NARC_New(u32 narcId, u32 heapId);
+void  LONG_CALL NARC_Delete(void *narc);
+void* LONG_CALL NARC_AllocAndReadWholeMember(void *narc, u32 memberIdx, u32 heapId);
+
+void LONG_CALL NNS_G3dGlbSetBaseTrans(const VecFx32 *trans);
+void LONG_CALL NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
+void LONG_CALL NNS_G3dDraw1Mat1Shp(void *resMdl, u32 matIdx, u32 shpIdx, BOOL draw);
+// 3D background end----------------------------------------------------------------------------------------
 
 /* new battle engine declarations*/
 /**

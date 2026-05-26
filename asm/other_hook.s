@@ -828,6 +828,32 @@ bx r1
 .pool
 
 
+.thumb_func
+.global BattleSystem_SetBackground_Original
+BattleSystem_SetBackground_Original:
+push {r4, r5, r6, r7, lr}
+sub  sp, #0x2c 
+movs r1, #0x1
+add r4, r0, #0x0
+ldr r3, =0x0223B87C | 1
+bx r3
+
+.pool
+
+.thumb_func
+.global Battle_Run_Original
+Battle_Run_Original:
+push {r3, r4, r5, r6, lr}
+sub  sp, #0x24
+add r4, r1, #0x0
+add r6, r0, #0x0
+ldr r2, =0x022378C8 | 1
+bx r2
+
+.pool
+
+
+
 .data
 
 .align 2

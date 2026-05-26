@@ -846,3 +846,50 @@ UpdateFriendshipFainted = 0x02248558 | 1;
 StringExpandPlaceholders = 0x0200CBBC | 1;
 
 ov12_02256694 = 0x02256694 | 1;
+
+
+/*3d battle backgrounds */
+NNS_G3dResDefaultSetup = 0x0201EE90;
+NNS_G3dGetMdlSet = 0x020C3B40;
+NNS_G3dRenderObjInit = 0x020BE120;
+NNS_G3dRenderObjAddAnmObj = 0x020BE294;
+NNS_G3dAllocAnmObj = 0x020C2B7C;
+NNS_G3dFreeAnmObj = 0x020C2BA0;
+NNS_G3dAnmObjInit = 0x020BE008;
+NNS_G3dGetAnmByIdx = 0x020C3B90;
+NNS_G3dGetTex = 0x020C3B50;
+NNS_G3dDraw = 0x020BFCC8;
+NNS_G3dGlbFlushP = 0x020BEF98;
+AllocAndReadWholeNarcMemberByIdPair = 0x02007524 | 1;
+
+HeapExp_FndInitAllocator = 0x0201AC14 | 1;
+Heap_Free = 0x0201AB0C | 1;
+
+Camera_New = 0x02023114 | 1;
+Camera_Delete = 0x02023120 | 1;
+Camera_Init_FromTargetAndPos = 0x02023308 | 1;
+Camera_SetPerspectiveClippingPlane = 0x02023240 | 1;
+Camera_ApplyPerspectiveType = 0x020233D8 | 1;
+Camera_PushLookAtToNNSGlb = 0x02023154 | 1;
+
+FS_InitFile =       0x020D7F98;
+FS_OpenFileFast =   0x020D8208;
+FS_ReadFile =       0x020D83CC;
+FS_SeekFile =       0x020D83DC;
+FS_CloseFile =      0x020D82C0;
+FS_FindArchive =    0x020D7958;
+
+DC_FlushAll = 0x020D2828;
+DC_FlushRange =     0x020D2894;
+DC_InvalidateRange = 0x020D285C;
+
+MI_CpuFill8 =       0x020D4994;
+
+NARC_New = 0x02007688 | 1;
+NARC_Delete = 0x0200770C | 1;
+NARC_AllocAndReadWholeMember = 0x0200771C | 1;
+
+NNS_G3dGlbSetBaseTrans = 0x020BEFD4;
+NNS_G3dGlbSetBaseScale = 0x020BF004;
+NNS_G3dDraw1Mat1Shp = 0x020C2150; 
+

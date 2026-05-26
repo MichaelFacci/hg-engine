@@ -600,3 +600,8 @@ arm9 PartyMenu_StartContextMenuButtonPressAnim_FromCursorObj 0207CB9C 3
 0012 ov12_0224D23C 0224D23C 3
 0012 ov12_0224DD74 0224DD74 3
 0012 GetTypeEffectivenessData 0225260C 3
+
+# 3d battle backgrounds
+0012 BattleSystem_GetBackgroundId 0223AB54 1
+0012 BattleSystem_SetBackground_hook 0223B874 1
+0012 Battle_Run_hook 022378C0 4

@@ -1,6 +1,6 @@
 # Makefile
 
-ROMNAME = rom.nds
+ROMNAME = HG_fresh_actual.nds
 BUILDROM = test.nds
 
 define n
