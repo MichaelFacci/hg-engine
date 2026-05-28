@@ -2411,7 +2411,8 @@ void  LONG_CALL NNS_G3dAnmObjInit(void *anmObj, void *anim, void *model, void *t
 void* LONG_CALL NNS_G3dGetAnmByIdx(void *animRes, u32 idx);                                   // 020C3B90
 void* LONG_CALL NNS_G3dGetTex(void *modelRes);                                                // 020C3B50
 void  LONG_CALL NNS_G3dDraw(void *renderObj);                                                 // 020BFCC8
-                                      // need address
+                                      
+void  LONG_CALL NNS_G2dSetupSoftwareSpriteCamera(void);                                // 020BFCC8
 
 // NARC
 void* LONG_CALL AllocAndReadWholeNarcMemberByIdPair(u32 narcIdx, u32 memberIdx, u32 heapID);   // 02007524
@@ -2438,6 +2439,23 @@ void* LONG_CALL NARC_AllocAndReadWholeMember(void *narc, u32 memberIdx, u32 heap
 void LONG_CALL NNS_G3dGlbSetBaseTrans(const VecFx32 *trans);
 void LONG_CALL NNS_G3dGlbSetBaseScale(const VecFx32 *scale);
 void LONG_CALL NNS_G3dDraw1Mat1Shp(void *resMdl, u32 matIdx, u32 shpIdx, BOOL draw);
+
+typedef u8 FSFile[72];
+
+typedef enum
+{
+	FS_SEEK_SET,
+	FS_SEEK_CUR,
+	FS_SEEK_END
+} FSSeekFileMode;
+
+BOOL LONG_CALL FS_SeekFile(FSFile *p_file, s32 offset, FSSeekFileMode origin);
+s32  LONG_CALL FS_ReadFile(FSFile *p_file, void *dst, s32 len);
+BOOL LONG_CALL FS_CloseFile(FSFile *p_file);
+BOOL LONG_CALL FS_OpenFileFast(FSFile* p_file, void* archivePtr, int file_id);
+void LONG_CALL FS_InitFile(FSFile *p_file);
+void* LONG_CALL FS_FindArchive(const char* name, int len);
+
 // 3D background end----------------------------------------------------------------------------------------
 
 /* new battle engine declarations*/

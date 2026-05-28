@@ -893,3 +893,5 @@ NNS_G3dGlbSetBaseTrans = 0x020BEFD4;
 NNS_G3dGlbSetBaseScale = 0x020BF004;
 NNS_G3dDraw1Mat1Shp = 0x020C2150; 
 
+NNS_G2dSetupSoftwareSpriteCamera = 0x020B7350;
+

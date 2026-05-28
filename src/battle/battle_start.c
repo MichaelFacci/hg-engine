@@ -14,6 +14,7 @@
 #include "../../include/constants/system_control.h"
 #include "../../include/overlay.h"
 
+
 #ifdef DEBUG_BATTLE_SCENARIOS
 #include "../../include/test_battle.h"
 #endif // DEBUG_BATTLE_SCENARIOS
@@ -250,11 +251,13 @@ typedef struct NNSG3dAnmObj_t {
     // remainder opaque
 } NNSG3dAnmObj;
  
-// NNSG3dRenderObj — opaque, sized conservatively at 0x60 bytes
-typedef struct { u8 opaque[0x60]; } NNSG3dRenderObj;
+// NNSG3dRenderObj — opaque, sized conservatively at 0x100 bytes
+typedef struct { u8 opaque[0x100]; } NNSG3dRenderObj;
  
 // NNSFndAllocator — heap allocator handle
 typedef struct { u32 heap; u32 allocFunc; u32 freeFunc; } NNSFndAllocator;
+
+
  
 // ---------------------------------------------------------------------------
 // NNS G3D dict structures for GetFirstModel
@@ -288,7 +291,7 @@ void  LONG_CALL NNS_G3dGlbFlushP(void);   // used as G3_ResetG3X
 // --------------------------------------------------------------------------1-
 typedef struct {
     NNSFndAllocator  allocator;
-    NNSG3dRenderObj  renderObj;
+    
     NNSG3dAnmObj    *anmObj;
     void            *resMdl;
     void            *modelRes;
@@ -297,6 +300,7 @@ typedef struct {
     VecFx32          pos;
     VecFx32          scale;
     fx32             frame;
+    NNSG3dRenderObj  renderObj;
 } Battle3DBgState;
  
 static Battle3DBgState sBattle3DBg;
@@ -305,45 +309,65 @@ static BOOL            sBattle3DInitialized = FALSE;
 // ---------------------------------------------------------------------------
 // Replace YOUR_NARC_ID / YOUR_NSBMD_MEMBER / YOUR_NSBCA_MEMBER with real values
 // ---------------------------------------------------------------------------
-#define NARC_ID       195   
+#define NARC_ID       195 //507 for new file with FS loading, 195 is title screen graphics replaced with some flat-ish land with trees as a test
 #define NSBMD_MEMBER  5   
 #define NSBCA_MEMBER  1   
- 
-void* ReadNarcMemberSafely(u32 narcId, u32 memberIdx, u32 heapId) {
-    // 1. Open the NARC file system handle
-    debug_printf("before narc_new\n");
-    void *narcHandle = NARC_New(narcId, heapId);
-    debug_printf("after narc_new\n");
-    if (narcHandle == NULL) {
-        debug_printf("CRITICAL: Failed to open NARC %d handle!\n", narcId);
-        return NULL;
+
+/*Not using this for now*/
+void* LoadStandaloneModelByID(u32 fileId, u32 heapID) {
+    FSFile file;
+    void *buffer = NULL;
+    
+    FS_InitFile(&file);
+    void* romArchive = FS_FindArchive("rom", 3);
+
+    // Open the file (507 is snowy.nsbmd)
+    if (FS_OpenFileFast(&file, romArchive, fileId)) {
+        
+        // 1. HARDCODE THE SIZE! (From your Tinke screenshot)
+        u32 fileSize = 27664; 
+        
+        // 2. Allocate exactly 27,664 bytes on the heap
+        buffer = sys_AllocMemory(heapID, fileSize);
+        
+        if (buffer != NULL) {
+            // 3. Read the file into our new bucket
+            FS_ReadFile(&file, buffer, fileSize);
+            debug_printf("SUCCESS: Read %d bytes from file ID %d into memory!\n", fileSize, fileId);
+        } else {
+            debug_printf("CRITICAL: Failed to allocate %d bytes on heap %d!\n", fileSize, heapID);
+        }
+        
+        FS_CloseFile(&file);
+    } else {
+        debug_printf("CRITICAL: FS_OpenFileFast failed to find file ID %d!\n", fileId);
     }
     
-    // 2. Allocate and read JUST the specific member (the BMD0 file)
-    void *fileData = NARC_AllocAndReadWholeMember(narcHandle, memberIdx, heapId);
-    
-    if (fileData == NULL) {
-        debug_printf("CRITICAL: Failed to read member %d from NARC %d!\n", memberIdx, narcId);
-    }
-    
-    // 3. Clean up the NARC handle so we don't leak memory
-    NARC_Delete(narcHandle);
-    
-    return fileData;
+    return buffer;
 }
+
 
 void Battle3DBg_Init(u32 heapID) {
     // 1. Load NSBMD and NSBCA
     debug_printf(" NARC: %d Member: %d Heap: %d \n", 
                      NARC_ID, NSBMD_MEMBER, heapID);
     //sBattle3DBg.modelRes = ReadNarcMemberSafely(NARC_ID, NSBMD_MEMBER, heapID);
+    //sBattle3DBg.modelRes = LoadStandaloneModelByID(507, heapID); //AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
     sBattle3DBg.modelRes = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
 
+
+    if (sBattle3DBg.modelRes == NULL) {
+        debug_printf("CRITICAL: NSBMD load failed!\n");
+        return;
+    }
+    debug_printf("modelRes = 0x%08X\n", (u32)sBattle3DBg.modelRes);
+
     //sBattle3DBg.animRes  = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBCA_MEMBER, heapID);
+    
     debug_printf(" NARC %d Member %d loaded successfully! \n", 
                      NARC_ID, NSBMD_MEMBER);
     // 2. Set up model resource (binds textures/palettes into VRAM)
-    //NNS_G3dResDefaultSetup(sBattle3DBg.modelRes);
+    NNS_G3dResDefaultSetup(sBattle3DBg.modelRes);
  
     // 3. Get model and init render obj
     void *mdlSet = NNS_G3dGetMdlSet(sBattle3DBg.modelRes);
@@ -364,31 +388,89 @@ void Battle3DBg_Init(u32 heapID) {
     sBattle3DBg.frame = 0;
  
     // 6. Camera
-    VecFx32 camTarget = { 0, 0, 0 };
+    VecFx32 camTarget = { 0, FX32_CONST(100), FX32_CONST(-18) };
     VecFx32 camPos    = { 0, FX32_CONST(192), FX32_CONST(600) };
     sBattle3DBg.camera = Camera_New(heapID);
     Camera_Init_FromTargetAndPos(
         &camTarget, &camPos,
-        FX_DEG_TO_IDX(FX32_CONST(15.996f)),
+        2912,//FX_DEG_TO_IDX(FX32_CONST(15.996f)),
         0,      // perspective type — verify against camera.o
         FALSE,
         sBattle3DBg.camera);
-    Camera_SetPerspectiveClippingPlane(FX32_CONST(0), FX32_CONST(300), sBattle3DBg.camera);
+    Camera_SetPerspectiveClippingPlane(FX32_CONST(1), FX32_CONST(1000), sBattle3DBg.camera);
     Camera_ApplyPerspectiveType(0, sBattle3DBg.camera);
     Camera_PushLookAtToNNSGlb(sBattle3DBg.camera);
  
     // 7. 3D render state
     G3X_AntiAlias(TRUE);
     G3X_AlphaBlend(TRUE);
-    G2_SetBG0Priority(3);
+    G2_SetBG0Priority(1);
 
     DC_FlushAll();
 }
  
+
+/*
+void Battle3DBg_Render_derwil(void) {
+    if (sBattle3DBg.resMdl == NULL) {
+        return;
+    }
+
+    Camera_SetAsActive(sCamera);
+    Camera_ComputeProjectionMatrix(CAMERA_PROJECTION_PERSPECTIVE, sCamera);
+    Camera_ComputeViewMatrix();
+    NNS_G3dGlbFlush();
+    NNS_G3dGeFlushBuffer();
+
+     // --- Dynamic arena model transform ---
+    G3_PushMtx();
+
+    fx32 t[3];
+    u16  r[3];
+    fx32 sc;
+
+    // Prefer scene entity arena transform; fall back to ArenaConfigEntry
+    BOOL useScene = (sScene != NULL && sScene->arenaEntityIndex >= 0
+        && sScene->entities[sScene->arenaEntityIndex].visible);
+
+    if (useScene) {
+        SceneTransform *st = &sScene->entities[sScene->arenaEntityIndex].localTransform;
+        t[0] = st->position.x;
+        t[1] = st->position.y;
+        t[2] = st->position.z;
+        r[0] = st->rotation[0];
+        r[1] = st->rotation[1];
+        r[2] = st->rotation[2];
+        sc   = st->uniformScale;
+    } else {
+        const ArenaConfigEntry *cfg = ArenaConfig_Lookup(sArenaMapHeader);
+        t[0] = cfg->translation[0];
+        t[1] = cfg->translation[1];
+        t[2] = cfg->translation[2];
+        r[0] = cfg->rotation[0];
+        r[1] = cfg->rotation[1];
+        r[2] = cfg->rotation[2];
+        sc   = cfg->scale;
+    }
+
+    G3_Translate(t[0], t[1], t[2]);
+    G3_RotX(FX_SinIdx(r[0]), FX_CosIdx(r[0]));
+    G3_RotY(FX_SinIdx(r[1]), FX_CosIdx(r[1]));
+    G3_RotZ(FX_SinIdx(r[2]), FX_CosIdx(r[2]));
+    G3_Scale(sc, sc, sc);
+
+    Gen5Battle3DArena_Draw();
+
+    G3_PopMtx(1);
+
+    Camera_ClearActive();
+    G3_ResetG3X();
+    NNS_G2dSetupSoftwareSpriteCamera();
+}
+*/
+
+
 void Battle3DBg_Render(void) {
-    // flush NNS globals (camera, lights) to hardware
-    NNS_G3dGlbFlushP();
- 
 
     // re-apply camera every frame
     Camera_ApplyPerspectiveType(0, sBattle3DBg.camera);
@@ -398,26 +480,58 @@ void Battle3DBg_Render(void) {
     NNS_G3dGlbSetBaseTrans(&sBattle3DBg.pos);
     NNS_G3dGlbSetBaseScale(&sBattle3DBg.scale);
     NNS_G3dGlbFlushP();
-
-    // flush data cache before DMA/GPU reads
-    
  
     debug_printf("before draw\n");
     // draw the model
     if (sBattle3DBg.resMdl != NULL) {
         NNS_G3dDraw1Mat1Shp(sBattle3DBg.resMdl, 0, 0, TRUE);
+        //NNS_G3dDraw(&sBattle3DBg.renderObj);
         debug_printf("drawn!\n");
     }
     
-    // advance animation frame, loop using numFrame from the anm object
-    //sBattle3DBg.frame += FX32_ONE;
-    //if (sBattle3DBg.frame >= ((fx32)GetAnmNumFrames(sBattle3DBg.anmObj) << FX32_SHIFT)) {
-    //    sBattle3DBg.frame = 0;
-    //}
-    //sBattle3DBg.anmObj->frame = sBattle3DBg.frame;
+    //NNS_G2dSetupSoftwareSpriteCamera();
+}
+void Battle3DBg_Render_gem(void) {
+    if (sBattle3DBg.resMdl == NULL) return;
+
+    // --- 1. SAVE HARDWARE MATRIX STATE ---
+    *((volatile u32 *)0x04000440) = 0; // Proj mode
+    *((volatile u32 *)0x04000444) = 0; // Push
+    *((volatile u32 *)0x04000440) = 2; // Pos/Vec mode
+    *((volatile u32 *)0x04000444) = 0; // Push
+
+    // --- 2. SETUP CAMERA & GLOBAL TRANSFORMS ---
+    Camera_ApplyPerspectiveType(0, sBattle3DBg.camera);
+    Camera_PushLookAtToNNSGlb(sBattle3DBg.camera);
  
-    // swap geometry buffers
-    //G3_RequestSwapBuffers(GX_SORTMODE_MANUAL, GX_BUFFERMODE_W);
+    NNS_G3dGlbSetBaseTrans(&sBattle3DBg.pos);
+    NNS_G3dGlbSetBaseScale(&sBattle3DBg.scale);
+    NNS_G3dGlbFlushP(); 
+ 
+    // --- 3. DYNAMIC SAFE DRAW (Bypassing NNS_G3dDraw) ---
+    // Read the exact material and shape counts from the model header
+    u8 numMat = *((u8*)sBattle3DBg.resMdl + 0x18);
+    u8 numShp = *((u8*)sBattle3DBg.resMdl + 0x19);
+
+    debug_printf("Model has %d materials and %d shapes\n", numMat, numShp);
+
+    for (int i = 0; i < numShp; i++) {
+        // If there are more shapes than materials (e.g. a texture atlas),
+        // clamp the material index to the highest available material to prevent a crash.
+        int matIdx = (i < numMat) ? i : (numMat - 1);
+        
+        NNS_G3dDraw1Mat1Shp(sBattle3DBg.resMdl, matIdx, i, TRUE);
+    }
+
+    // --- 4. RESTORE HARDWARE MATRIX STATE ---
+    *((volatile u32 *)0x04000440) = 2; // Pos/Vec mode
+    *((volatile u32 *)0x04000448) = 1; // Pop
+    *((volatile u32 *)0x04000440) = 0; // Proj mode
+    *((volatile u32 *)0x04000448) = 1; // Pop
+    *((volatile u32 *)0x04000440) = 2; // Reset mode back to Pos/Vec
+
+    // --- 5. SWAP BUFFERS ---
+    G3_RequestSwapBuffers(GX_SORTMODE_MANUAL, GX_BUFFERMODE_W);
 }
 
 
@@ -431,8 +545,9 @@ BOOL LONG_CALL Battle_Run_hook(struct BattleSystem *bsys, int *battleState, int 
             sBattle3DInitialized = TRUE;
         }
         u32 current = (reg_GX_DISPCNT & REG_GX_DISPCNT_DISPLAY_MASK) >> REG_GX_DISPCNT_DISPLAY_SHIFT;
-        GX_SetVisiblePlane(current & ~(1 << 3));
-        Battle3DBg_Render();
+        //GX_SetVisiblePlane(current & ~(1 << 3));
+        GX_SetVisiblePlane((current | (1 << 0)) & ~(1 << 3));
+        Battle3DBg_Render_gem();
     }
     
     return result;

@@ -1,6 +1,6 @@
 # Makefile
 
-ROMNAME = HG_fresh_actual.nds
+ROMNAME = dialga_palkia_model_replaced.nds
 BUILDROM = test.nds
 
 define n
