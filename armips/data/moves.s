@@ -783,7 +783,7 @@ movedata MOVE_SUPERSONIC, "Supersonic"
     pss SPLIT_STATUS
     basepower 0
     type TYPE_NORMAL
-    accuracy 75
+    accuracy 90
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -2015,9 +2015,9 @@ movedata MOVE_BONE_CLUB, "Bone Club"
     pss SPLIT_PHYSICAL
     basepower 65
     type TYPE_GROUND
-    accuracy 95
+    accuracy 100
     pp 10
-    effectchance 10
+    effectchance 30
     target RANGE_SINGLE_TARGET
     priority 0
     flags FLAG_KEEP_HP_BAR | FLAG_MIRROR_MOVE | FLAG_PROTECT | FLAG_UNUSABLE_IN_GEN_8 | FLAG_UNUSABLE_IN_GEN_9
@@ -2061,7 +2061,7 @@ movedata MOVE_WATERFALL, "Waterfall"
 movedata MOVE_CLAMP, "Clamp"
     battleeffect MOVE_EFFECT_BIND_HIT
     pss SPLIT_PHYSICAL
-    basepower 45
+    basepower 75
     type TYPE_WATER
     accuracy 100
     pp 10
@@ -2239,7 +2239,7 @@ movedata MOVE_POISON_GAS, "Poison Gas"
     pss SPLIT_STATUS
     basepower 0
     type TYPE_POISON
-    accuracy 90
+    accuracy 95
     pp 10
     effectchance 0
     target RANGE_ADJACENT_OPPONENTS
@@ -2447,7 +2447,7 @@ movedata MOVE_CRABHAMMER, "Crabhammer"
     pss SPLIT_PHYSICAL
     basepower 100
     type TYPE_WATER
-    accuracy 90
+    accuracy 100
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -3055,7 +3055,7 @@ movedata MOVE_OCTAZOOKA, "Octazooka"
     pss SPLIT_SPECIAL
     basepower 65
     type TYPE_WATER
-    accuracy 85
+    accuracy 100
     pp 10
     effectchance 50
     target RANGE_SINGLE_TARGET
@@ -3183,7 +3183,7 @@ movedata MOVE_BONE_RUSH, "Bone Rush"
     pss SPLIT_PHYSICAL
     basepower 25
     type TYPE_GROUND
-    accuracy 90
+    accuracy 95
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -5888,7 +5888,7 @@ movedata MOVE_ACUPRESSURE, "Acupressure"
     basepower 0
     type TYPE_NORMAL
     accuracy 0
-    pp 5
+    pp 3
     effectchance 0
     target RANGE_SINGLE_TARGET_USER_SIDE
     priority 0
@@ -6431,7 +6431,7 @@ movedata MOVE_AQUA_TAIL, "Aqua Tail"
     pss SPLIT_PHYSICAL
     basepower 90
     type TYPE_WATER
-    accuracy 90
+    accuracy 100
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -7230,11 +7230,11 @@ movedata MOVE_BUG_BITE, "Bug Bite"
 movedata MOVE_CHARGE_BEAM, "Charge Beam"
     battleeffect MOVE_EFFECT_RAISE_SP_ATK_HIT
     pss SPLIT_SPECIAL
-    basepower 50
+    basepower 55
     type TYPE_ELECTRIC
-    accuracy 90
+    accuracy 100
     pp 10
-    effectchance 70
+    effectchance 40
     target RANGE_SINGLE_TARGET
     priority 0
     flags FLAG_MIRROR_MOVE | FLAG_PROTECT
@@ -13915,7 +13915,7 @@ movedata MOVE_TRIPLE_DIVE, "Triple Dive"
     pss SPLIT_PHYSICAL
     basepower 30
     type TYPE_WATER
-    accuracy 95
+    accuracy 100
     pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
@@ -14188,7 +14188,7 @@ movedata MOVE_TIDY_UP, "Tidy Up"
     basepower 0
     type TYPE_NORMAL
     accuracy 0
-    pp 10
+    pp 2
     effectchance 0
     target RANGE_USER
     priority 0

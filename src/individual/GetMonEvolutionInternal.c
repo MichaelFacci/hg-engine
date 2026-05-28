@@ -197,11 +197,11 @@ u16 GetMonEvolutionInternal(struct Party *party, struct PartyPokemon *pokemon, u
                     *method_ret = EVO_LEVEL_FEMALE;
                 }
                 break;
-            case EVO_CORONET: // magnetic field at route 43+kanto power plant
+            case EVO_CORONET: // magnetic field at route 43+kanto power plant //wattlands:iridium
                 {
                     u32 location = gFieldSysPtr->location->mapId;
 
-                    if (location == 45 || location == 18)
+                    if (location == 11 || location == 248)
                     {
                         target = evoTable[i].target & 0x7FF;
                         *method_ret = EVO_CORONET;
