@@ -89,6 +89,8 @@ scrdef scr_seq_0003_071
 scrdef scr_seq_0003_072
 scrdef scr_seq_0003_072_repels
 scrdef scr_seq_0003_073_autobattle_testing
+//scrdef scr_seq_0003_074 //this doesnt exist?
+scrdef scr_seq_0003_075_qol
 scrdef_end
 
 scr_seq_0003_002:
@@ -771,6 +773,7 @@ _0A18:
     scrcmd_500 90
     scrcmd_501 90
     scrcmd_308 90
+    
 _skipPCOnOff:
     return
 
@@ -1773,5 +1776,271 @@ scr_seq_0003_073_autobattle_testing:
     end
 
 
+scr_seq_0003_075_qol:
+    lockall
+    touchscreen_menu_hide
+    buffer_int 0, 0x416F
+    npc_msg 156
+    menu_init_std_gmm 1, 1, 0, 1, VAR_SPECIAL_x8008
+    menu_item_add 478, 255, 0
+    menu_item_add 479, 255, 1
+    menu_item_add 480, 255, 2
+    menu_item_add 481, 255, 3
+    menu_item_add 482, 255, 4
+    menu_item_add 483, 255, 5
+    menu_item_add 484, 255, 6
+    menu_item_add 485, 255, 7
+    menu_exec
+    copyvar VAR_SPECIAL_RESULT, VAR_SPECIAL_x8008
+    compare VAR_SPECIAL_RESULT, 0
+    call_if_eq _healparty
+    compare VAR_SPECIAL_RESULT, 1
+    call_if_eq _portapc
+    compare VAR_SPECIAL_RESULT, 2
+    call_if_eq _moverelearner
+    compare VAR_SPECIAL_RESULT, 3
+    call_if_eq _movedeleter
+    compare VAR_SPECIAL_RESULT, 4
+    call_if_eq _togglebgm
+    compare VAR_SPECIAL_RESULT, 5
+    call_if_eq _townmap
+    compare VAR_SPECIAL_RESULT, 6
+    call_if_eq _storyguide
+    compare VAR_SPECIAL_RESULT, 7
+    call_if_eq _exit
+    closemsg
+    touchscreen_menu_show
+    releaseall
+    end
 
+_healparty:
+    heal_party
+    npc_msg 150
+    return
+
+_portapc:
+    scrcmd_609
+    lockall
+    play_se SEQ_SE_DP_PC_ON
+    call _0A18          
+    buffer_players_name 0
+    npc_msg 33
+    touchscreen_menu_hide
+    goto _0A2E          
+
+
+_moverelearner:
+    hasitem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _func094
+    npc_msg 158
+    npc_msg 159
+    closemsg
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    party_select_ui
+    getselectedpartyslot VAR_SPECIAL_x8005
+    returnscreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8005, 255
+    goto_if_eq _func094
+    getpartypokemonid VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _func095
+    scrcmd_466 VAR_SPECIAL_RESULT, VAR_SPECIAL_x8005   // CheckHasLearnableMoves
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _func096
+    npc_msg 160
+    closemsg
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    move_relearner_init VAR_SPECIAL_x8005
+    move_relearner_get_result VAR_SPECIAL_RESULT
+    returnscreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_RESULT, 255
+    goto_if_eq _func094
+    takeitem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    buffer_players_name 3 
+    npc_msg 164
+    wait_button_or_walk_away
+    closemsg
+    return
+
+_movedeleter:
+    goto_if_set 1, _func177
+    npc_msg 165
+    setflag 1
+    goto _func177
+ 
+_togglebgm:
+    
+    touchscreen_menu_show
+    touchscreen_menu_hide
+    npc_msg 174
+    menu_init_std_gmm 1, 1, 0, 1, VAR_SPECIAL_x8008
+    menu_item_add 487, 255, 0
+    menu_item_add 488, 255, 1
+    menu_item_add 489, 255, 2
+    menu_item_add 490, 255, 3
+
+    menu_exec
+    copyvar VAR_SPECIAL_RESULT, VAR_SPECIAL_x8008
+    compare VAR_SPECIAL_RESULT, 0
+    call_if_eq _setmusic1
+    compare VAR_SPECIAL_RESULT, 1
+    call_if_eq _setmusic2
+    compare VAR_SPECIAL_RESULT, 2
+    call_if_eq _setmusic3
+    compare VAR_SPECIAL_RESULT, 3
+    call_if_eq _setmusic4
+    npc_msg 175
+    return
+
+_townmap:
+    npc_msg 154
+    wait_button_or_walk_away
+    return
+
+_storyguide:
+    npc_msg 155
+    wait_button_or_walk_away
+    return
+ 
+_exit:
+    return
+
+_setmusic1:
+    setvar 0x40AF, 0
+    return
+
+_setmusic2:
+    setvar 0x40AF, 1
+    return
+
+_setmusic3:
+    setvar 0x40AF, 2
+    return
+
+_setmusic4:
+    setvar 0x40AF, 3
+    return
+
+
+//no heart scale or cancel
+_func094:
+    npc_msg 161
+    wait_button_or_walk_away
+    closemsg
+    releaseall
+    end
+
+//egg cant learn move
+_func095:
+    npc_msg 162
+    wait_button_or_walk_away
+    closemsg
+    releaseall
+    end
+ 
+ //mon has no moves to relearn
+_func096:
+    npc_msg 163
+    wait_button_or_walk_away
+    closemsg
+    releaseall
+    end
+
+//move deleter yesno
+_func177:
+    npc_msg 166
+    touchscreen_menu_hide
+    getmenuchoice VAR_SPECIAL_RESULT
+    touchscreen_menu_show
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _func178
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _func179
+    end
+
+_func178:
+    npc_msg 167
+    closemsg
+    goto _func180
+ 
+  
+_func179:
+    npc_msg 168
+    wait_button_or_walk_away
+    closemsg
+    releaseall
+    end
+
+//choose deleter mon & move
+_func180:
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    party_select_ui
+    getselectedpartyslot VAR_SPECIAL_x8002
+    returnscreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8002, 255
+    goto_if_eq _func179
+    getpartypokemonid VAR_SPECIAL_x8002, VAR_SPECIAL_x8001
+    compare VAR_SPECIAL_x8001, 0
+    goto_if_eq _func182
+    count_mon_moves VAR_SPECIAL_RESULT, VAR_SPECIAL_x8002   // GetMoveCount
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _func183
+    npc_msg 171
+    closemsg
+    fade_screen 6, 1, 0, RGB_BLACK
+    wait_fade
+    scrcmd_394 VAR_SPECIAL_x8002                       // CMD_394 (show move list for deletion)
+    scrcmd_395 VAR_SPECIAL_x8001                       // CMD_395 (get selected move)
+    returnscreen
+    fade_screen 6, 1, 1, RGB_BLACK
+    wait_fade
+    compare VAR_SPECIAL_x8001, 255
+    goto_if_eq _func178
+    // TextPartyPokemonMove 0 VAR_x8002 VAR_x8001
+    buffer_party_mon_move_name 0, VAR_SPECIAL_x8002, VAR_SPECIAL_x8001
+    npc_msg 172
+    touchscreen_menu_hide
+    getmenuchoice VAR_SPECIAL_RESULT
+    touchscreen_menu_show
+    compare VAR_SPECIAL_RESULT, 0
+    goto_if_eq _func185
+    compare VAR_SPECIAL_RESULT, 1
+    goto_if_eq _func184
+    end
+
+_func182:
+    npc_msg 170
+    closemsg
+    goto _func180
+
+_func183:
+    npc_msg 169
+    closemsg
+    goto _func180
+
+_func184:
+    npc_msg 167
+    closemsg
+    goto _func180
+
+_func185:
+    // DeleteMove VAR_x8002 VAR_x8001
+    DeleteMove VAR_SPECIAL_x8002, VAR_SPECIAL_x8001
+    play_se SEQ_ME_WASURE
+    wait_fanfare
+    npc_msg 173
+    wait_button_or_walk_away
+    closemsg
+    releaseall
+    end
 .close

@@ -1,6 +1,7 @@
 #include "../include/types.h"
 #include "../include/config.h"
 #include "../include/debug.h"
+#include "../include/save.h"
 #include "../include/sound.h"
 #include "../include/NWAVPlayer.h"
 #include "../include/constants/sndseq.h"
@@ -22,6 +23,12 @@ static const NWAV_Override sNwavOverrides[] = {
     {1008, 2},  // Title screen -> iris network
     //{1004, 31}, // Opening  -> feelings risen
     
+};
+
+int sNwavBattleOverrides[3] = {
+    NWAV_BATTLE_XC2,
+    NWAV_NEW_BATTLE_XC3_DLC,
+    NWAV_STAND_AGAINST_OUR_PATH
 };
 
 
@@ -74,7 +81,7 @@ void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
 void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
 {
     NNS_SndPlayerStopSeqByPlayerNo_Original(playerID, fadeFrame);
-    debug_printf("Stop seq for p %d with fframe %d.\n", playerID, fadeFrame);
+    //debug_printf("Stop seq for p %d with fframe %d.\n", playerID, fadeFrame);
     if(playerID == 9 && fadeFrame > 0 || current_seq == NWAV_KEVES_BATTLE){
         NWAVPlayer_stop(fadeFrame);
         current_seq = 0xFFFF;
@@ -134,6 +141,19 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
             next_is_seq = FALSE;
             wavID = firstWavID + sNwavOverrides[i].nwav_id;
             break;
+        }
+    }
+
+    if(seqno == NWAV_BATTLE_XC2){// regular trainer battle music has been queued, check in-game toggle
+        //debug_printf("a");
+        u32 selectionOverride = GetScriptVar(0x40AF);
+        if(selectionOverride != 3){
+            next_is_seq = FALSE;
+            wavID = firstWavID + sNwavBattleOverrides[selectionOverride]; //selected 0, 1, or 2
+        }
+        else{
+            next_is_seq = FALSE;
+            wavID = firstWavID + gf_rand() % 3; //randomly select one each battle
         }
     }
 

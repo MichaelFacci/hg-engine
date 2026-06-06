@@ -1441,14 +1441,14 @@ trainerdata 22, "Olivia"
 		abilityslot 32
 		level 4
 		pokemon SPECIES_SMOLIV
-		item ITEM_LANSAT_BERRY
+		item ITEM_SALAC_BERRY
 		move MOVE_FLAIL
 		move MOVE_RAZOR_LEAF
 		move MOVE_ENDURE
 		move MOVE_GRASSY_TERRAIN
 		ability ABILITY_EARLY_BIRD
 		setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spe, spatk, spdef
-		setevs 0, 0, 0, 0, 0, 0
+		setevs 0, 0, 0, 252, 0, 0
 		nature NATURE_JOLLY
 		shinylock 0
 		ballseal 0
@@ -11998,7 +11998,7 @@ trainerdata 245, "Will"
 		ballseal 0
     endparty
 
-trainerdata 246, "Karen"
+trainerdata 246, "Tau"
 	trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass TRAINERCLASS_TAU
      
@@ -12015,17 +12015,17 @@ trainerdata 246, "Karen"
         // mon 0
 		ivs 250
 		abilityslot 32
-		level 32
-		pokemon SPECIES_HONCHKROW
+		level 100
+		pokemon SPECIES_MIRAIDON
 		item ITEM_NONE
-		move MOVE_NIGHT_SLASH
-		move MOVE_AERIAL_ACE
-		move MOVE_STEEL_WING
-		move MOVE_THUNDER_WAVE
-		ability ABILITY_SUPER_LUCK
-		setivs 15, 15, 15, 15, 15, 15 // hp, atk, def, spe, spatk, spdef
+		move MOVE_THUNDERBOLT
+		move MOVE_DRACO_METEOR
+		move MOVE_OVERHEAT
+		move MOVE_DAZZLING_GLEAM
+		ability ABILITY_HADRON_ENGINE
+		setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spe, spatk, spdef
 		setevs 0, 0, 0, 0, 0, 0
-		nature NATURE_HARDY
+		nature NATURE_MODEST
 		shinylock 1
 		ballseal 0
 	// mon 1

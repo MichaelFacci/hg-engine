@@ -85,9 +85,9 @@ Cameraman
 Reporter
 Researcher
 Champion
-Elite Four
-Elite Four
-Elite Four
+Ethereal
+Ethereal
+Ethereal
 ₧₦ Trainer
 ₧₦ Trainer
 ₧₦ Trainer
@@ -110,7 +110,7 @@ Henchman
 ₧₦ Trainer
 Leader
 Elder
-Elite Four
+Ethereal
 Scientist
 Executive
 Boarder

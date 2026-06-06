@@ -2211,7 +2211,7 @@ int ExpertFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext
         }
     }
 
-    /*Attract*/
+    /*Focus Energy*/
     if(ai->attackerMoveEffect == MOVE_EFFECT_CRIT_UP_2){
         moveScore += 2;
     }

@@ -29,7 +29,7 @@ void ClearOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req)
     req->DebugKeyPush = 0;
 
     req->OpenPCCheck  = 0; // new:  check if pc should be opened
-    req->OpenRelearnerCheck = 0; // new
+    req->OpenQolMenu = 0; // new
 
     req->Site = 0xFF;
     req->PushSite = 0xFF;
@@ -44,7 +44,7 @@ void ClearOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req)
 void SetOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, u16 trg)
 {
     if (trg & PAD_BUTTON_R) {
-        req->OpenRelearnerCheck = TRUE;
+        req->OpenQolMenu = TRUE;
     }
 
      if (trg & PAD_BUTTON_L) {
@@ -60,7 +60,7 @@ void SetOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, u16 trg)
 void CheckOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, FieldSystem *fsys)
 {
     // Proper mode
-    // if (req->OpenRelearnerCheck && CheckScriptFlag(2167)) {
+    // if (req->OpenQolMenu && CheckScriptFlag(2167)) {
     //     if (CheckScriptFlag(2170)) {
     //         EventSet_Script(fsys, 2074, NULL); // set up script 2074 if flag 2170 is set, disallowing use of the Teleport Gem
     //     } else {
@@ -69,13 +69,14 @@ void CheckOverworldRequestFlags(OVERWORLD_REQUEST_FLAGS *req, FieldSystem *fsys)
     // }
 
     // Testing mode
-    if(!CheckScriptFlag(2552)){ //If we are in a gauntlet, the flag should be "set" (that is, == 1 == TRUE)
-        if (req->OpenRelearnerCheck) {
-            EventSet_Script(fsys, 2072, NULL); // set up script 2072
+    if(TRUE){//!CheckScriptFlag(2552)){ //If we are in a gauntlet, the flag should be "set" (that is, == 1 == TRUE)
+        if (req->OpenQolMenu) {
+            SetScriptFlag(0x18F); //bypass PC animation to avoid crash
+            EventSet_Script(fsys, 2075, NULL); //run commonscript 76, which is script 2075
         }
         if (req->OpenPCCheck) {
-            SetScriptFlag(0x18F); // some random flag that should be set by script 2010 (file 3 script 10)
-            EventSet_Script(fsys, 2010, NULL); // set up script 2010
+            SetScriptFlag(0x18F); 
+            EventSet_Script(fsys, 2010, NULL); // run porta PC, see 
         }
     }
 

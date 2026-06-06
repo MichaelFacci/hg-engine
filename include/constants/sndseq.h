@@ -25,7 +25,7 @@
 #define NWAV_URAYAN_TUNNELS                    18
 #define NWAV_TORIGOTH_NIGHT                    19
 #define NWAV_ERYTHIA_SEA                       20
-#define NWAV_SPIRIT_CRUCIBLE_DNE                   21
+#define NWAV_SPIRIT_CRUCIBLE                   21
 #define NWAV_DANNAGH_DESERT                    22
 #define NWAV_ROAMING_THE_WASTES                23
 #define NWAV_AGNUS_COLONY                      24
@@ -35,9 +35,17 @@
 #define NWAV_YGGDRASIL                         28
 #define NWAV_MECHONIS_FIELD                    29
 #define NWAV_TORIGOTH_DAY                      30
-#define NWAV_FEELINGS_RISEN_TO_THE_SKY_DNE         31
+#define NWAV_FEELINGS_RISEN_TO_THE_SKY         31
 #define NWAV_MILLICK_MEADOWS                   32
 #define NWAV_KEVES_BATTLE                      33
+#define NWAV_NEW_BATTLE_XC3_DLC                34
+#define NWAV_MOEBIUS_BATTLE                    35
+#define NWAV_STAND_AGAINST_OUR_PATH            36
+#define NWAV_GORMOTTI_FOREST                   37
+#define NWAV_GORMOTT                           38
+#define NWAV_GARFONT_MERCENARIES               39
+#define NWAV_ELYSIUM_IN_THE_BLUE_SKY           40
+
 #define SEQ_DUMMY                            1000
 #define SEQ_SILENCE_FIELD                    1001
 #define SEQ_SILENCE_DUNGEON                  1002
@@ -1565,7 +1573,7 @@ enum {
     ANIM_MUSIC_COMBO_DARKRAI,
     ANIM_MUSIC_COMBO_BROKEN,
     ANIM_MUSIC_COMBO_HANNAH,
-    ANIM_MUSIC_COMBO_BLUE,
+    ANIM_MUSIC_COMBO_TAU,
     ANIM_MUSIC_COMBO_GALACTIC,
     ANIM_MUSIC_COMBO_KOGA,
     ANIM_MUSIC_COMBO_BRUNO,

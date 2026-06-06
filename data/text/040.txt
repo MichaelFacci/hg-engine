@@ -119,3 +119,59 @@ NOT TELLING
 The repellent’s effect wore off!\nWould you like to use another one?
 You used the {STRVAR_1 8, 1, 0}.
 Begin auto-battle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your party has been fully healed!\r
+Move relearner under construction.
+Move deleter under construction.
+Music toggle under construction.
+Map under construction.
+The story so far...\n(under construction).\r
+Activated the powers menu!\nThe current level cap is {STRVAR_1 0, 0, 0}.
+
+Ha! That’s it! That’s an honest-to-\ngoodness Heart Scale!\rLet me guess, you want me to teach\none of your Pokémon a move?\r
+Which Pokémon needs tutoring?\r
+Which move should it remember?\r
+If any of your Pokémon needs to learn a\nmove, come back with a Heart Scale.
+Hunh?\rDon’t you think it’d be tough for\nan Egg to remember a move?\rIt’s not even hatched.
+Sorry...\rThere isn’t any move I can make\nthat Pokémon remember.
+{STRVAR_1 3, 3, 0} handed over one\nHeart Scale in exchange.
+Um...\nWho did you say I was again?\r...\n...\rOh, yes, I remember now!\nI’m the Move Deleter!\r
+You’ve come to make me force your\nPokémon to forget some moves? {YESNO 0}
+Which Pokémon should forget a move?\r
+Remember me if there are moves that\nneed to be forgotten.
+That Pokémon knows only one move,\nso it can’t be forgotten...\r
+What? That’s an Egg.\nNo Egg should know any moves.\r
+OK, then.\nWhich move should be forgotten?\r
+Hm! The move {STRVAR_1 6, 0, 0}?\nShould that move be forgotten? {YESNO 0}
+It worked perfectly!\rYour Pokémon has forgotten the move\n{STRVAR_1 6, 0, 0} completely.
+Select the music you’d like to\nhear during trainer battles.
+Music selection updated.
+T

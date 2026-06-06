@@ -1,7 +1,7 @@
 # Makefile
 
-ROMNAME = rom_pre512mb.nds
-BUILDROM = rom_reboot_bad_withsdat.nds
+ROMNAME = forEngineAllspritesAndText.nds
+BUILDROM = testingMenu.nds
 
 define n
 
