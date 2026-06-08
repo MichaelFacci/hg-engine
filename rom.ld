@@ -241,6 +241,8 @@ HeldItemHealStatusCheck = 0x02254E7C | 1;
 Battle_GetClientPartySize = 0x0223a834 | 1;
 Battle_GetClientPartyMon = 0x0223a880 | 1;
 
+ov12_0223ABB8 = 0x0223ABB8 | 1;
+
 /*Battle Script Functions*/
 IncrementBattleScriptPtr = 0x02245508 | 1;
 /*read_battle_script_param = 0x022454E8 | 1;*/
@@ -268,6 +270,7 @@ ClientCommandReset = 0x02259928 | 1;
 BattleWorkPokePartyGet = 0x0223A7F4 | 1;
 PokeParty_GetPokeCount = 0x02074640 | 1;
 Party_GetMonByIndex = 0x02074644 | 1;
+GetBattlerVar = 0x0224EDE0 | 1;
 SideClientNoGet = 0x0224768C | 1;
 BattleWorkClientNoGet = 0x0223AAD8 | 1;
 BattleWorkPartnerClientNoGet = 0x0223AB6C | 1;
@@ -707,7 +710,6 @@ CanUseItemOnPokemon = 0x0208FD9C | 1;
 
 BagApp_GetSaveRoamers = 0x021F992C | 1;
 
-ov12_022506D4 = 0x022506D4 | 1;
 ov12_02250A18 = 0x02250A18 | 1;
 
 /* Stuff for Battle End Item */
@@ -754,7 +756,6 @@ CanSwitchMon = 0x02252890 | 1;
 BattleMon_AddVar = 0x0224F7AC | 1;
 GetFlavorPreferenceFromPID = 0x020718E8 | 1;
 
-ov12_0224DD74 = 0x0224DD74 | 1;
 ov12_02261258 = 0x02261258 | 1;
 //ov12_02252D14 = 0x02252D14 | 1;
 
@@ -831,6 +832,8 @@ InitBattleMsg = 0x022479C0 | 1;
 BattleController_EmitPrintMessage = 0x022633F0 | 1;
 BattleController_EmitPrintAttackMessage = 0x022633B8 | 1;
 
+BattleScriptGetVarPointer = 0x02245528 | 1;
+
 Mon_UpdateRotomForm	= 0x02071EC0 | 1;
 
 LoadItemDataOrGfx = 0x02077CE8 | 1;
@@ -901,3 +904,4 @@ DC_FlushRange =     0x020D2894;
 DC_InvalidateRange = 0x020D285C;
 
 MI_CpuFill8 =       0x020D4994;
+ov12_02256694 = 0x02256694 | 1;

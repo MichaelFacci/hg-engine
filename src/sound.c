@@ -52,7 +52,7 @@ void LONG_CALL NNS_SndPlayerSetTempoRatio_Hook(int handle, int tempo){
 }
 */
 
-
+/*
 void LONG_CALL GF_SndHandleMoveVolume_Hook(int param1, int volume, int frames)
 {
     GF_SndHandleMoveVolume_Original(param1, volume, frames);
@@ -66,6 +66,7 @@ void LONG_CALL GF_SndHandleMoveVolume_Hook(int param1, int volume, int frames)
 
     //}
 }
+*/
 
 void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
 {

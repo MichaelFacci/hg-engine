@@ -388,10 +388,10 @@ static void update(StreamInfo* sInfo)
     int limit = sInfo->loops ? hInfo.loopEnd : sInfo->musicEnd;
     int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
 
-    if (remain < 0) remain = 0;
+    //if (remain < 0) remain = 0;
 
-    if (remain < len)
-        len = remain;
+    //if (remain < len)
+    //    len = remain;
 
 // Read the main block of data
     //if (len > 0) {
@@ -611,7 +611,7 @@ void NWAVPlayer_play(int fileID)
     }
     
     sInfo.loops = hInfo.loopEnd != 0;
-    debug_printf("LoopEnd: %d.\n", hInfo.loopEnd);
+    //debug_printf("LoopEnd: %d.\n", hInfo.loopEnd);
     //Setup events.
     //if (hInfo.numEvents)
     //{
