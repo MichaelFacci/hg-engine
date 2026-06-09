@@ -39,6 +39,7 @@ typedef u32 bool32;
 
 
 typedef s32 fx32;
+typedef s16 fx16;
 #define FX32_SHIFT          12
 #define FX32_INT_SIZE       19
 #define FX32_DEC_SIZE       12

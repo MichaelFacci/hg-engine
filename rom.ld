@@ -884,14 +884,21 @@ DC_FlushRange =     0x020D2894;
 DC_InvalidateRange = 0x020D285C;
 
 MI_CpuFill8 =       0x020D4994;
+MI_Copy36B =        0x020D4928;
 
 NARC_New = 0x02007688 | 1;
 NARC_Delete = 0x0200770C | 1;
 NARC_AllocAndReadWholeMember = 0x0200771C | 1;
 
+NNS_G3dGlb = 0x021DA49C;
 NNS_G3dGlbSetBaseTrans = 0x020BEFD4;
 NNS_G3dGlbSetBaseScale = 0x020BF004;
 NNS_G3dDraw1Mat1Shp = 0x020C2150; 
+
+GfGfx_EngineATogglePlanes = 0x02022C60 | 1;
+G3X_SetClearColor = 0x020CF910;
+
+
 
 NNS_G2dSetupSoftwareSpriteCamera = 0x020B7350;
 

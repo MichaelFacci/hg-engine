@@ -13,6 +13,7 @@
 #include "../../include/constants/species.h"
 #include "../../include/constants/system_control.h"
 #include "../../include/overlay.h"
+#include "../../include/3d_bg.h"
 
 
 #ifdef DEBUG_BATTLE_SCENARIOS
@@ -195,113 +196,9 @@ void LONG_CALL BattleSystem_SetBackground_hook(int param1) {
 }
 
 
-/********************************************************************************************************************/
-/********************************************************************************************************************/
-//                                            3D Battle Background
-/********************************************************************************************************************/
-/********************************************************************************************************************/
- 
-// ---------------------------------------------------------------------------
-// Fixed-point macros (not in types.h)
-// ---------------------------------------------------------------------------
-#define FX32_ONE            (1 << FX32_SHIFT)
-#define FX32_CONST(x)       ((fx32)((x) * FX32_ONE))
-#define FX_DEG_TO_IDX(x)    ((u16)((u32)((x) * 65536.0 / 360.0)))
- 
-// ---------------------------------------------------------------------------
-// 3D hardware registers
-// ---------------------------------------------------------------------------
-#define REG_DISP3DCNT       (*(vu16*)0x04000060)
-#define REG_GXSTAT          (*(vu32*)0x04000600)
-#define REG_GXFIFO          (*(vu32*)0x04000400)
-#define GX_FIFO_BUSY        (1 << 27)
- 
-// NDS geometry command for SWAP_BUFFERS is 0x50
-#define GX_SORTMODE_MANUAL  0
-#define GX_BUFFERMODE_W     1
- 
-static inline void G3X_AntiAlias(BOOL enable) {
-    if (enable) REG_DISP3DCNT |=  (1 << 4);
-    else        REG_DISP3DCNT &= ~(1 << 4);
-}
- 
-static inline void G3X_AlphaBlend(BOOL enable) {
-    if (enable) REG_DISP3DCNT |=  (1 << 3);
-    else        REG_DISP3DCNT &= ~(1 << 3);
-}
- 
-static inline void G3_RequestSwapBuffers(u32 sortMode, u32 bufferMode) {
-    while (REG_GXSTAT & GX_FIFO_BUSY);
-    REG_GXFIFO = 0x00000050; // SWAP_BUFFERS command
-    REG_GXFIFO = (sortMode & 1) | ((bufferMode & 1) << 1);
-}
- 
-// ---------------------------------------------------------------------------
-// NNS G3D type definitions
-// ---------------------------------------------------------------------------
- 
-// NNSG3dAnmObj — layout from public NNS SDK
-// frame field is at offset 0x04
-typedef struct NNSG3dAnmObj_t {
-    struct NNSG3dAnmObj_t *next;   // 0x00
-    fx32                   frame;  // 0x04
-    fx32                   blend;  // 0x08
-    u16                    numFrame; // 0x0C
-    u16                    pad;    // 0x0E
-    // remainder opaque
-} NNSG3dAnmObj;
- 
-// NNSG3dRenderObj — opaque, sized conservatively at 0x100 bytes
-typedef struct { u8 opaque[0x100]; } NNSG3dRenderObj;
- 
-// NNSFndAllocator — heap allocator handle
-typedef struct { u32 heap; u32 allocFunc; u32 freeFunc; } NNSFndAllocator;
 
 
- 
-// ---------------------------------------------------------------------------
-// NNS G3D dict structures for GetFirstModel
-// NNSi_G3dResDictEntry: 28 bytes total
-// NNSG3dResDict: 4 byte header + entries
-// Entry[1].offset is at byte 4 + 28 + 8 = 0x28 from dict start
-// ---------------------------------------------------------------------------
-static inline void *GetFirstModel(void *mdlSet) {
-    u32 offset = *(u32 *)((u8 *)mdlSet + 0x28);
-    return (void *)((u8 *)mdlSet + offset);
-}
- 
-// GetAnmNumFrames — reads numFrame field at offset 0x0C from NNSG3dAnmObj
-static inline u16 GetAnmNumFrames(NNSG3dAnmObj *anmObj) {
-    return anmObj->numFrame;
-}
- 
-// ---------------------------------------------------------------------------
-// External function declarations
-// All addresses must be in the linker symbols file
-// ---------------------------------------------------------------------------
- 
-// NNS G3D (all ARM mode)
 
-
-void  LONG_CALL NNS_G3dGlbFlushP(void);   // used as G3_ResetG3X
- 
-
-// ---------------------------------------------------------------------------
-// Battle 3D BG state
-// --------------------------------------------------------------------------1-
-typedef struct {
-    NNSFndAllocator  allocator;
-    
-    NNSG3dAnmObj    *anmObj;
-    void            *resMdl;
-    void            *modelRes;
-    void            *animRes;
-    void            *camera;
-    VecFx32          pos;
-    VecFx32          scale;
-    fx32             frame;
-    NNSG3dRenderObj  renderObj;
-} Battle3DBgState;
  
 static Battle3DBgState sBattle3DBg;
 static BOOL            sBattle3DInitialized = FALSE;
@@ -347,31 +244,54 @@ void* LoadStandaloneModelByID(u32 fileId, u32 heapID) {
 }
 
 
+
 void Battle3DBg_Init(u32 heapID) {
-    // 1. Load NSBMD and NSBCA
+    
+        // set display mode to graphics, BG0 as 3D
+    //u32 dispcnt = reg_GX_DISPCNT;
+    //dispcnt &= ~(7 << 0);   // clear bg mode bits
+    //dispcnt |=  (1 << 3);   // enable BG0 as 3D (GX_BG0_AS_3D)
+    //reg_GX_DISPCNT = dispcnt;
+
     debug_printf(" NARC: %d Member: %d Heap: %d \n", 
                      NARC_ID, NSBMD_MEMBER, heapID);
     //sBattle3DBg.modelRes = ReadNarcMemberSafely(NARC_ID, NSBMD_MEMBER, heapID);
     //sBattle3DBg.modelRes = LoadStandaloneModelByID(507, heapID); //AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
-    sBattle3DBg.modelRes = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
+    //sBattle3DBg.modelRes = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
 
+    //try loading the model from path similar to easy3d:
+    //void *outResource = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBMD_MEMBER, heapID);
+    void *outResource;
 
-    if (sBattle3DBg.modelRes == NULL) {
+    outResource = AllocAndReadWholeNarcMemberByIdPair(195 + 8, 0    , heapID);
+
+    u8 *b = (u8*)outResource;
+    debug_printf("member %d: %c%c%c%c\n", 0, b[0], b[1], b[2], b[3]);
+    u8 *bytes = (u8 *)outResource;
+    debug_printf("magic: %c%c%c%c\n", bytes[0], bytes[1], bytes[2], bytes[3]);
+    debug_printf("bytes[4-7]: %02X %02X %02X %02X\n", bytes[4], bytes[5], bytes[6], bytes[7]);
+    debug_printf("filesize field: 0x%08X\n", *(u32*)(bytes + 8));
+    
+    if (outResource == NULL) {
         debug_printf("CRITICAL: NSBMD load failed!\n");
         return;
     }
-    debug_printf("modelRes = 0x%08X\n", (u32)sBattle3DBg.modelRes);
+    debug_printf("modelRes = 0x%08X\n", (u32)outResource);
 
-    //sBattle3DBg.animRes  = AllocAndReadWholeNarcMemberByIdPair(NARC_ID, NSBCA_MEMBER, heapID);
-    
-    debug_printf(" NARC %d Member %d loaded successfully! \n", 
-                     NARC_ID, NSBMD_MEMBER);
-    // 2. Set up model resource (binds textures/palettes into VRAM)
-    NNS_G3dResDefaultSetup(sBattle3DBg.modelRes);
- 
-    // 3. Get model and init render obj
-    void *mdlSet = NNS_G3dGetMdlSet(sBattle3DBg.modelRes);
-    sBattle3DBg.resMdl = GetFirstModel(mdlSet);
+    void *texture = NNS_G3dGetTex(outResource);
+    debug_printf("texture = 0x%08X\n", (u32)texture);
+
+    DC_FlushAll();
+    NNS_G3dResDefaultSetup(outResource);
+    sBattle3DBg.modelRes = outResource;
+    void *mdlSet = NNS_G3dGetMdlSet(outResource);
+    debug_printf("mdlSet = 0x%08X\n", (u32)mdlSet);
+
+    sBattle3DBg.resMdl = NNS_G3dGetMdlByIdx(NNS_G3dGetMdlSet(outResource), 0);
+    debug_printf("resMdl = 0x%08X\n", (u32)sBattle3DBg.resMdl);
+
+    //resMdl is having the issues
+
     NNS_G3dRenderObjInit(&sBattle3DBg.renderObj, sBattle3DBg.resMdl);
  
     // 4. Init animation
@@ -385,6 +305,7 @@ void Battle3DBg_Init(u32 heapID) {
     // 5. Position and scale
     sBattle3DBg.pos   = (VecFx32){ 0, 0, 0 };
     sBattle3DBg.scale = (VecFx32){ FX32_ONE, FX32_ONE, FX32_ONE };
+    sBattle3DBg.rot = (MtxFx33){ .a = { FX32_ONE, 0, 0, 0, FX32_ONE, 0, 0, 0, FX32_ONE } };
     sBattle3DBg.frame = 0;
  
     // 6. Camera
@@ -402,9 +323,13 @@ void Battle3DBg_Init(u32 heapID) {
     Camera_PushLookAtToNNSGlb(sBattle3DBg.camera);
  
     // 7. 3D render state
+    GfGfx_EngineATogglePlanes(GF_BG_LYR_MAIN_0_F, GF_PLANE_TOGGLE_ON);
+    G2_SetBG0Priority(1);
+
     G3X_AntiAlias(TRUE);
     G3X_AlphaBlend(TRUE);
-    G2_SetBG0Priority(1);
+    G3X_SetClearColor(GX_RGB(0, 0, 0), 0, 0x7FFF, 63, 0);
+    G3_ViewPort(0, 0, 255, 191);
 
     DC_FlushAll();
 }
@@ -472,25 +397,29 @@ void Battle3DBg_Render_derwil(void) {
 
 void Battle3DBg_Render(void) {
 
+    //reg_GX_DISPCNT |= (1 << 3);
     // re-apply camera every frame
     Camera_ApplyPerspectiveType(0, sBattle3DBg.camera);
     Camera_PushLookAtToNNSGlb(sBattle3DBg.camera);
  
 
     NNS_G3dGlbSetBaseTrans(&sBattle3DBg.pos);
+    NNS_G3dGlbSetBaseRot(&sBattle3DBg.rot);
     NNS_G3dGlbSetBaseScale(&sBattle3DBg.scale);
     NNS_G3dGlbFlushP();
  
     debug_printf("before draw\n");
     // draw the model
     if (sBattle3DBg.resMdl != NULL) {
-        NNS_G3dDraw1Mat1Shp(sBattle3DBg.resMdl, 0, 0, TRUE);
-        //NNS_G3dDraw(&sBattle3DBg.renderObj);
+        //NNS_G3dDraw1Mat1Shp(sBattle3DBg.resMdl, 0, 0, TRUE);
+        NNS_G3dDraw(&sBattle3DBg.renderObj);
         debug_printf("drawn!\n");
     }
     
     //NNS_G2dSetupSoftwareSpriteCamera();
+    G3_RequestSwapBuffers(GX_SORTMODE_MANUAL, GX_BUFFERMODE_W);
 }
+
 void Battle3DBg_Render_gem(void) {
     if (sBattle3DBg.resMdl == NULL) return;
 
@@ -541,13 +470,13 @@ BOOL LONG_CALL Battle_Run_hook(struct BattleSystem *bsys, int *battleState, int 
     
     if (battleState[0] > 0) {
         if (!sBattle3DInitialized) {
-            Battle3DBg_Init(HEAPID_BATTLE_HEAP); 
+            Battle3DBg_Init(0); 
             sBattle3DInitialized = TRUE;
         }
         u32 current = (reg_GX_DISPCNT & REG_GX_DISPCNT_DISPLAY_MASK) >> REG_GX_DISPCNT_DISPLAY_SHIFT;
         //GX_SetVisiblePlane(current & ~(1 << 3));
         GX_SetVisiblePlane((current | (1 << 0)) & ~(1 << 3));
-        Battle3DBg_Render_gem();
+        Battle3DBg_Render();
     }
     
     return result;
