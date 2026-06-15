@@ -386,7 +386,7 @@ static void update(StreamInfo* sInfo)
     // Get read length.
     int len = STRM_BUF_PAGESIZE;
     int limit = sInfo->loops ? hInfo.loopEnd : sInfo->musicEnd;
-    int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
+    //int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
 
     //if (remain < 0) remain = 0;
 

@@ -610,7 +610,7 @@ arm9 PartyMenu_StartContextMenuButtonPressAnim_FromCursorObj 0207CB9C 3
 
 #Streamed Audio
 arm9 PlayBGM_Hook 02005D48 1
-#arm9 GF_SndHandleMoveVolume_Hook 02005408 3
+arm9 GF_SndHandleMoveVolume_Hook 02005408 3
 #ifdef DISABLE_CRITICAL_HP_WARNING
 
 0012 BattleSystem_GetCriticalHpMusicFlag 0223BD2C 1

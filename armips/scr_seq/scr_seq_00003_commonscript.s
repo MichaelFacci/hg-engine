@@ -1830,6 +1830,7 @@ _portapc:
 
 
 _moverelearner:
+    touchscreen_menu_show
     hasitem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _func094
@@ -1870,6 +1871,7 @@ _moverelearner:
     return
 
 _movedeleter:
+    
     goto_if_set 1, _func177
     npc_msg 165
     setflag 1

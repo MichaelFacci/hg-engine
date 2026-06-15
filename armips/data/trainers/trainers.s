@@ -12002,7 +12002,7 @@ trainerdata 246, "Tau"
 	trainermontype TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK
     trainerclass TRAINERCLASS_TAU
      
-    nummons 5
+    nummons 1
     item ITEM_NONE
     item ITEM_NONE
     item ITEM_NONE
@@ -12026,70 +12026,6 @@ trainerdata 246, "Tau"
 		setivs 31, 31, 31, 31, 31, 31 // hp, atk, def, spe, spatk, spdef
 		setevs 0, 0, 0, 0, 0, 0
 		nature NATURE_MODEST
-		shinylock 1
-		ballseal 0
-	// mon 1
-		ivs 250
-		abilityslot 32
-		level 33
-		pokemon SPECIES_ZOROARK
-		item ITEM_WIDE_LENS
-		move MOVE_FLAMETHROWER
-		move MOVE_NIGHT_DAZE
-		move MOVE_MUD_SHOT
-		move MOVE_U_TURN
-		ability ABILITY_ILLUSION
-		setivs 15, 15, 15, 15, 15, 15 // hp, atk, def, spe, spatk, spdef
-		setevs 0, 0, 0, 0, 0, 0
-		nature NATURE_SASSY
-		shinylock 1
-		ballseal 0
-	// mon 2
-		ivs 250
-		abilityslot 32
-		level 33
-		pokemon SPECIES_OBSTAGOON
-		item ITEM_CHOPLE_BERRY
-		move MOVE_MEGA_PUNCH
-		move MOVE_CRUNCH
-		move MOVE_SUBSTITUTE
-		move MOVE_HONE_CLAWS
-		ability ABILITY_GUTS
-		setivs 15, 15, 15, 15, 15, 15 // hp, atk, def, spe, spatk, spdef
-		setevs 0, 0, 0, 0, 0, 0
-		nature NATURE_RELAXED
-		shinylock 1
-		ballseal 0
-    // mon 3
-		ivs 250
-		abilityslot 32
-		level 36
-		pokemon SPECIES_GRIMMSNARL
-		item ITEM_SITRUS_BERRY
-		move MOVE_DRAINING_KISS
-		move MOVE_DARK_PULSE
-		move MOVE_THUNDER_WAVE
-		move MOVE_SWAGGER
-		ability ABILITY_PRANKSTER
-		setivs 15, 15, 15, 15, 15, 15 // hp, atk, def, spe, spatk, spdef
-		setevs 0, 0, 0, 0, 0, 0
-		nature NATURE_HARDY
-		shinylock 1
-		ballseal 0
-	// mon 4
-		ivs 250
-		abilityslot 32
-		level 33
-		pokemon SPECIES_SHARPEDO
-		item ITEM_SHARPEDONITE
-		move MOVE_SCALD
-		move MOVE_DARK_PULSE
-		move MOVE_SLASH
-		move MOVE_AQUA_JET
-		ability ABILITY_STRONG_JAW
-		setivs 15, 15, 15, 15, 15, 15 // hp, atk, def, spe, spatk, spdef
-		setevs 0, 0, 0, 0, 0, 0
-		nature NATURE_HARDY
 		shinylock 1
 		ballseal 0
     endparty
