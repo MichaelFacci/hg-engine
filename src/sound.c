@@ -26,8 +26,9 @@ static const NWAV_Override sNwavOverrides[] = {
 };
 
 int sNwavBattleOverrides[3] = {
-    NWAV_BATTLE_XC2,
+    
     NWAV_NEW_BATTLE_XC3_DLC,
+    NWAV_BATTLE_XC2,
     NWAV_STAND_AGAINST_OUR_PATH
 };
 
@@ -145,7 +146,7 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
         }
     }
 
-    if(seqno == NWAV_BATTLE_XC2){// regular trainer battle music has been queued, check in-game toggle
+    if(seqno == NWAV_NEW_BATTLE_XC3_DLC){// regular trainer battle music has been queued, check in-game toggle
         //debug_printf("a");
         u32 selectionOverride = GetScriptVar(0x40AF);
         if(selectionOverride != 3){
@@ -165,7 +166,7 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
             //if (work) {
             //    work->currentSeqNo = 0xFFFF; 
             //}
-            NNS_SndPlayerStopSeqByPlayerNo_Original(0, 30); // Kills vanilla BGM
+            //NNS_SndPlayerStopSeqByPlayerNo_Original(0, 30); // Kills vanilla BGM
             NNS_SndPlayerStopSeqByPlayerNo_Original(1, 30); // Kills Eye Music
             NNS_SndPlayerStopSeqByPlayerNo_Original(9, 30);
             PlayBGM_Original(seqno);
@@ -173,8 +174,8 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
         } else {
             
             NWAVPlayer_play(wavID);
-            NWAVPlayer_setVolume(127, 0);
-            NWAVPlayer_setSpeed(0x1000);
+            //NWAVPlayer_setVolume(127, 0);
+            //NWAVPlayer_setSpeed(0x1000);
             current_is_nwav = TRUE;
         }
     }
@@ -189,8 +190,8 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
             NNS_SndPlayerStopSeqByPlayerNo_Original(9, 30);
 
             NWAVPlayer_play(wavID);
-            NWAVPlayer_setVolume(127, 0);
-            NWAVPlayer_setSpeed(0x1000);
+            //NWAVPlayer_setVolume(127, 0);
+            //NWAVPlayer_setSpeed(0x1000);
             current_is_nwav = TRUE;
         }
     }

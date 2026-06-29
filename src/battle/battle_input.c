@@ -896,6 +896,18 @@ void LONG_CALL BattleBgExpansionLoader(struct BattleSystem *bsys)
         terrainType = MISTY_TERRAIN;
 #endif
         break;
+    case 16:
+        terrainType = GRASSY_TERRAIN;
+        break;
+    case 17:
+        terrainType = ELECTRIC_TERRAIN;
+        break;
+    case 18:
+        terrainType = PSYCHIC_TERRAIN;
+        break;
+    case 19:
+        terrainType = MISTY_TERRAIN;
+        break;
     default:
         break;
     }

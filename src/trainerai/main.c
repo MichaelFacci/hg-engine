@@ -2528,14 +2528,12 @@ int ExpertFlag (struct BattleSystem *bsys, int attacker, int i, struct AIContext
     }
 
     /*Encore*/
-    else if(ai->attackerMoveEffect == MOVE_EFFECT_DISABLE){
+    else if(ai->attackerMoveEffect == MOVE_EFFECT_ENCORE){
         if(ctx->battlemon[ai->defender].moveeffect.disabledTurns != 0){
-            if(BattleRand(bsys) % 10 < 9){
-                moveScore += 3;
-            }
+            moveScore += 5;
         }
-        if(ai->defenderMovesFirst){
-            moveScore -= 2;
+        if(ai->attackerMovesFirst && ctx->moveTbl[ai->defenderLastUsedMove].split == SPLIT_STATUS){
+            moveScore += 5;
         }
         /*TODO: there's more unknown logic in the ai doc*/
     }

@@ -139,9 +139,9 @@ BOOL LONG_CALL OS_SendMessage(OSMessageQueue *mq, OSMessage msg, s32 flags);
 void LONG_CALL OS_InitMessageQueue(OSMessageQueue *mq, OSMessage *msgArray, s32 msgCount);
 
 void MI_CpuFill8(void *dest, u8 data, u32 size);
-static inline void MI_CpuClear8(void *dest, u32 size) {
-    MI_CpuFill8(dest, 0, size);
-}
+//static inline void MI_CpuClear8(void *dest, u32 size) {
+//    MI_CpuFill8(dest, 0, size);
+//}
 
 void LONG_CALL SND_SetupChannelPcm(int chNo, SNDWaveFormat format, const void *dataAddr, SNDChannelLoop loop, int loopStart, int dataLen, int volume, SNDChannelDataShift shift, int timer, int pan);
 void LONG_CALL SND_SetChannelVolume(u32 chBitMask, int volume, SNDChannelDataShift shift);
@@ -162,8 +162,8 @@ void DC_FlushRange(const void *vAddr, u32 size);
 void DC_InvalidateRange(void *vAddr, u32 size);
 
 
-static inline fx32 FX_MulInline(fx32 v1, fx32 v2) {
-    return FX32_CAST(((s64)(v1)*v2 + 0x800LL) >> FX32_SHIFT);
-}
+//static inline fx32 FX_MulInline(fx32 v1, fx32 v2) {
+//    return FX32_CAST(((s64)(v1)*v2 + 0x800LL) >> FX32_SHIFT);
+//}
 
 #endif //!_NWAVPLAYER_H

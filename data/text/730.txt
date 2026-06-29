@@ -99,7 +99,7 @@ Mastermind
 Leader
 Fallen Sage
 Plasma Boss
-Plasma Boss
+Leader
 Castle Valet
 Leader
 Leader

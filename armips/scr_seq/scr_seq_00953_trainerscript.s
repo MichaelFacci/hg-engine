@@ -798,7 +798,7 @@ _0C2F:
 	goto_if_defeated VAR_SPECIAL_x8006, _0C7F
 	scrcmd_317 1
 	call _0D9F
-	compare VAR_SPECIAL_RESULT, 1
+	compare VAR_SPECIAL_RESULT, 99
 	call_if_eq _0DCF
 	settrainerflag VAR_TEMP_x4012
 	releaseall
@@ -1014,7 +1014,7 @@ _0F0A:
 	settrainerflag VAR_SPECIAL_x8004
 	scrcmd_317 0
 	call _0D9F
-	compare VAR_SPECIAL_RESULT, 1
+	compare VAR_SPECIAL_RESULT, 99
 	call_if_eq _0DCF
 	releaseall
 	end
@@ -1059,7 +1059,7 @@ _0FC7:
 	copyvar VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
 	settrainerflag VAR_SPECIAL_x8005
 	call _0D9F
-	compare VAR_SPECIAL_RESULT, 1
+	compare VAR_SPECIAL_RESULT, 99
 	call_if_eq _0DCF
 	releaseall
 	end
@@ -1111,7 +1111,7 @@ _10A8:
 	copyvar VAR_SPECIAL_x8005, VAR_SPECIAL_RESULT
 	settrainerflag VAR_SPECIAL_x8005
 	call _0D9F
-	compare VAR_SPECIAL_RESULT, 1
+	compare VAR_SPECIAL_RESULT, 99
 	call_if_eq _0DCF
 	releaseall
 	end

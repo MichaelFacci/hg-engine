@@ -172,7 +172,7 @@ static void prepareBuffer(void)
 }
 
 //Gets if the music is paused.
-BOOL NWAVPlayer_getPaused(void) { return sInfo.isPaused; }
+//BOOL NWAVPlayer_getPaused(void) { return sInfo.isPaused; }
 
 //Sets if the music is paused by stopping or starting the timers.
 void NWAVPlayer_setPaused(BOOL paused)
@@ -194,7 +194,7 @@ void NWAVPlayer_setPaused(BOOL paused)
 }
 
 //Gets the current volume.
-int NWAVPlayer_getVolume(void) { return sInfo.volume; }
+//int NWAVPlayer_getVolume(void) { return sInfo.volume; }
 
 //Sets the volume by shifting it during the specified frame period.
 void NWAVPlayer_setVolume(int volume, int frames)
@@ -386,12 +386,14 @@ static void update(StreamInfo* sInfo)
     // Get read length.
     int len = STRM_BUF_PAGESIZE;
     int limit = sInfo->loops ? hInfo.loopEnd : sInfo->musicEnd;
-    //int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
+    int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
+
+    
 
     //if (remain < 0) remain = 0;
 
-    //if (remain < len)
-    //    len = remain;
+    if (remain < len)
+        len = remain;
 
 // Read the main block of data
     //if (len > 0) {
@@ -496,7 +498,7 @@ static void setup(void)
 }
 
 //Reloads the current timers to apply new settings.
-static void reloadTimers(void)
+/*static void reloadTimers(void)
 {
     BOOL notPaused = !sInfo.isPaused;
     if (notPaused)
@@ -505,9 +507,10 @@ static void reloadTimers(void)
     if (notPaused)
         NWAVPlayer_setPaused(FALSE);
 }
+        */
 
 //Gets the music speed.
-fx32 NWAVPlayer_getSpeed(void) { return sInfo.speed; }
+//fx32 NWAVPlayer_getSpeed(void) { return sInfo.speed; }
 
 //Sets the music speed.
 void NWAVPlayer_setSpeed(fx32 speed)
@@ -516,7 +519,12 @@ void NWAVPlayer_setSpeed(fx32 speed)
     sInfo.playRate = (hInfo.sampleRate * speed) >> FX32_SHIFT;
     sInfo.speed = speed;
     //debug_printf("playRate is: %d\n", sInfo.playRate);
-    reloadTimers();
+        BOOL notPaused = !sInfo.isPaused;
+    if (notPaused)
+        NWAVPlayer_setPaused(TRUE);
+    setup();
+    if (notPaused)
+        NWAVPlayer_setPaused(FALSE);
 }
 
 /*
@@ -610,7 +618,7 @@ void NWAVPlayer_play(int fileID)
         hInfo.loopEnd &= ~3;
     }
     
-    sInfo.loops = hInfo.loopEnd != 0;
+    //sInfo.loops = hInfo.loopEnd != 0;
     //debug_printf("LoopEnd: %d.\n", hInfo.loopEnd);
     //Setup events.
     //if (hInfo.numEvents)

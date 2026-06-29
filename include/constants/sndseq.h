@@ -7,8 +7,8 @@
 #define NWAV_HOMETOWN                           0
 #define NWAV_CHAIN_ATTACK                       1
 #define NWAV_IRIS_NETWORK                       2
-#define NWAV_YOU_WILL_KNOW_OUR_NAMES_XC3        3
-#define NWAV_MECHANICAL_RHYTHM                  4
+#define NWAV_MECHANICAL_RHYTHM                  3
+#define NWAV_YOU_WILL_KNOW_OUR_NAMES_XC3        4
 #define NWAV_INCOMING                           5
 #define NWAV_BATTLE_TORNA_GOLDEN                6
 #define NWAV_IMMEDIATE_THREAT                   7
@@ -22,12 +22,12 @@
 #define NWAV_RIBBI_FLATS                       15
 #define NWAV_ALFETO_VALLEY                     16
 #define NWAV_EAGUS_WILDERNESS                  17
-#define NWAV_URAYAN_TUNNELS                    18
+#define NWAV_ERYTHIA_SEA                       18
 #define NWAV_TORIGOTH_NIGHT                    19
-#define NWAV_ERYTHIA_SEA                       20
-#define NWAV_SPIRIT_CRUCIBLE                   21
+#define NWAV_URAYAN_TUNNELS                    20
+#define NWAV_ROAMING_THE_WASTES                21
 #define NWAV_DANNAGH_DESERT                    22
-#define NWAV_ROAMING_THE_WASTES                23
+#define NWAV_SPIRIT_CRUCIBLE                   23
 #define NWAV_AGNUS_COLONY                      24
 #define NWAV_TANTAL_DAY                        25
 #define NWAV_TANTAL_NIGHT                      26
@@ -45,6 +45,7 @@
 #define NWAV_GORMOTT                           38
 #define NWAV_GARFONT_MERCENARIES               39
 #define NWAV_ELYSIUM_IN_THE_BLUE_SKY           40
+#define NWAV_SATORL_MARSH                      41
 
 #define SEQ_DUMMY                            1000
 #define SEQ_SILENCE_FIELD                    1001
@@ -1592,7 +1593,7 @@ enum {
     ANIM_MUSIC_COMBO_CYRUS,
     ANIM_MUSIC_COMBO_ROUGHNECK,
     ANIM_MUSIC_COMBO_LANCE,
-    ANIM_MUSIC_COMBO_GIOVANNI,
+    ANIM_MUSIC_COMBO_ACE_TRAINER,
     ANIM_MUSIC_COMBO_JOHTO_TRAINER_1,
     ANIM_MUSIC_COMBO_JOHTO_TRAINER_2,
     ANIM_MUSIC_COMBO_JOHTO_TRAINER_3,

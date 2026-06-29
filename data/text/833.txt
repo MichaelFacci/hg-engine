@@ -502,7 +502,7 @@ a {COLOR 255}Park Ball{COLOR 0}
 a {COLOR 255}Photo Album{COLOR 0}
 the {COLOR 255}GB Sounds{COLOR 0}
 a {COLOR 255}Tidal Bell{COLOR 0}
-a {COLOR 255}Rage Candy Bar{COLOR 0}
+a {COLOR 255}Hyper Candy{COLOR 0}
 a {COLOR 255}Data Card 01{COLOR 0}
 a {COLOR 255}Data Card 02{COLOR 0}
 a {COLOR 255}Data Card 03{COLOR 0}

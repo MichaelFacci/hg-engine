@@ -121363,19 +121363,19 @@
       },
       {
         "Level": 3,
-        "Move": "MOVE_POWDER_SNOW"
-      },
-      {
-        "Level": 5,
         "Move": "MOVE_ROCK_THROW"
       },
       {
+        "Level": 5,
+        "Move": "MOVE_ENCORE"
+      },
+      {
         "Level": 7,
-        "Move": "MOVE_ICICLE_SPEAR"
+        "Move": "MOVE_MUD_SHOT"
       },
       {
         "Level": 9,
-        "Move": "MOVE_ROCK_BLAST"
+        "Move": "MOVE_ANCIENT_POWER"
       },
       {
         "Level": 10,
@@ -121383,7 +121383,7 @@
       },
       {
         "Level": 12,
-        "Move": "MOVE_ANCIENT_POWER"
+        "Move": "MOVE_DOUBLE_HIT"
       },
       {
         "Level": 14,
@@ -121391,7 +121391,7 @@
       },
       {
         "Level": 18,
-        "Move": "MOVE_SNOWSCAPE"
+        "Move": "MOVE_HAZE"
       },
       {
         "Level": 21,
@@ -121419,7 +121419,7 @@
       },
       {
         "Level": 41,
-        "Move": "MOVE_METEOR_BEAM"
+        "Move": "MOVE_SNOWSCAPE"
       },
       {
         "Level": 44,
