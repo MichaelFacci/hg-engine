@@ -4,12 +4,6 @@ GEN_CHAMPIONS equ 99
 
 GEN_LATEST equ defined(DEBUG_BATTLE_SCENARIOS) ? GEN_CHAMPIONS : 9
 
-// START_ADDRESS defines the file address within the synthetic overlay where you would like to place all of the code that this project uses.  this is largely the repointed tables that the code uses.
-// if START_ADDRESS is 0x10000, then the tables will be inserted at address 0x10000 of the synthetic overlay
-// the current implementation (with all gen 5 mons) uses ~9222/0x2406 bytes.  make sure this points to that much free space (probably allow for a little bit more than that)
-// currently 0x10 to have space for a marker for DSPRE to disable editors!
-START_ADDRESS equ 0x10
-
 // DISALLOW_DEXIT_GEN controls whether to disallow selection of dexited moves in later generations. Choose any Generation below 8 for none. 0 will instead disable any unimplemented moves.
 DISALLOW_DEXIT_GEN equ 0
 
@@ -65,3 +59,5 @@ NO_PARTNER_DOUBLE_BATTLES equ 1
 // APPLY_ANTIPIRACY will apply the typical anti-piracy code changes to your ROM automatically so that the game runs well on hardware (TWLmenu and R4 are both tested)
 // comment out the lines if you do not want anti-piracy to be applied to your ROM
 //.definelabel APPLY_ANTIPIRACY, 0
+
+//ap has been commented out / removed in the armips->c merge

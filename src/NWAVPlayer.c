@@ -172,7 +172,7 @@ static void prepareBuffer(void)
 }
 
 //Gets if the music is paused.
-//BOOL NWAVPlayer_getPaused(void) { return sInfo.isPaused; }
+BOOL NWAVPlayer_getPaused(void) { return sInfo.isPaused; }
 
 //Sets if the music is paused by stopping or starting the timers.
 void NWAVPlayer_setPaused(BOOL paused)
@@ -194,7 +194,7 @@ void NWAVPlayer_setPaused(BOOL paused)
 }
 
 //Gets the current volume.
-//int NWAVPlayer_getVolume(void) { return sInfo.volume; }
+int NWAVPlayer_getVolume(void) { return sInfo.volume; }
 
 //Sets the volume by shifting it during the specified frame period.
 void NWAVPlayer_setVolume(int volume, int frames)
@@ -388,9 +388,7 @@ static void update(StreamInfo* sInfo)
     int limit = sInfo->loops ? hInfo.loopEnd : sInfo->musicEnd;
     int remain = (limit - sInfo->musicCursor) * sInfo->bytesPerSample;
 
-    
-
-    //if (remain < 0) remain = 0;
+    if (remain < 0) remain = 0;
 
     if (remain < len)
         len = remain;
@@ -509,8 +507,7 @@ static void setup(void)
 }
         */
 
-//Gets the music speed.
-//fx32 NWAVPlayer_getSpeed(void) { return sInfo.speed; }
+//Gets the music speed.fx32 NWAVPlayer_getSpeed(void) { return sInfo.speed; }
 
 //Sets the music speed.
 void NWAVPlayer_setSpeed(fx32 speed)

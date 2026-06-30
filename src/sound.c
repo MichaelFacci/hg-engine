@@ -34,7 +34,7 @@ int sNwavBattleOverrides[3] = {
 
 
 void LONG_CALL NNS_SndInit_Hook(void){
-    firstWavID = 533;
+    firstWavID = 534;
     NNS_SndInit_Original();
     NWAVPlayer_init();
 }
@@ -166,7 +166,7 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
             //if (work) {
             //    work->currentSeqNo = 0xFFFF; 
             //}
-            //NNS_SndPlayerStopSeqByPlayerNo_Original(0, 30); // Kills vanilla BGM
+            NNS_SndPlayerStopSeqByPlayerNo_Original(0, 30); // Kills vanilla BGM
             NNS_SndPlayerStopSeqByPlayerNo_Original(1, 30); // Kills Eye Music
             NNS_SndPlayerStopSeqByPlayerNo_Original(9, 30);
             PlayBGM_Original(seqno);
@@ -174,8 +174,8 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
         } else {
             
             NWAVPlayer_play(wavID);
-            //NWAVPlayer_setVolume(127, 0);
-            //NWAVPlayer_setSpeed(0x1000);
+            NWAVPlayer_setVolume(127, 0);
+            NWAVPlayer_setSpeed(0x1000);
             current_is_nwav = TRUE;
         }
     }
@@ -190,8 +190,8 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
             NNS_SndPlayerStopSeqByPlayerNo_Original(9, 30);
 
             NWAVPlayer_play(wavID);
-            //NWAVPlayer_setVolume(127, 0);
-            //NWAVPlayer_setSpeed(0x1000);
+            NWAVPlayer_setVolume(127, 0);
+            NWAVPlayer_setSpeed(0x1000);
             current_is_nwav = TRUE;
         }
     }
