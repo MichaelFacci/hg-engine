@@ -159,6 +159,20 @@ const TrainerData sTrainerData[] = {
                 .ballSeal = 5,
             },
         },
+        .text = {
+            {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "You're only pissing me off!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Take this, punk!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "Fine, you win.\\nLeave me alone.\\n",
+            },
+        },
     },
 
     [4] = {
@@ -241,7 +255,7 @@ const TrainerData sTrainerData[] = {
             .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
             .partySize = TRAINER_DATA_RANDOM_PARTY_ORDER | 3,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS | F_MIRROR_BATTLE,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
@@ -290,16 +304,20 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "Oh, you are a cute little Trainer!\\nI like you, but I won’t hold back!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Oh ho ho! Type matchups matter!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Are you beating me at\\nmy own game?\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE_HALF,
+                .text = "No!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Let’s see...\\nOops, it’s over?\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Wow, you must be good to beat me!\\nKeep it up!\\n",
+                .text = "Gah... Lost against\\nmy own team...\\n",
             },
         },
     },
@@ -360,15 +378,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "What’s with you?\\nWhat are you doing?\\r",
+                .text = "Hi!! Have you heard of Metronome?\\nIt's a silly little move I like.\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "You don’t have to worry about the night\\nwhen you’re with strong Pokémon.\\n",
+                .text = "I guess using random moves\\nisn't a consistent strategy.\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "The group stealing other people’s\\nPokémon seems to be growing lately.\\fYou should be careful, too.\\n",
+                .text = "I wonder if I can beat\\neveryone using Metronome...\\n",
             },
         },
     },
@@ -428,20 +446,36 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "Behold my dexterity and grace!\\r",
+                .type = TRMSG_DBL_INTRO_1,
+                .text = "Have you heard of Reflect\\nand Light Screen?\\fThey're all the rage!\\r",
             },
             {
-                .type = TRMSG_LOSE,
-                .text = "Whew! That was a jolt!\\n",
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "But... status moves should\\nhave disabled your Pokemon!\\n",
             },
             {
-                .type = TRMSG_AFTER,
-                .text = "I was going to dazzle you with my prize\\nPokémon. But your prowess\\felectrified me!\\n",
+                .type = TRMSG_DBL_AFTER_1,
+                .text = "Maybe even with Impidimp's status\\nmoves, I took too much damage.\\n",
             },
             {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "Yo! I’ve been waiting!\\r",
+                .type = TRMSG_DBL_1POKE_1,
+                .text = "You need at least 2 Pokemon.\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = "Gible: Gib!!\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Gible: Gib...\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = "(Gible looks very sad to have lost)\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = "Gible: Gib!!\\n",
             },
         },
     },
@@ -505,40 +539,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_DBL_INTRO_1,
-                .text = "Pfft! A new trainer?\\nThis should be free.!\\r",
+                .type = TRMSG_INTRO,
+                .text = "I heard switch-out moves are\\nall the rage. Let's try it!\\r",
             },
             {
-                .type = TRMSG_DBL_LOSE_1,
-                .text = "MY SKWOVET!!\\n",
+                .type = TRMSG_LOSE,
+                .text = "My fire gem didn't surprise you...\\n",
             },
             {
-                .type = TRMSG_DBL_AFTER_1,
-                .text = "Maybe I was the noob...\\nMaybe I was free...\\n",
-            },
-            {
-                .type = TRMSG_DBL_1POKE_1,
-                .text = "2 or more Pokemon required.\\n",
-            },
-            {
-                .type = TRMSG_DBL_INTRO_2,
-                .text = "Skwovet: SKWO!\\r",
-            },
-            {
-                .type = TRMSG_DBL_LOSE_2,
-                .text = "Skwovet: skwo...\\n",
-            },
-            {
-                .type = TRMSG_DBL_AFTER_2,
-                .text = "Skwovet: skwo...\\n",
-            },
-            {
-                .type = TRMSG_DBL_1POKE_2,
-                .text = "Skwovet: SKWO!\\n",
-            },
-            {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "I’ve been waiting!\\nLet’s battle now!\\r",
+                .type = TRMSG_AFTER,
+                .text = "I'm thinking of challenging Gardenia...\\nBut I need to train more first.\\n",
             },
         },
     },
@@ -603,15 +613,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "Are you going to Cianwood?\\rHow about a quick battle first?\\r",
+                .text = "Ho ho ho... My Buizel packs\\nquite the punch!\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "I lost that one!\\n",
+                .text = "...! Even with Sonic Boom!\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "I’d say I’m a better swimmer than you.\\nYeah!\\n",
+                .text = "I needed to level up Buizel more.\\n",
             },
         },
     },
@@ -660,16 +670,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "I love the way bugs wiggle!\\nEspecially when I burn them!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "P-001: Hands off!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Let freedom ring.\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Roasted!\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Fire fire fire...\\nThat’s what it’s all about!\\n",
+                .text = "You should release your Pokemon.\\n",
             },
         },
     },
@@ -770,16 +780,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "Plasma P-194: Hey! Get out!\\nThis is a very serious operation!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "P-002: Chill out!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Free the Pokemon.\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Just...\\nToo strong...\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Plasma P-194: Zinzolin...\\nForgive me!\\n",
+                .text = "Let it go.\\n",
             },
         },
     },
@@ -840,16 +850,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "P-140: For liberation!\\nGo Sandile!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Now I'm fire up!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "One last 'mon!\\nOne last beating!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Unbelievable!\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Plasma P-140: Master Zinzolin\\nwill take care of you, heh.\\n",
+                .text = "Wrrrooooooaaaaaar!\\n",
             },
         },
     },
@@ -910,15 +920,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "Fork over your goods!\\r",
+                .text = "Hey, I've learned type matchups.\\nI can use ghost types now!\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Mercy!\\n",
+                .text = "Hey!! What gives?\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "Steal and sell!\\nThat’s basic in crime, kid!\\n",
+                .text = "I thought using different types\\nof Pokemon would help me win.\\n",
             },
         },
     },
@@ -978,16 +988,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "Ah!\\nThe weather’s as fine as ever.\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Hehe! That tickled!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "This is when it gets good!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "It’s sunny, but in my heart,\\nit’s rainy...\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "When it rains, it’s hard to get fired up.\\nI just simmer...\\n",
+                .text = "Awww, the grass wasn't\\non my side...\\n",
             },
         },
     },
@@ -1047,16 +1057,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "You have to warm up before going into\\nthe water.\\rThat’s basic.\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Skiddo! No!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Gardenia, watch this!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "OK! I give up!\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Cianwood City is a good distance away\\nfrom here.\\n",
+                .text = "Waahhhh! Nooo!\\n",
             },
         },
     },
@@ -1158,20 +1168,20 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "I was training here alone.\\nBehold the result of my hard work!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Gardenia: We shake it off.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Gardenia: Now is the time!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE_HALF,
+                .text = "Gardenia: Not... yet!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Waaaargh!\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "This calls for extreme measures. I must\\ntake to the hills and train in solitude.\\n",
-            },
-            {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "I’ve been studying while waiting for you\\nto come back...\\rLet me show you the results!\\r",
+                .text = "Gardenia: That's incredible...!\\nAnd you didn't break a sweat!\\n",
             },
         },
     },
@@ -1231,16 +1241,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "Whoa!\\rYou made me lose that fish!\\r",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Okay, I see you!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "Come on, Chlorophyll!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Sploosh!\\n",
-            },
-            {
-                .type = TRMSG_AFTER,
-                .text = "Calm, collected...\\rThe essence of fishing and Pokémon is\\nthe same.\\n",
+                .text = "What! I lost?\\nJust like that?\\n",
             },
         },
     },
@@ -1310,6 +1320,20 @@ const TrainerData sTrainerData[] = {
                 .nature = NATURE_IMPISH,
                 .shinyLock = 0,
                 .ballSeal = 0,
+            },
+        },
+        .text = {
+            {
+                .type = TRMSG_INTRMSG_HIT_POKE_FIRST_TIMETRO,
+                .text = "G-004: Pfft, weak hit.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "G-004:Nope! Not losing!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "G-004: Un-believe-able!\\n",
             },
         },
     },
@@ -1384,38 +1408,42 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Hit me once? Shame on you.\\n",
+            },
+            {
                 .type = TRMSG_LAST_POKE,
-                .text = "The wind is finally with us!\\n",
+                .text = "...! With my own team?!\\n",
             },
             {
                 .type = TRMSG_LAST_POKE_HALF,
-                .text = "We can still fly!\\n",
+                .text = "No!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "I understand...\\nI’ll bow out gracefully.\\n",
+                .text = "Impossible.\\n",
             },
         },
     },
 
     [21] = {
-        .name = "Flint",
+        .name = "Matt",
         .data = {
             .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK,
-            .trainerClass = TRAINERCLASS_FLINT,
+            .trainerClass = TRAINERCLASS_ACE_TRAINER_M,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
-            .battleType = SINGLE_BATTLE,
+            .battleType = DOUBLE_BATTLE,
         },
         .party = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 9,
-                .species = SPECIES_HOUNDOUR,
-                .item = ITEM_SHUCA_BERRY,
-                .moves = { MOVE_EMBER, MOVE_SNARL, MOVE_MUD_SHOT, MOVE_TAUNT },
-                .ability = ABILITY_UNNERVE,
+                .level = 14,
+                .species = SPECIES_DODUO,
+                .item = ITEM_FLYING_GEM,
+                .moves = { MOVE_PLUCK, MOVE_QUICK_ATTACK, MOVE_STEEL_WING, MOVE_PURSUIT },
+                .ability = ABILITY_TANGLED_FEET,
                 .setIvs = { 31, 31, 31, 31, 31, 31 },
                 .setEvs = { 0, 0, 0, 0, 0, 0 },
                 .nature = NATURE_HARDY,
@@ -1425,11 +1453,11 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 9,
-                .species = SPECIES_CHIMCHAR,
-                .item = ITEM_PASSHO_BERRY,
-                .moves = { MOVE_FAKE_OUT, MOVE_MACH_PUNCH, MOVE_FLAME_WHEEL, MOVE_AERIAL_ACE },
-                .ability = ABILITY_BLAZE,
+                .level = 14,
+                .species = SPECIES_ELECTRIKE,
+                .item = ITEM_ELECTRIC_GEM,
+                .moves = { MOVE_SHOCK_WAVE, MOVE_ELECTROWEB, MOVE_SNARL, MOVE_ICE_FANG },
+                .ability = ABILITY_LIGHTNING_ROD,
                 .setIvs = { 31, 31, 31, 31, 31, 31 },
                 .setEvs = { 0, 0, 0, 0, 0, 0 },
                 .nature = NATURE_HARDY,
@@ -1439,11 +1467,11 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 10,
-                .species = SPECIES_MAGBY,
-                .item = ITEM_HEAT_ROCK,
-                .moves = { MOVE_SUNNY_DAY, MOVE_EMBER, MOVE_SMOG, MOVE_WILL_O_WISP },
-                .ability = ABILITY_FLAME_BODY,
+                .level = 13,
+                .species = SPECIES_MUDBRAY,
+                .item = ITEM_GROUND_GEM,
+                .moves = { MOVE_BULLDOZE, MOVE_ROCK_SLIDE, MOVE_BULK_UP, MOVE_PROTECT },
+                .ability = ABILITY_STAMINA,
                 .setIvs = { 31, 31, 31, 31, 31, 31 },
                 .setEvs = { 0, 0, 0, 0, 0, 0 },
                 .nature = NATURE_HARDY,
@@ -1453,25 +1481,11 @@ const TrainerData sTrainerData[] = {
             {
                 .ivs = 250,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 8,
-                .species = SPECIES_GROWLITHE,
-                .item = ITEM_LUM_BERRY,
-                .moves = { MOVE_FLAME_WHEEL, MOVE_BITE, MOVE_THUNDER_FANG, MOVE_MORNING_SUN },
-                .ability = ABILITY_INTIMIDATE,
-                .setIvs = { 31, 31, 31, 31, 31, 31 },
-                .setEvs = { 0, 0, 0, 0, 0, 0 },
-                .nature = NATURE_HARDY,
-                .shinyLock = 0,
-                .ballSeal = 3,
-            },
-            {
-                .ivs = 250,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 11,
-                .species = SPECIES_PONYTA,
-                .item = ITEM_CHARTI_BERRY,
-                .moves = { MOVE_FLAME_CHARGE, MOVE_STOMP, MOVE_QUICK_ATTACK, MOVE_WILL_O_WISP },
-                .ability = ABILITY_FLAME_BODY,
+                .level = 13,
+                .species = SPECIES_PAWNIARD,
+                .item = ITEM_DARK_GEM,
+                .moves = { MOVE_SUCKER_PUNCH, MOVE_METAL_CLAW, MOVE_AERIAL_ACE, MOVE_POWER_UP_PUNCH },
+                .ability = ABILITY_DEFIANT,
                 .setIvs = { 31, 31, 31, 31, 31, 31 },
                 .setEvs = { 0, 0, 0, 0, 0, 0 },
                 .nature = NATURE_HARDY,
@@ -1481,16 +1495,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_LAST_POKE,
-                .text = "I won’t burn out!\\n",
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Matt: Hah, a good try\\nfrom you.\\n",
             },
             {
-                .type = TRMSG_LAST_POKE_HALF,
-                .text = "Hang in there! Just a little more!\\n",
+                .type = TRMSG_LAST_POKE,
+                .text = "Matt: I win these.\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Burnt right down to cinders...\\n",
+                .text = "Matt: WHAT?! I wanted the\\nFlight Services! Noooooo!\\n",
             },
         },
     },
@@ -1537,15 +1551,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "You shouldn’t let your guard down just\\n’cause I don’t look tough!\\r",
+                .text = "Ooh la la! A fresh trainer!\\nMy Smoliv wants to fight you!\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Gosh...\\nI thought you were weak...\\n",
+                .text = "Aiiiieee! My Smoliv!\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "Who do you think are stronger--\\nboys or girls?\\n",
+                .text = "There are so many Pokemon to find\\nin Caelestia Meadows.\\n",
             },
         },
     },
@@ -1582,7 +1596,7 @@ const TrainerData sTrainerData[] = {
                 .item = ITEM_QUICK_CLAW,
                 .moves = { MOVE_MUD_SLAP, MOVE_POISON_STING, MOVE_TAIL_WHIP, MOVE_POISON_POWDER },
                 .ability = ABILITY_WATER_ABSORB,
-                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setIvs = { 31, 31, 31, 31, 31, 31 }, //hp, atk, def, spe, spatk, spdef
                 .setEvs = { 0, 0, 0, 0, 0, 0 },
                 .nature = NATURE_HARDY,
                 .shinyLock = 0,
@@ -1605,16 +1619,36 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "I roam far and wide in search of\\nPokémon.\\rAre you looking for Pokémon, too?\\nThen you’re my collecting rival!\\r",
+                .type = TRMSG_DBL_INTRO_1,
+                .text = "Go Wurmple! Show them your power!\\r",
             },
             {
-                .type = TRMSG_LOSE,
-                .text = "Ugh. My poor Pokémon...\\n",
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "Man, bug types suck!!\\n",
             },
             {
-                .type = TRMSG_AFTER,
-                .text = "Every Friday, you can hear Pokémon\\nroars from deep inside the cave.\\n",
+                .type = TRMSG_DBL_AFTER_1,
+                .text = "Did you know that some trainers\\nare better at double battles?\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_1,
+                .text = "You need at least 2 Pokemon.\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = "Wurmple: Wuuuurm!\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Wurmple: Wurrm!\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = "(Wurmple looks very sad to have lost)\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = "Wurmple: Wurmpah!\\n",
             },
         },
     },
@@ -1675,19 +1709,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "I can properly prepare for any\\nPokémon adversary!\\r",
+                .text = "Heh, my normal type Pokemon pack\\na punch! Watch out!\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Huh...?\\nWas my prediction incorrect?\\n",
+                .text = "What?! You're telling me that\\nI need other types of Pokemon!?\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "Sniffle... I study for five hours\\nstraight every day...\\rIf you only read the textbook, I guess\\nyou miss out on a lot.\\n",
-            },
-            {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "I’ve prepared perfectly, waiting\\nfor you!\\r",
+                .text = "Hey, maybe I need some fighting\\ntype Pokemon... yeah that'll do!\\n",
             },
         },
     },
@@ -1747,16 +1777,40 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "You’re headed to Azalea, are you?\\nLet my Pokémon see if you are good\\fenough to battle.\\r",
+                .type = TRMSG_DBL_INTRO_1,
+                .text = ".\\r",
             },
             {
-                .type = TRMSG_LOSE,
-                .text = "Oh, oh, oh!\\n",
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "Grrrr... stupid kids.\\n",
             },
             {
-                .type = TRMSG_AFTER,
-                .text = "All right, then! I’ve decided.\\rI’m not leaving until my Pokémon\\nget tougher!\\n",
+                .type = TRMSG_DBL_AFTER_1,
+                .text = ".\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_1,
+                .text = ".\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = ".\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Now the cops will come looking...\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = ".\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = ".\\n",
+            },
+                        {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "You ain't nothing,\\nyou hear me?\\n",
             },
         },
     },
@@ -1803,15 +1857,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "That glance...\\nIt’s intriguing.\\r",
+                .text = ".\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Hmmm. This is disappointing.\\n",
+                .text = "Wahaha!! Kids are tough!\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "If you don’t want to battle, just avoid\\neye contact.\\n",
+                .text = ".\\n",
             },
         },
     },
@@ -1858,19 +1912,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "Uh-huh. Yeah, and you know...\\rPardon? Pokémon battle?\\nI’m on the phone.\\rOh, all right.\\nI’ll accept your challenge!\\r",
+                .text = ".\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Pfft.\\nBefore I could get serious, I lost!\\n",
+                .text = "Lookie here! We lost!\\nWahahahah!\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "At least I can complain over the phone.\\n",
-            },
-            {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "You’re late! Let’s get started now!\\r",
+                .text = ".\\n",
             },
         },
     },
@@ -1986,15 +2036,15 @@ const TrainerData sTrainerData[] = {
         .text = {
             {
                 .type = TRMSG_INTRO,
-                .text = "Surprise! I shocked ya!\\r",
+                .text = "YUP! BIRD TIME!\\nCan you handle my Ducklett?\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "My spark faded...",
+                .text = "Nah! Not the birds!\\n",
             },
             {
                 .type = TRMSG_AFTER,
-                .text = "My spark faded...\\n",
+                .text = "Yeah, I need to diversify the\\ntypes of Pokemon I use.\\n",
             },
         },
     },
@@ -2054,16 +2104,16 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_LAST_POKE,
-                .text = "H-hey! Just one left?\\nBut... I ain’t losin’, you hear?\\n",
-            },
-            {
-                .type = TRMSG_LAST_POKE_HALF,
-                .text = "Poor me!\\n",
+                .type = TRMSG_INTRO,
+                .text = "I found a hidden-ability Venipede.\\nIt's got Speed Boost!\\r",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "Ugh...\\n",
+                .text = "Venipede didn't pull through...\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "These mines are so creepy.\\nBut I need to overcome my fears.\\n",
             },
         },
     },
@@ -13725,6 +13775,24 @@ const TrainerData sTrainerData[] = {
                 .ballSeal = 0,
             },
         },
+        .text = {
+            {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "You will never prevail.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "I am Tau! I will not lose!\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE_HALF,
+                .text = "My last stand!\\n",
+            },
+            {
+                .type = TRMSG_LOSE,
+                .text = "This... is not good for our world.\\nYou are a monster.\\n",
+            },
+        },
     },
 
     [244] = {
@@ -18444,20 +18512,36 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
-                .type = TRMSG_INTRO,
-                .text = "I love gym class the best!\\r",
+                .type = TRMSG_DBL_INTRO_1,
+                .text = "Bug trouble!\\nMake it double!\\r",
             },
             {
-                .type = TRMSG_LOSE,
-                .text = "Oh, no!\\nHow could I lose?\\n",
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "Man, bug types suck!!\\n",
             },
             {
-                .type = TRMSG_AFTER,
-                .text = "If Pokémon were a subject at school,\\nI’d be the best!\\n",
+                .type = TRMSG_DBL_AFTER_1,
+                .text = "Did you know that some trainers\\nare better at double battles?\\n",
             },
             {
-                .type = TRMSG_PHONE_REMATCH_INTRO,
-                .text = "Welcome, welcome!\\rHere you will face a battle with me, and\\nI’m really athletic!\\r",
+                .type = TRMSG_DBL_1POKE_1,
+                .text = "You need at least 2 Pokemon.\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = "Dwebble: Dwebb!\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Dwebble: Dwebb... :(\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = "(Dwebble looks very sad to have lost)\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = "Dwebble: Dwebb!\\n",
             },
         },
     },
@@ -24089,164 +24173,328 @@ const TrainerData sTrainerData[] = {
     },
 
     [459] = {
-        .name = "Jamie",
+        .name = "N",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES,
-            .trainerClass = TRAINERCLASS_ACE_TRAINER_F,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS,
+            .trainerClass = TRAINERCLASS_TRAINER_N ,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
             {
-                .ivs = 50,
+                .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_2,
-                .level = 42,
-                .species = SPECIES_RAPIDASH,
-                .moves = { MOVE_STOMP, MOVE_FIRE_SPIN, MOVE_FIRE_BLAST, MOVE_EMBER },
+                .level = 15,
+                .species = SPECIES_BOLDORE,
+                .item = ITEM_ROWAP_BERRY,
+                .moves = { MOVE_ROCK_BLAST, MOVE_ROCK_SMASH, MOVE_EARTH_POWER, MOVE_ROCK_POLISH },
+                .ability = ABILITY_WEAK_ARMOR,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_CAREFUL,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
             {
-                .ivs = 50,
+                .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 40,
-                .species = SPECIES_AMPHAROS,
-                .moves = { MOVE_DISCHARGE, MOVE_SIGNAL_BEAM, MOVE_CHARGE, MOVE_THUNDER_WAVE },
+                .level = 14,
+                .species = SPECIES_JOLTIK,
+                .item = ITEM_CHARTI_BERRY,
+                .moves = { MOVE_VOLT_SWITCH, MOVE_SKITTER_SMACK, MOVE_THUNDER_WAVE, MOVE_STICKY_WEB },
+                .ability = ABILITY_COMPOUND_EYES,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_HARDY,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_ZORUA,
+                .item = ITEM_FOCUS_SASH,
+                .moves = { MOVE_FOUL_PLAY, MOVE_FLAME_BURST, MOVE_PURSUIT, MOVE_WORK_UP },
+                .ability = ABILITY_ILLUSION,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_JOLLY,
+                .shinyLock = 0,
+                .additionalFlags = 0,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_VULLABY,
+                .item = ITEM_LIECHI_BERRY,
+                .moves = { MOVE_AERIAL_ACE, MOVE_FEINT_ATTACK, MOVE_ROOST, MOVE_WORK_UP },
+                .ability = ABILITY_WEAK_ARMOR,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_ADAMANT,
+                .shinyLock = 0,
+                .additionalFlags = 0,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_FOONGUS,
+                .item = ITEM_COBA_BERRY,
+                .moves = { MOVE_SPORE, MOVE_SLUDGE, MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED },
+                .ability = ABILITY_EFFECT_SPORE,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_RELAXED,
+                .shinyLock = 0,
+                .additionalFlags = 0,
+                .ballSeal = 0,
+            }
         },
         .text = {
             {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "N: Quite the hit.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "N: I feel the breeze.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE_HALF,
+                .text = "N: You're moving in harmony.\\n",
+            },
+            {
                 .type = TRMSG_LOSE,
-                .text = "Pokémon aren’t tools of war.\\n",
+                .text = "N: Quite the display of power.\\n",
             },
         },
     },
 
     [460] = {
-        .name = "Wade",
+        .name = "P-138",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES,
-            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS,
+            .trainerClass = TRAINERCLASS_PLASMA_M,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = DOUBLE_BATTLE,
         },
         .party = {
             {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_METAPOD,
-                .moves = { MOVE_BUG_BITE, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE },
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+                .level = 14,
+                .species = SPECIES_TRANQUILL,
+                .item = ITEM_SCOPE_LENS,
+                .moves = { MOVE_AIR_CUTTER, MOVE_QUICK_ATTACK, MOVE_TAILWIND, MOVE_RAIN_DANCE },
+                .ability = ABILITY_SUPER_LUCK,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_JOLLY,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
             {
-                .ivs = 0,
+                .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 29,
-                .species = SPECIES_BUTTERFREE,
-                .moves = { MOVE_PSYBEAM, MOVE_SILVER_WIND, MOVE_SUPERSONIC, MOVE_WHIRLWIND },
+                .level = 14,
+                .species = SPECIES_PALPITOAD,
+                .item = ITEM_RINDO_BERRY,
+                .moves = { MOVE_WATER_PULSE, MOVE_BULLDOZE, MOVE_ICY_WIND, MOVE_PROTECT },
+                .ability = ABILITY_SWIFT_SWIM,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_HARDY,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 22,
-                .species = SPECIES_KAKUNA,
-                .moves = { MOVE_BUG_BITE, MOVE_POISON_STING, MOVE_STRING_SHOT, MOVE_NONE },
-                .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_METAPOD,
-                .moves = { MOVE_BUG_BITE, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE },
-                .ballSeal = 0,
-            },
+            }
         },
         .text = {
             {
-                .type = TRMSG_LOSE,
-                .text = "Awwwww...\\n",
+                .type = TRMSG_DBL_INTRO_1,
+                .text = "P-138: I can't let you reach\\nour boss. My time to shine!\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_1,
+                .text = "P-138: No!!\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_1,
+                .text = "P-138: We're trying to research\\nmeg- no, I should shut it.\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_1,
+                .text = "You need at least 2 Pokemon.\\n",
+            },
+            {
+                .type = TRMSG_DBL_INTRO_2,
+                .text = "Tranquill: Traaah!\\r",
+            },
+            {
+                .type = TRMSG_DBL_LOSE_2,
+                .text = "Tranquill: Trrrr!\\n",
+            },
+            {
+                .type = TRMSG_DBL_AFTER_2,
+                .text = "(Tranquill looks very sad to have lost)\\n",
+            },
+            {
+                .type = TRMSG_DBL_1POKE_2,
+                .text = "Tranquill: Traaanq!\\n",
             },
         },
     },
 
     [461] = {
-        .name = "Wade",
+        .name = "P-134",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_MOVES,
-            .trainerClass = TRAINERCLASS_BUG_CATCHER,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS,
+            .trainerClass = TRAINERCLASS_PLASMA_M,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
             {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_METAPOD,
-                .moves = { MOVE_BUG_BITE, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE },
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+                .level = 14,
+                .species = SPECIES_TINKATUFF,
+                .item = ITEM_SALAC_BERRY,
+                .moves = { MOVE_FAKE_OUT, MOVE_MAGNET_BOMB, MOVE_BRUTAL_SWING, MOVE_WILL_O_WISP },
+                .ability = ABILITY_OWN_TEMPO,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_ADAMANT,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
             {
-                .ivs = 0,
+                .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 29,
-                .species = SPECIES_BUTTERFREE,
-                .moves = { MOVE_PSYBEAM, MOVE_SILVER_WIND, MOVE_SUPERSONIC, MOVE_WHIRLWIND },
+                .level = 13,
+                .species = SPECIES_HERDIER,
+                .item = ITEM_LEFTOVERS,
+                .moves = { MOVE_HEADBUTT, MOVE_BITE, MOVE_AERIAL_ACE, MOVE_ICE_FANG },
+                .ability = ABILITY_INTIMIDATE,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_ADAMANT,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
             {
-                .ivs = 0,
+                .ivs = 255,
                 .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 22,
-                .species = SPECIES_KAKUNA,
-                .moves = { MOVE_BUG_BITE, MOVE_POISON_STING, MOVE_STRING_SHOT, MOVE_NONE },
+                .level = 14,
+                .species = SPECIES_TIMBURR,
+                .item = ITEM_NORMAL_GEM,
+                .moves = { MOVE_FORCE_PALM, MOVE_ROCK_TOMB, MOVE_RETALIATE, MOVE_BRUTAL_SWING },
+                .ability = ABILITY_GUTS,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_ADAMANT,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
-            },
-            {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 18,
-                .species = SPECIES_METAPOD,
-                .moves = { MOVE_BUG_BITE, MOVE_STRING_SHOT, MOVE_NONE, MOVE_NONE },
-                .ballSeal = 0,
-            },
+            }
         },
         .text = {
             {
+                .type = TRMSG_INTRO,
+                .text = "P-134: Surprise! We've got big\\nambitions here!\\fAnd they don't include you!\\r",
+            },
+            {
                 .type = TRMSG_LOSE,
-                .text = "Awwwww...\\n",
+                .text = "P-134: Boss! Sorry!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "P-134: We're trying to find meg-\\nWait, no. I can't say that to you!\\n",
             },
         },
     },
 
     [462] = {
-        .name = "P-101",
+        .name = "P-130",
         .data = {
-            .trainerType = TRAINER_DATA_TYPE_NOTHING,
+            .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK | TRAINER_DATA_TYPE_ADDITIONAL_FLAGS,
             .trainerClass = TRAINERCLASS_PLASMA_M,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
-            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE,
+            .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
             .battleType = SINGLE_BATTLE,
         },
         .party = {
             {
-                .ivs = 0,
-                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
-                .level = 1,
-                .species = SPECIES_HYDREIGON,
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_2,
+                .level = 14,
+                .species = SPECIES_DARUMAKA,
+                .item = ITEM_PASSHO_BERRY,
+                .moves = { MOVE_FLAME_WHEEL, MOVE_POWER_UP_PUNCH, MOVE_ROCK_SMASH, MOVE_WILL_O_WISP },
+                .ability = ABILITY_INNER_FOCUS,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_IMPISH,
+                .shinyLock = 0,
+                .additionalFlags = 0,
                 .ballSeal = 0,
             },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 15,
+                .species = SPECIES_SNOVER,
+                .item = ITEM_OCCA_BERRY,
+                .moves = { MOVE_ICE_SHARD, MOVE_MEGA_DRAIN, MOVE_CHILLING_WATER, MOVE_ICICLE_SPEAR },
+                .ability = ABILITY_SNOW_WARNING,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_SASSY,
+                .shinyLock = 0,
+                .additionalFlags = 0,
+                .ballSeal = 0,
+            },
+            {
+                .ivs = 255,
+                .abilitySlot = TRAINER_POKEMON_ABILITY_1,
+                .level = 14,
+                .species = SPECIES_TOEDSCOOL,
+                .item = ITEM_YACHE_BERRY,
+                .moves = { MOVE_MUD_SHOT, MOVE_MAGICAL_LEAF, MOVE_ACID_SPRAY, MOVE_HEX },
+                .ability = ABILITY_EFFECT_SPORE,
+                .setIvs = { 31, 31, 31, 31, 31, 31 },
+                .setEvs = { 0, 0, 0, 0, 0, 0 },
+                .nature = NATURE_TIMID,
+                .shinyLock = 0,
+                .additionalFlags = 0,
+                .ballSeal = 0,
+            }
         },
         .text = {
             {
+                .type = TRMSG_INTRO,
+                .text = "P-130: Yo! Stop right there!\\nI can't let you pass.\\r",
+            },
+            {
                 .type = TRMSG_LOSE,
-                .text = "Tch! I tried to rush things...\\n",
+                .text = "P-130: Liberty!!\\n",
+            },
+            {
+                .type = TRMSG_AFTER,
+                .text = "P-130: Boss's orders: let no\\none through, including you!\\n",
             },
         },
     },
@@ -26167,16 +26415,20 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "Okay! Now it's heated!\\n",
+            },
+            {
                 .type = TRMSG_LAST_POKE_HALF,
-                .text = "...Humph!\\nYou’re doing OK for someone weak.\\n",
+                .text = "It's not over!\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "...Humph!\\nAre you happy you won?\\n",
+                .text = "Wow! The first win goes to you!\\n",
             },
             {
                 .type = TRMSG_WIN,
-                .text = "...Humph!\\nThat was a waste of time.\\n",
+                .text = "Hey, at least you tried!\\n",
             },
         },
     },
@@ -26236,16 +26488,20 @@ const TrainerData sTrainerData[] = {
         },
         .text = {
             {
+                .type = TRMSG_HIT_POKE_FIRST_TIME,
+                .text = "I see. So you don't\\nplay around.\\n",
+            },
+            {
+                .type = TRMSG_LAST_POKE,
+                .text = "I saved the best for last.\\n",
+            },
+            {
                 .type = TRMSG_LAST_POKE_HALF,
-                .text = "...Humph!\\nYou’re doing OK for someone weak.\\n",
+                .text = "A calculated gamble...\\n",
             },
             {
                 .type = TRMSG_LOSE,
-                .text = "...Humph!\\nAre you happy you won?\\n",
-            },
-            {
-                .type = TRMSG_WIN,
-                .text = "...Humph!\\nThat was a waste of time.\\n",
+                .text = "I see substantial improvements in\\nyou for a rookie.\\n",
             },
         },
     },
