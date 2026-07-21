@@ -8,6 +8,10 @@
 #define OVERWORLD_SIZE_SMALL_NO_SHADOW 0x4E26
 #define OVERWORLD_SIZE_LARGE           0x5208
 
+#define NEW_NPC_START 7000
+#define NEW_NPC_GFX_START 2000 // exact number may depend--it is the number of the first overworld gfx that is not used in the overworld table
+#define NEW_NPC_ENTRY(num) {.tag = NEW_NPC_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0}
+
 /*
  *  if you would like to add new npc overworlds, go to
  *  https://ds-pokemon-hacking.github.io/docs/generation-iv/guides/hgss-new_overworlds/
@@ -307,6 +311,8 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         { .tag = 425, .gfx = 210, .callback_params = 0x45A5 },
         { .tag = 426, .gfx = 211, .callback_params = 0x49A5 },
         { .tag = 427, .gfx = 212, .callback_params = 0x0000 },
+        
+        NEW_NPC_ENTRY(0)
 
         // npc mons
 
@@ -1690,6 +1696,7 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         MON_FOLLOWER_ENTRY(SPECIES_IRON_CROWN, OVERWORLD_SIZE_SMALL)
         MON_FOLLOWER_ENTRY(SPECIES_TERAPAGOS, OVERWORLD_SIZE_SMALL)
         MON_FOLLOWER_ENTRY(SPECIES_PECHARUNT, OVERWORLD_SIZE_SMALL)
+        
 
         { 0xFFFF, 0, 0 },
     };

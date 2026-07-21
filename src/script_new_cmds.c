@@ -3,10 +3,25 @@
 #include "../include/roamer.h"
 #include "../include/script.h"
 #include "../include/types.h"
+#include "../include/window.h"
+#include "../include/sprite.h"
+#include "../include/pokemon.h"
 
 #define SCRIPT_NEW_CMD_REPEL_USE 0
-
+#define SCRIPT_NEW_CMD_FLOATING_TEXT_SHOW 1
+#define SCRIPT_NEW_CMD_FLOATING_TEXT_HIDE 2
 #define SCRIPT_NEW_CMD_MAX 256
+
+#define FLOATING_TEXTBOX_TILE_MARGIN 32
+
+typedef struct FloatingTextboxWork {
+    BOOL active;
+    u8 x, y, u, v;
+    struct Window window;
+    String *msg;
+} FloatingTextboxWork;
+
+static FloatingTextboxWork sFloatingTextbox;
 
 BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
 {
@@ -20,6 +35,69 @@ BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
         SetScriptVar(arg0, most_recent_repel);
         Repel_Use(most_recent_repel, HEAPID_MAIN_HEAP);
 #endif
+        break;
+
+    case SCRIPT_NEW_CMD_FLOATING_TEXT_SHOW:
+        //These should be set in dspre (i.e. SetVar 0x8004 4)
+        sFloatingTextbox.x = 33;//GetScriptVar(0x8004);
+        sFloatingTextbox.y = 1; //GetScriptVar(0x8005);
+        sFloatingTextbox.u = 10; //GetScriptVar(0x8006);
+        sFloatingTextbox.v = 4; //GetScriptVar(0x8007); //these are correctly set in dspre.
+        debug_printf("After Var Set. Values are %d, %d, %d, %d \n", sFloatingTextbox.x, sFloatingTextbox.y, sFloatingTextbox.u, sFloatingTextbox.v);
+        if (!sFloatingTextbox.active) {
+            void *bgConfig = ctx->fsys->bg_config;
+
+            //u8 bgId = 3;
+            //u16 baseTile = 10;
+            //u8 paletteNum = 11;
+            //u8 frameId = 0;
+
+            u8 bgId = 3;
+            u8 paletteNum = 12;
+            u16 baseTile = 707;
+
+            struct Window *msgWindow = (struct Window *)FieldSysGetAttrAddr(ctx->fsys, SCRIPTENV_WINDOW);
+            //u16 baseTile = msgWindow->baseTile + (msgWindow->width * msgWindow->height) + FLOATING_TEXTBOX_TILE_MARGIN;
+            //debug_printf("baseTile is %d \n", baseTile);
+            //debug_printf("paletteNum is %d \n", msgWindow->paletteNum);
+            //debug_printf("bgId is %d \n", msgWindow->bgId);
+
+            //AddWindowParameterized(msgWindow->bgConfig, &sFloatingTextbox.window, msgWindow->bgId,sFloatingTextbox.x, sFloatingTextbox.y,sFloatingTextbox.u, sFloatingTextbox.v,  msgWindow->paletteNum, baseTile);
+            AddWindowParameterized(bgConfig, &sFloatingTextbox.window, bgId,
+                                    sFloatingTextbox.x, sFloatingTextbox.y,
+                                    sFloatingTextbox.u, sFloatingTextbox.v,
+                                    paletteNum, baseTile);
+
+            FillWindowPixelBuffer(&sFloatingTextbox.window, 0xFF);
+
+
+        
+            //(bgConfig, bgId, baseTile, framePalette, frameId, HEAPID_MAIN_HEAP);
+            //LoadUserFrameGfx1(bgConfig, 0, 0x1F7, 2, 0, 0);
+            //LoadFontPal0(0, 0x20, 0);
+
+
+            //DrawFrameAndWindow1(&sFloatingTextbox.window, FALSE, 1, 8);
+            DrawFrameAndWindow1(&sFloatingTextbox.window, TRUE, 1, 8);
+
+            sFloatingTextbox.msg = NewString_ReadMsgData((MsgData *)ctx->msg_data, arg0);
+
+            AddTextPrinterParameterized(&sFloatingTextbox.window, 0, sFloatingTextbox.msg, 0, 0, 0, 0);
+ 
+            sFloatingTextbox.active = TRUE;
+        }
+        break;
+    case SCRIPT_NEW_CMD_FLOATING_TEXT_HIDE:
+        if (sFloatingTextbox.active) {
+            RemoveWindow(&sFloatingTextbox.window);
+ 
+            if (sFloatingTextbox.msg != NULL) {
+                sys_FreeMemoryEz(sFloatingTextbox.msg);
+                sFloatingTextbox.msg = NULL;
+            }
+ 
+            sFloatingTextbox.active = FALSE;
+        }
         break;
 
     default:

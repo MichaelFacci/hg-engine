@@ -109,7 +109,7 @@
 //#define DEBUG_AUTO_CONTINUE_GAME
 
 // NOCASH_GBA_PRINT swaps from desmume prints with the syscall to NO$GBA-style prints for use with i.e. melonDS
-#define NOCASH_GBA_PRINT
+//#define NOCASH_GBA_PRINT
 
 //DEBUG_TRAINER_AI turns on a number of debug prints related to the trainer AI
 //#define DEBUG_TRAINER_AI

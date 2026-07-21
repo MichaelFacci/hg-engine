@@ -1,7 +1,7 @@
 # Makefile
 
-ROMNAME = forEngineAllspritesAndText.nds
-BUILDROM = testingMenu.nds
+ROMNAME = testingFloatEdit.nds
+BUILDROM = testingFloat.nds
 
 define n
 
