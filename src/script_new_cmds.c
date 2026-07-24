@@ -39,8 +39,8 @@ BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
 
     case SCRIPT_NEW_CMD_FLOATING_TEXT_SHOW:
         //These should be set in dspre (i.e. SetVar 0x8004 4)
-        sFloatingTextbox.x = 33;//GetScriptVar(0x8004);
-        sFloatingTextbox.y = 1; //GetScriptVar(0x8005);
+        sFloatingTextbox.x = 2;//GetScriptVar(0x8004);
+        sFloatingTextbox.y = 2; //GetScriptVar(0x8005);
         sFloatingTextbox.u = 10; //GetScriptVar(0x8006);
         sFloatingTextbox.v = 4; //GetScriptVar(0x8007); //these are correctly set in dspre.
         debug_printf("After Var Set. Values are %d, %d, %d, %d \n", sFloatingTextbox.x, sFloatingTextbox.y, sFloatingTextbox.u, sFloatingTextbox.v);
@@ -73,11 +73,12 @@ BOOL Script_RunNewCmd(SCRIPTCONTEXT *ctx)
 
         
             //(bgConfig, bgId, baseTile, framePalette, frameId, HEAPID_MAIN_HEAP);
-            //LoadUserFrameGfx1(bgConfig, 0, 0x1F7, 2, 0, 0);
+            //
             //LoadFontPal0(0, 0x20, 0);
 
 
             //DrawFrameAndWindow1(&sFloatingTextbox.window, FALSE, 1, 8);
+            LoadUserFrameGfx1(bgConfig, bgId, 1, 8, 0, HEAP_FIELD1);
             DrawFrameAndWindow1(&sFloatingTextbox.window, TRUE, 1, 8);
 
             sFloatingTextbox.msg = NewString_ReadMsgData((MsgData *)ctx->msg_data, arg0);

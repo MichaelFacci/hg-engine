@@ -2756,13 +2756,13 @@ const TrainerData sTrainerData[] = {
     },
 
     [39] = {
-        .name = "Calvin",
+        .name = "Mars",
         .data = {
             .trainerType = TRAINER_DATA_TYPE_MOVES | TRAINER_DATA_TYPE_ITEMS | TRAINER_DATA_TYPE_ABILITY | TRAINER_DATA_TYPE_IV_EV_SET | TRAINER_DATA_TYPE_NATURE_SET | TRAINER_DATA_TYPE_SHINY_LOCK,
-            .trainerClass = TRAINERCLASS_CAMPER,
+            .trainerClass = TRAINERCLASS_MARS,
             .items = { ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE },
             .aiFlags = F_PRIORITIZE_SUPER_EFFECTIVE | F_EVALUATE_ATTACKS | F_EXPERT_ATTACKS,
-            .battleType = SINGLE_BATTLE,
+            .battleType = DOUBLE_BATTLE,
         },
         .party = {
             {
