@@ -1,6 +1,6 @@
 # Makefile
 
-ROMNAME = testingFloatEdit.nds
+ROMNAME = withfeather.nds
 BUILDROM = testingFloat.nds
 
 define n

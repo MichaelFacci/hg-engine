@@ -60,4 +60,5 @@ u8 LONG_CALL GetWindowWidth(struct Window *window);
 void LONG_CALL ScheduleWindowCopyToVram(struct Window *window);
 void LONG_CALL SetBgPriority(u8 bgId, u16 priority);
 
+
 #endif

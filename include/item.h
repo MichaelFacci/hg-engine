@@ -4,6 +4,8 @@
 #include "types.h"
 #include "task.h"
 #include "script.h"
+#include "player_avatar.h"
+#include "pokemon.h"
 
 /*
  * Bit array describing the effects of using the item on a
@@ -142,6 +144,45 @@ struct ItemUseFuncDat {
     ItemFieldUseFunc field;
     ItemCheckUseFunc check;
 };
+
+struct LocalFieldData {
+    Location currentPosition;
+    Location entrancePosition;
+    Location previousPosition;
+    Location dynamicWarp;
+    Location specialSpawn;
+    u16 musicId;
+    u16 weather;
+    u16 lastSpawn;
+    u8 cameraType;
+    struct PlayerSaveData player;
+    u16 poisonStepCounter;
+    u16 safariStepCounter;
+    u16 safariBallCounter;
+    u8 filler7A[6];
+};
+
+typedef struct PokegearArgs {
+    u8 isScriptedLaunch;     // 0x00
+    u8 menuInputState;       // 0x01
+    u16 mapMusicID;          // 0x02 (surf-overriden)
+    u8 callerId;             // 0x04
+    u8 isScriptedCall;       // 0x05
+    u8 callScriptID;         // 0x06
+    u8 playerGender;         // 0x07
+    int x;                   // 0x08
+    int z;                   // 0x0c
+    u16 mapID;               // 0x10
+    u16 mapHeader;           // 0x12
+    BOOL setFlyDestination;  // 0x14
+    int mapCursorX;          // 0x18
+    int mapCursorY;          // 0x1C
+    u16 selectedFlyDest;     // 0x20
+    u8 matrixXCoord;         // 0x22
+    u8 matrixYCoord;         // 0x23
+    SaveData *saveData;      // 0x24
+    void *menuInputStatePtr; // 0x28
+} PokegearArgs;
 
 enum
 {
@@ -355,7 +396,30 @@ void LONG_CALL sub_0203C8F0(struct BagViewAppWork *env, u32 task); // task is a 
 void LONG_CALL RegisteredItem_CreateGoToAppTask(struct ItemFieldUseData *data, FieldApplicationWorkCtor ctorTask, BOOL something);
 s32 LONG_CALL GetItemAttrSub(ITEMPARTYPARAM *param, u16 attrno);
 
-
+void LONG_CALL  *PokegearTownMap_LaunchApp(FieldSystem *fieldSystem, int kind);
+TaskManager LONG_CALL  *FieldSystem_CreateTask(FieldSystem *fieldSystem, TaskFunc taskFunc, void *env);
+FieldSystem LONG_CALL  *TaskManager_GetFieldSystem(TaskManager *taskManager);
+void LONG_CALL  *TaskManager_GetEnvironment(TaskManager *taskManager);
+BOOL LONG_CALL  sub_020505C8(FieldSystem *fieldSystem);
+BOOL LONG_CALL  MapHeader_IsFlyAllowed(u32 mapId);
+//u32 LONG_CALL PlayerAvatar_GetGender(PlayerAvatar *avatar);
+void LONG_CALL StartFlyMachineWarp(TaskManager *taskManager, u32 mapId, int warpId, int x, int y, int direction);
+void LONG_CALL *FlyMachine_StartDepartureAnimation(FieldSystem *fieldSystem, int mode, struct PartyPokemon *mon, int gender);
+BOOL LONG_CALL FlyMachine_DepartureAnimationIsFinished(void *work);
+void LONG_CALL FlyMachine_DeleteDepartureAnimation(void *work);
+BOOL LONG_CALL Task_ReturnToMenuFromAppItem(TaskManager *taskManager);
+Location LONG_CALL *LocalFieldData_GetSpecialSpawnWarpPtr(struct LocalFieldData *localFieldData);
+struct LocalFieldData LONG_CALL *Save_LocalFieldData_Get(SaveData *saveData);
+void LONG_CALL FieldSystem_LoadFieldOverlay(FieldSystem *fieldSystem);
+void LONG_CALL GF_AssertFail(void);
+void LONG_CALL TaskManager_Jump(TaskManager *taskman, TaskFunc taskFunc, void *env);
+BOOL LONG_CALL IsPaletteFadeFinished(void);
+void LONG_CALL GetFlyWarpData(u16 spawnId, Location *dest); //kinda inferred this 
+u32 LONG_CALL PlayerAvatar_GetGender(FIELD_PLAYER_AVATAR *playerAvatar);
+void LONG_CALL FlyMachine_StartFieldFade(int fadeIn);
+u16 LONG_CALL FlyMapIdToSpawnId(u16 mapId);
+void GetSpecialSpawnWarpData(u16 spawnId, Location *dest);
+BOOL FieldSystem_ApplicationIsRunning(FieldSystem *fieldSystem);
 // defined in item.c
 /**
  *  @brief allocate memory on the heap and dump the item data narc to it, making an item data table

@@ -933,3 +933,37 @@ SetRoamerData = 0x0202DAB8 | 1;
 Roamers_GetRoamMonStats = 0x0202DA54 | 1;
 Roamer_GetLocation = 0x0202D9F8 | 1;
 ApplyRoamerLocation = 0x02067914 | 1;
+
+#Fly Implementation (thx Ebben)
+PokegearTownMap_LaunchApp = 0x0203EAB0 | 1;
+FieldSystem_CreateTask = 0x020504F0 | 1;
+TaskManager_GetFieldSystem = 0x0205064C | 1;
+TaskManager_GetEnvironment = 0x02050650 | 1;
+sub_020505C8 = 0x020505C8 | 1;
+MapHeader_IsFlyAllowed = 0x0203B454 | 1;
+
+#need header
+GetFlyWarpData = 0x0203BA74 | 1;
+
+GetSpecialSpawnWarpData = 0x0203BAE8 | 1;
+StartFlyMachineWarp = 0x02053908 | 1;
+FlyMachine_StartFieldFade = 0x021E636C | 1;
+FlyMachine_StartDepartureAnimation = 0x02249458 | 1;
+FlyMachine_DepartureAnimationIsFinished = 0x0224953C | 1;
+FlyMachine_DeleteDepartureAnimation = 0x02249548 | 1;
+LocalFieldData_GetSpecialSpawnWarpPtr = 0x0203B964 | 1;
+Save_LocalFieldData_Get = 0x0203B9C4 | 1;
+FieldSystem_LoadFieldOverlay = 0x020505C0;
+GF_AssertFail = 0x0202551C | 1;
+TaskManager_Jump = 0x02050510 | 1;
+IsPaletteFadeFinished	= 0x0200FB5C | 1;
+FlyMachine_StartFieldFade = 0x021E636C | 1;
+FlyMapIdToSpawnId = 0x0203BB50 | 1;
+GetSpecialSpawnWarpData = 0x0203BAE8 | 1;
+FieldSystem_ApplicationIsRunning = 0x020505A0 | 1;
+
+Task_ReturnToMenuFromAppItem = 0x0203D718 | 1;
+PlayerAvatar_GetGender = 0x0205C724 | 1;
+
+
+

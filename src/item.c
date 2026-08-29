@@ -12,6 +12,15 @@
 #define GFX_ITEM_RETURN_ID ((MAX_TOTAL_ITEM_NUM + 1) * 2 + 4)
 #define NEW_ITEM_GFX       (797)
 
+typedef enum ItemUseError {
+    ITEMUSEERROR_OKAY = 0,       // no error
+    ITEMUSEERROR_NODISMOUNT = 1, // can't get off bike
+    ITEMUSEERROR_NOFOLLOWER = 2, // have a companion
+    ITEMUSEERROR_NOTNOW = 3,     // you're a member of team rocket
+
+    ITEMUSEERROR_OAKSWORDS = -1u,
+} ItemUseError;
+
 static const u16 sMachineMoves[] = {
     // vanilla TMs
     MOVE_FOCUS_PUNCH, // TM001
@@ -378,6 +387,13 @@ void ItemMenuUseFunc_AbilityCapsule(struct ItemMenuUseData *data, const struct I
 void ItemMenuUseFunc_Mint(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
 void ItemMenuUseFunc_Nectar(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
 void ItemMenuUseFunc_RotomCatalog(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
+void ItemMenuUseFunc_FlyMachine(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED);
+BOOL ItemFieldUseFunc_FlyMachine(struct ItemFieldUseData *data);
+u32 ItemCheckUseFunc_FlyMachine(const struct ItemCheckUseData *data);
+static BOOL Task_FlyMachineFromBag(TaskManager *taskManager);
+static BOOL Task_FlyMachineRegistered(TaskManager *taskManager);
+
+
 
 const struct ItemUseFuncDat sItemFieldUseFuncs[] = {
     { NULL, ItemFieldUseFunc_Generic, NULL },
@@ -417,6 +433,7 @@ const struct ItemUseFuncDat sItemFieldUseFuncs[] = {
     { ItemMenuUseFunc_Mint, NULL, NULL },
     { ItemMenuUseFunc_Nectar, NULL, NULL },
     { ItemMenuUseFunc_RotomCatalog, NULL, NULL },
+    { ItemMenuUseFunc_FlyMachine, ItemFieldUseFunc_FlyMachine, ItemCheckUseFunc_FlyMachine }
 };
 
 u16 GetItemIndex(u16 item, u16 type)
@@ -680,4 +697,160 @@ void ItemMenuUseFunc_RotomCatalog(struct ItemMenuUseData *data, const struct Ite
     struct BagViewAppWork *env = data->taskManager->env; // TaskManager_GetEnvironment(data->taskManager);
     env->atexit_TaskEnv = sub_0203FAE8(fieldSystem, HEAPID_WORLD, ITEM_ROTOM_CATALOG);
     sub_0203C8F0(env, 0x0203CA9C | 1);
+}
+
+void ItemMenuUseFunc_FlyMachine(struct ItemMenuUseData *data, const struct ItemCheckUseData *dat2 UNUSED)
+{
+    FieldSystem *fieldSystem = data->taskManager->fieldSystem;
+    struct BagViewAppWork *env = data->taskManager->env;
+
+    env->atexit_TaskEnv = PokegearTownMap_LaunchApp(fieldSystem, 0);
+    sub_0203C8F0(env, (u32)Task_FlyMachineFromBag);
+}
+
+BOOL ItemFieldUseFunc_FlyMachine(struct ItemFieldUseData *data)
+{
+    data->work = PokegearTownMap_LaunchApp(data->fieldSystem, 0);
+    FieldSystem_CreateTask(data->fieldSystem, Task_FlyMachineRegistered, data);
+    return TRUE;
+}
+
+u32 ItemCheckUseFunc_FlyMachine(const struct ItemCheckUseData *data)
+{
+    u32 fieldMode = *(u32 *)((u8 *)data->fieldSystem + 0x70);
+
+    if (fieldMode == 2 || fieldMode == 3) {
+        return ITEMUSEERROR_OAKSWORDS;
+    }
+    if (!MapHeader_IsFlyAllowed(data->mapId)) {
+        return ITEMUSEERROR_OAKSWORDS;
+    }
+    if (data->haveFollower) {
+        return ITEMUSEERROR_NOFOLLOWER;
+    }
+    if (data->haveRocketCostume) {
+        return ITEMUSEERROR_NOTNOW;
+    }
+
+    return ITEMUSEERROR_OKAY;
+}
+
+typedef struct FlyMachineTaskEnv {
+    u16 state;
+    u16 spawnId;
+    struct PartyPokemon *transportMon;
+    void *animation;
+} FlyMachineTaskEnv;
+
+static BOOL Task_FlyMachineWaitForField(TaskManager *taskManager)
+{
+    FieldSystem *fieldSystem = TaskManager_GetFieldSystem(taskManager);
+    FlyMachineTaskEnv *env = TaskManager_GetEnvironment(taskManager);
+
+    switch (env->state) {
+    case 0:
+        if (!sub_020505C8(fieldSystem)) {
+            break;
+        }
+        FlyMachine_StartFieldFade(1);
+        env->state++;
+        break;
+    case 1:
+        if (!IsPaletteFadeFinished()) {
+            break;
+        }
+        env->transportMon = AllocMonZeroed(HEAPID_WORLD);
+        PokeParaSetChr(env->transportMon, SPECIES_CORVIKNIGHT, 50, 31, 0);
+        env->animation = FlyMachine_StartDepartureAnimation(fieldSystem, 1, env->transportMon, PlayerAvatar_GetGender(fieldSystem->playerAvatar));
+        env->state++;
+        break;
+    case 2:
+    {
+        Location location;
+
+        if (!FlyMachine_DepartureAnimationIsFinished(env->animation)) {
+            break;
+        }
+        FlyMachine_DeleteDepartureAnimation(env->animation);
+        Heap_FreeExplicit(HEAPID_WORLD, env->transportMon);
+        GetFlyWarpData(env->spawnId, &location);
+        GetSpecialSpawnWarpData(env->spawnId, LocalFieldData_GetSpecialSpawnWarpPtr(Save_LocalFieldData_Get(fieldSystem->savedata)));
+        StartFlyMachineWarp(taskManager, location.mapId, -1, location.x, location.z, location.direction);
+        Heap_FreeExplicit(HEAPID_WORLD, env);
+        break;
+    }
+    default:;
+    }
+
+    return FALSE;
+}
+
+static void FlyMachine_WarpToDestination(TaskManager *taskManager, FieldSystem *fieldSystem, PokegearArgs *args)
+{
+    FlyMachineTaskEnv *env = sys_AllocMemoryLo(HEAPID_WORLD, sizeof(FlyMachineTaskEnv));
+    u16 spawnId = FlyMapIdToSpawnId(args->selectedFlyDest);
+
+    if (spawnId == 0) {
+        GF_AssertFail();
+    }
+    env->state = 0;
+    env->spawnId = spawnId;
+    env->transportMon = NULL;
+    env->animation = NULL;
+    Heap_FreeExplicit(HEAPID_WORLD, args);
+    FieldSystem_LoadFieldOverlay(fieldSystem);
+    TaskManager_Jump(taskManager, Task_FlyMachineWaitForField, env);
+}
+
+static BOOL Task_FlyMachineFromBag(TaskManager *taskManager)
+{
+    FieldSystem *fieldSystem = TaskManager_GetFieldSystem(taskManager);
+    struct BagViewAppWork *env = TaskManager_GetEnvironment(taskManager);
+    PokegearArgs *args = env->atexit_TaskEnv;
+
+    if (!args->setFlyDestination) {
+        return Task_ReturnToMenuFromAppItem(taskManager);
+    }
+
+    FlyMachine_WarpToDestination(taskManager, fieldSystem, args);
+    return FALSE;
+}
+
+static BOOL Task_FlyMachineRegistered(TaskManager *taskManager)
+{
+    struct ItemFieldUseData *data = taskManager->env;
+    PokegearArgs *args = data->work;
+
+    switch (data->state) {
+    case 0:
+        if (FieldSystem_ApplicationIsRunning(data->fieldSystem)) {
+            break;
+        }
+        if (args->setFlyDestination) {
+            FlyMachine_WarpToDestination(taskManager, data->fieldSystem, args);
+            Heap_FreeExplicit(HEAPID_WORLD, data);
+            break;
+        }
+        Heap_FreeExplicit(HEAPID_WORLD, data->work);
+        data->work = NULL;
+        FieldSystem_LoadFieldOverlay(data->fieldSystem);
+        data->state++;
+        break;
+    case 1:
+        if (!sub_020505C8(data->fieldSystem)) {
+            break;
+        }
+        FlyMachine_StartFieldFade(1);
+        data->state++;
+        break;
+    case 2:
+        if (!IsPaletteFadeFinished()) {
+            break;
+        }
+        Heap_FreeExplicit(HEAPID_WORLD, data);
+        return TRUE;
+    default:;
+    }
+
+    return FALSE;
 }
