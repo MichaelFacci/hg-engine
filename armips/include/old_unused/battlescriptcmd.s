@@ -30,7 +30,7 @@ STAT_HP equ 0
 STAT_ATTACK equ 1
 STAT_DEFENSE equ 2
 STAT_SPEED equ 3
-STAT_SPATK equ 4
+STAT_SPECIAL_ATTACK equ 4
 STAT_SPDEF equ 5
 STAT_ACCURACY equ 6
 STAT_EVASION equ 7
@@ -79,7 +79,7 @@ WEATHER_HAIL_PERMANENT              equ (0x00000080)                            
 WEATHER_HAIL_ANY                    equ (0x000000c0)                                                                    // 0000 0000 0000 1100 0000
 FIELD_STATUS_UPROAR                 equ (0x00000f00)                                                                    // 0000 0000 1111 0000 0000
 FIELD_CONDITION_GRAVITY_INIT        equ (0x00005000)                                                                    // 0000 0101 0000 0000 0000
-FIELD_STATUS_GRAVITY                equ (0x00007000)                                                                    // 0000 0111 0000 0000 0000
+FIELD_CONDITION_GRAVITY                equ (0x00007000)                                                                    // 0000 0111 0000 0000 0000
 FIELD_STATUS_FOG                    equ (0x00008000)                                                                    // 0000 1000 0000 0000 0000
 FIELD_CONDITION_TRICK_ROOM_INIT     equ (0x00050000)                                                                    // 0101 0000 0000 0000 0000
 FIELD_STATUS_TRICK_ROOM             equ (0x00070000)                                                                    // 0111 0000 0000 0000 0000

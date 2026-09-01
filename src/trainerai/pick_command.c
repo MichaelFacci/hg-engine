@@ -28,7 +28,7 @@ BOOL TrainerAI_ShouldSwitch(struct BattleSystem * bsys, int attacker){
 
     u32 battleType = BattleTypeGet(bsys);
 
-   // if (battleType & (BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TAG))
+   // if (battleType & (BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLES | BATTLE_TYPE_TAG))
     //    return FALSE;
 
     if (CantEscape(bsys, ctx, attacker, NULL))
@@ -102,7 +102,7 @@ BOOL TrainerAI_ShouldSwitch(struct BattleSystem * bsys, int attacker){
     }
 
     if (attackerMon.percenthp > 67
-        && (onlyIneffectiveMoves || ((ctx->battlemon[attacker].effect_of_moves & MOVE_EFFECT_FLAG_PERISH_SONG_ACTIVE) && (BattleRand(bsys) % 2))))
+        && (onlyIneffectiveMoves || ((ctx->battlemon[attacker].effect_of_moves & MOVE_EFFECT_FLAG_PERISH_SONG) && (BattleRand(bsys) % 2))))
     {
         int score = 0;
         int switchToSlot = BattleAI_PostKOSwitchIn_Internal(bsys, attacker, &score);
@@ -120,7 +120,7 @@ BOOL TrainerAI_ShouldSwitch(struct BattleSystem * bsys, int attacker){
 
 BOOL AI_PerishSongKO(struct BattleStruct* battleCtx, int battler)
 {
-    if (battleCtx->battlemon[battler].effect_of_moves & MOVE_EFFECT_FLAG_PERISH_SONG_ACTIVE) {
+    if (battleCtx->battlemon[battler].effect_of_moves & MOVE_EFFECT_FLAG_PERISH_SONG) {
         battleCtx->aiSwitchedPartySlot[battler] = 6;
         return TRUE;
     }

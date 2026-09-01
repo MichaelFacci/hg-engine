@@ -1,8 +1,9 @@
-#include "../include/types.h"
+#include "../include/config.h"
 #include "../include/constants/trainerclass.h"
+#include "../include/types.h"
 
-struct TrainerMoney
-{
+#ifdef EXPAND_TRAINER_PRIZE_MONEY
+struct TrainerMoney {
     u16 class;
     u16 multiplier;
 };
@@ -139,3 +140,4 @@ struct TrainerMoney PrizeMoney[] = // 0x34C04 in Overlay 12; 2 bytes for trainer
     { .class = TRAINERCLASS_PKMN_TRAINER_DAWN_PT, .multiplier = 0 },
     { .class = TRAINERCLASS_BIRD_KEEPER, .multiplier = 8 },
 };
+#endif // EXPAND_TRAINER_PRIZE_MONEY

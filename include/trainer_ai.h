@@ -1,8 +1,10 @@
+
+#include "../include/battle.h"
 #define TRAINER_AI_H
 
-#include "battle.h"
+
 void LONG_CALL AITypeCalc(struct BattleStruct *sp, u32 move, u32 type, int atkAbility, int defAbility, int held_effect, int type1, int type2, u32 *flag);
-BOOL LONG_CALL CantEscape(struct BattleSystem *bsys, struct BattleStruct *ctx, int attacker, int *msg);
+//BOOL LONG_CALL CantEscape(struct BattleSystem *bsys, struct BattleStruct *ctx, int attacker, BattleMessage *msg);
 
 enum AIActionChoice {
     AI_ENEMY_ATTACK_1,

@@ -1,8 +1,9 @@
 #ifndef POKEHEARTGOLD_MAP_EVENTS_INTERNAL_H
 #define POKEHEARTGOLD_MAP_EVENTS_INTERNAL_H
 
-//#include "wild_encounter.h"
+// #include "wild_encounter.h"
 #include "types.h"
+
 #include "script.h"
 
 typedef struct BG_EVENT {
@@ -62,19 +63,8 @@ typedef struct MAP_EVENTS {
     COORD_EVENT *coord_events;
     u8 event_data[0x800];
     u8 script_header[0x100];
-    //ENC_DATA wildEncounters; // we'll get there when we get there
+    // ENC_DATA wildEncounters; // we'll get there when we get there
 } MAP_EVENTS;
-
-
-
-
-
-
-
-
-
-
-
 
 typedef struct LocalMapObject LocalMapObject;
 
@@ -84,11 +74,11 @@ typedef struct MapObjectMan {
     u32 unk8;
     u32 unkC;
     u8 unk10[4];
-    void* mmodel_narc;
+    void *mmodel_narc;
     u8 unk18[4];
-    u8 unk1C[0x124-0x1C];
-    LocalMapObject* objects;
-    FieldSystem* fsys;
+    u8 unk1C[0x124 - 0x1C];
+    LocalMapObject *objects;
+    FieldSystem *fsys;
 } MapObjectMan; // size: 0x12c
 
 typedef enum MapObjectFlagBits {
@@ -161,10 +151,10 @@ struct LocalMapObject {
     /*0x064*/ int xCurr;
     /*0x068*/ int hCurr;
     /*0x06C*/ int yCurr;
-    /*0x070*/ u32 /*VecFx32*/ posVec [3];
-    /*0x07C*/ u32 /*VecFx32*/ faceVec [3];
-    /*0x088*/ u32 /*VecFx32*/ unk88 [3];
-    /*0x094*/ u32 /*VecFx32*/ unk94 [3];
+    /*0x070*/ u32 /*VecFx32*/ posVec[3];
+    /*0x07C*/ u32 /*VecFx32*/ faceVec[3];
+    /*0x088*/ u32 /*VecFx32*/ unk88[3];
+    /*0x094*/ u32 /*VecFx32*/ unk94[3];
     /*0x0A0*/ int unkA0;
     /*0x0A4*/ int movementCmd;
     /*0x0A8*/ int movementStep;
@@ -187,12 +177,11 @@ struct LocalMapObject {
     /*0x128*/ FieldSystem *fsys;
 };
 
-#define BIT_MOVE (1<<1)
-#define BIT_MOVE_START (1<<2)
-#define BIT_MOVE_END (1<<3)
-#define BIT_VANISH (1<<9)
-#define BIT_JUMP_START (1<<16)
-
+#define BIT_MOVE       (1 << 1)
+#define BIT_MOVE_START (1 << 2)
+#define BIT_MOVE_END   (1 << 3)
+#define BIT_VANISH     (1 << 9)
+#define BIT_JUMP_START (1 << 16)
 
 typedef struct OVERWORLD_REQUEST_FLAGS {
     /* 0x0 */ u16 TalkCheck:1;    // 0x0001
@@ -219,8 +208,7 @@ typedef struct OVERWORLD_REQUEST_FLAGS {
     /* 0x8 */ u16 cont;
 } __attribute__((packed)) OVERWORLD_REQUEST_FLAGS; // size = 0xa
 
-
-LocalMapObject * LONG_CALL GetMapObjectByID(void *arr, int id);
+LocalMapObject *LONG_CALL GetMapObjectByID(void *arr, int id);
 int LONG_CALL MapObject_GetMovement(LocalMapObject *mapObject);
 u32 LONG_CALL MapObject_GetGfxID(LocalMapObject *mapObject);
 void LONG_CALL MapObject_SetGfxID(LocalMapObject *mapObject, u32 spriteId);
@@ -238,39 +226,39 @@ void LONG_CALL MapObject_SetXRange(LocalMapObject *mapObject, u32 xRange);
 void LONG_CALL MapObject_SetYRange(LocalMapObject *mapObject, u32 yRange);
 
 void LONG_CALL MapObject_GfxDraw(LocalMapObject *mapObject);
-void LONG_CALL PlayerAlternate_MapObject_GfxDraw(LocalMapObject *mapObject, int sprite_id, void *, void*);
+void LONG_CALL PlayerAlternate_MapObject_GfxDraw(LocalMapObject *mapObject, int sprite_id, void *, void *);
 
-LocalMapObject * LONG_CALL CreateFollowingSpriteFieldObject(void *mapObjectMan, int species, u16 forme, int gender, int direction, int x, int y, int shiny);
+LocalMapObject *LONG_CALL CreateFollowingSpriteFieldObject(void *mapObjectMan, int species, u16 forme, int gender, int direction, int x, int y, int shiny);
 u32 LONG_CALL FollowingPokemon_GetSpriteID(int species, u16 forme, u32 gender);
 void LONG_CALL FollowPokeFsysParamSet(FieldSystem *fsys, int species, u8 forme, BOOL shiny, u8 gender);
 void LONG_CALL FollowPokeMapObjectSetParams(LocalMapObject *mapObject, int species, u8 forme, BOOL shiny);
 void LONG_CALL FsysFollowMonClear(FollowMon *followMon);
-LocalMapObject * LONG_CALL CreateSpecialFieldObject(void *objectMan, u32 x, u32 z, u32 direction, u32 sprite, u32 movement, u32 mapNo);
+LocalMapObject *LONG_CALL CreateSpecialFieldObject(void *objectMan, u32 x, u32 z, u32 direction, u32 sprite, u32 movement, u32 mapNo);
 void LONG_CALL DeleteMapObject(LocalMapObject *mapObject);
 u32 LONG_CALL MapObject_GetCurrentX(LocalMapObject *object);
 u32 LONG_CALL MapObject_GetCurrentY(LocalMapObject *object);
-void LONG_CALL MapObject_SetCurrentY(LocalMapObject* object, u32 y);
-void LONG_CALL MapObject_SetCurrentX(LocalMapObject* object, u32 x);
-void LONG_CALL MapObject_SetFlag29(LocalMapObject* object, BOOL set);
+void LONG_CALL MapObject_SetCurrentY(LocalMapObject *object, u32 y);
+void LONG_CALL MapObject_SetCurrentX(LocalMapObject *object, u32 x);
+void LONG_CALL MapObject_SetFlag29(LocalMapObject *object, BOOL set);
 void LONG_CALL sub_02069DC8(LocalMapObject *mapObject, BOOL enable_bit);
-void LONG_CALL ov01_021F9048(LocalMapObject* map_object);
-void LONG_CALL MapObjectMan_PauseAllMovement(MapObjectMan* manager);
-void LONG_CALL MapObjectMan_UnpauseAllMovement(MapObjectMan* manager);
+void LONG_CALL ov01_021F9048(LocalMapObject *map_object);
+void LONG_CALL MapObjectMan_PauseAllMovement(MapObjectMan *manager);
+void LONG_CALL MapObjectMan_UnpauseAllMovement(MapObjectMan *manager);
 void LONG_CALL ChangeMapObjSprite(LocalMapObject *mapObject, u32 overworldTag);
 
-//#define FollowPokeObj_GetSpecies(mapObject) MapObject_GetParam(mapObject, 0)
+// #define FollowPokeObj_GetSpecies(mapObject) MapObject_GetParam(mapObject, 0)
 
 // Player avatar state
-#define PLAYER_STATE_WALKING         0
-#define PLAYER_STATE_CYCLING         1
-#define PLAYER_STATE_SURFING         2
-#define PLAYER_STATE_ROCKET          3
-#define PLAYER_STATE_UNK_SP          4
-#define PLAYER_STATE_UNK_WATER       5
-#define PLAYER_STATE_POKEATHLON      6
-#define PLAYER_STATE_FISHING         7
-#define PLAYER_STATE_UNK_POKE        8
-#define PLAYER_STATE_SAVING          9
+#define PLAYER_STATE_WALKING        0
+#define PLAYER_STATE_CYCLING        1
+#define PLAYER_STATE_SURFING        2
+#define PLAYER_STATE_ROCKET         3
+#define PLAYER_STATE_UNK_SP         4
+#define PLAYER_STATE_UNK_WATER      5
+#define PLAYER_STATE_POKEATHLON     6
+#define PLAYER_STATE_FISHING        7
+#define PLAYER_STATE_UNK_POKE       8
+#define PLAYER_STATE_SAVING         9
 #define PLAYER_STATE_HEAL           10
 #define PLAYER_STATE_LADDER         11
 #define PLAYER_STATE_ROCKET_HEAL    12
@@ -296,11 +284,11 @@ typedef struct FIELD_PLAYER_AVATAR {
     u32 unk24;
     int unk28;
     int unk2c;
-    LocalMapObject* mapObject;
+    LocalMapObject *mapObject;
     u32 unk34;
     FIELD_PLAYER_AVATAR_SUB *avatar_sub;
     u32 unk3c;
-} FIELD_PLAYER_AVATAR; //size: 0x40
+} FIELD_PLAYER_AVATAR; // size: 0x40
 
 u8 LONG_CALL GetMetatileBehaviorAt(FieldSystem *fieldSystem, int x, int y);
 int LONG_CALL GetPlayerXCoord(FIELD_PLAYER_AVATAR *avatar);
@@ -308,4 +296,4 @@ int LONG_CALL GetPlayerYCoord(FIELD_PLAYER_AVATAR *avatar);
 BOOL MapObject_IsSingleMovementActive(LocalMapObject *obj);
 void MapObject_PauseMovement(LocalMapObject *obj);
 
-#endif //POKEHEARTGOLD_MAP_EVENTS_INTERNAL_H
+#endif // POKEHEARTGOLD_MAP_EVENTS_INTERNAL_H

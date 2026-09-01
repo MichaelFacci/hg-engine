@@ -6,7 +6,7 @@
 .include "armips/include/soundeffects.s"
 .include "armips/include/vars.s"
 
-.include "asm/include/items.inc"
+// need to convert this to assembly ANYWAY
 
 
 // text archive to grab from: 040.txt
@@ -1248,7 +1248,7 @@ scr_seq_0003_019:
     end
 
 scr_seq_0003_020:
-    hasitem ITEM_BIKE, 1, VAR_SPECIAL_RESULT
+    hasitem 450, 1, VAR_SPECIAL_RESULT // ITEM_BIKE
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _1163
     scrcmd_609
@@ -1771,7 +1771,9 @@ scr_seq_0003_073_autobattle_testing:
     lockall
     npc_msg 120
     closemsg
-    trainer_battle 1, 0, 0, 0
+    trainer_battle 5, 0, 0, 0
+    //setvar 0x800B, 1
+    //WildBattleSp 785 | (1 << 11), 50, 0
     releaseall
     end
 
@@ -1831,7 +1833,7 @@ _portapc:
 
 _moverelearner:
     touchscreen_menu_show
-    hasitem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    hasitem 93, 1, VAR_SPECIAL_RESULT
     compare VAR_SPECIAL_RESULT, 0
     goto_if_eq _func094
     npc_msg 158
@@ -1863,7 +1865,7 @@ _moverelearner:
     wait_fade
     compare VAR_SPECIAL_RESULT, 255
     goto_if_eq _func094
-    takeitem ITEM_HEART_SCALE, 1, VAR_SPECIAL_RESULT
+    takeitem 93, 1, VAR_SPECIAL_RESULT
     buffer_players_name 3 
     npc_msg 164
     wait_button_or_walk_away

@@ -1,8 +1,10 @@
-#include "../../include/constants/file.h"
-#include "../../include/constants/pokemon.h"
-#include "../../include/constants/species.h"
-#include "../../include/pokemon.h"
-#include "../../include/types.h"
+#include "types.h"
+
+#include "constants/file.h"
+#include "constants/pokemon.h"
+#include "constants/species.h"
+
+#include "pokemon.h"
 
 #define OVERWORLD_SIZE_SMALL           0x4E27
 #define OVERWORLD_SIZE_SMALL_NO_SHADOW 0x4E26
@@ -1698,7 +1700,7 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         MON_FOLLOWER_ENTRY(SPECIES_PECHARUNT, OVERWORLD_SIZE_SMALL)
         
 
-        { 0xFFFF, 0, 0 },
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            { 0xFFFF, 0, 0 },
     };
 
 // used for HoF/pokeathlon overworlds
@@ -1725,10 +1727,15 @@ u32 grab_overworld_a081_index(u16 species, u32 form, u32 isFemale)
 {
     u32 ret, tag;
 
-    if (species <= 0 || species > MAX_MON_NUM) { // base species, Enamorus
+    if (species <= 0 || species > SPECIES_MAX_MON_NUM) { // base species, Enamorus
         ret = 1;
     } else {
         tag = get_mon_ow_tag(species, form, isFemale);
+
+        if (form != 0 && grab_overworld_ptr(tag)->tag != tag) {
+            // if we reached the failure case, try again but with form 0
+            tag = get_mon_ow_tag(species, 0, isFemale);
+        }
 
         ret = get_a081_index_from_tag(tag);
     }
