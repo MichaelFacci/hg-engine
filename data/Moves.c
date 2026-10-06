@@ -1549,7 +1549,7 @@ const MoveSourceEntry sMoveSource[NUM_OF_MOVES + 1] = {
         .data = {
             .effect = MOVE_EFFECT_DOUBLE_DAMAGE_DIVE,
             .split = SPLIT_SPECIAL,
-            .power = 60,
+            .power = 85,
             .type = TYPE_WATER,
             .accuracy = 100,
             .pp = 10,
@@ -4361,7 +4361,7 @@ const MoveSourceEntry sMoveSource[NUM_OF_MOVES + 1] = {
             .type = TYPE_NORMAL,
             .accuracy = 100,
             .pp = 10,
-            .effectChance = 20,
+            .effectChance = 30,
         },
         .battle = {
             .target = RANGE_SINGLE_TARGET,
@@ -15105,7 +15105,7 @@ const MoveSourceEntry sMoveSource[NUM_OF_MOVES + 1] = {
             .split = SPLIT_PHYSICAL,
             .power = 85,
             .type = TYPE_ICE,
-            .accuracy = 90,
+            .accuracy = 100,
             .pp = 10,
             .effectChance = 30,
         },

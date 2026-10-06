@@ -13,22 +13,30 @@
         debugsyscall(buf_assumeunuasedfasdf); \
     }
 
-int firstWavID = 533 + 4; // put nwav into base/root/waves folder, build hg-e, check in tinke, for now is 533
+int firstWavID = 533 + 3; // put nwav into base/root/waves folder, build hg-e, check in tinke, for now is 533
 static u16 current_seq = 0xFFFF;
 static BOOL current_is_nwav = FALSE;
 
-// typedef struct {
-//     u32 vanilla_seq;
-//     u32 nwav_id;
-// } NWAV_Override;
+typedef struct {
+    u32 vanilla_seq;
+    u32 nwav_id;
+} NWAV_Override;
 
-// //Use this array to override specific sequences that cannot be reassigned via music_tables.c or DSPRE's header editor
-// static const NWAV_Override sNwavOverrides[] = {
-//     //{example_sseq, example_nwav}
-//     //{1008, 2},  // Title screen -> iris network
-//     //{1004, 31}, // Opening  -> feelings risen
+//Use this array to override specific sequences that cannot be reassigned via music_tables.c or DSPRE's header editor
+static const NWAV_Override sNwavOverrides[] = {
+    //{example_sseq, example_nwav}
+    {1008, 2},  // Title screen -> iris network
+    {1004, 31}, // Opening  -> feelings risen
+    
+};
 
-// };
+int sNwavBattleOverrides[3] = {
+    
+    NWAV_NEW_BATTLE_XC3_DLC,
+    NWAV_BATTLE_XC2,
+    NWAV_STAND_AGAINST_OUR_PATH
+};
+
 
 void LONG_CALL NNS_SndInit_Hook(void)
 {
@@ -117,10 +125,10 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
 {
     sound_debug_printf("In PlayBGM_Hook\n");
     sound_debug_printf("current_seq: %d, seqno: %d\n", current_seq, seqno);
-    // if (current_seq == seqno) {
-    //     sound_debug_printf("current_seq == seqno\n");
-    //     return;
-    // }
+    if (current_seq == seqno) {
+        sound_debug_printf("current_seq == seqno\n");
+        return;
+    }
 
     if (seqno == 0xFFFF) {
         sound_debug_printf("seqno is 0xFFFF\n");
@@ -138,15 +146,28 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
 
     BOOL next_is_seq = GetIfSequenced(seqno);
     int wavID = firstWavID + seqno;
+    int num_overrides = sizeof(sNwavOverrides) / sizeof(sNwavOverrides[0]);
+    for (int i = 0; i < num_overrides; i++) {
+        if(seqno == sNwavOverrides[i].vanilla_seq) {
+            debug_printf("Found override for seqno: %d\n", seqno);
+            next_is_seq = FALSE;
+            wavID = firstWavID + sNwavOverrides[i].nwav_id;
+            break;
+        }
+    }
 
-    // int num_overrides = sizeof(sNwavOverrides) / sizeof(sNwavOverrides[0]);
-    // for (int i = 0; i < num_overrides; i++) {
-    //     if(seqno == sNwavOverrides[i].vanilla_seq) {
-    //         next_is_seq = FALSE;
-    //         wavID = firstWavID + sNwavOverrides[i].nwav_id;
-    //         break;
-    //     }
-    // }
+    if(seqno == NWAV_NEW_BATTLE_XC3_DLC){// regular trainer battle music has been queued, check in-game toggle
+        //debug_printf("a");
+        u32 selectionOverride = GetScriptVar(0x40AF);
+        if(selectionOverride != 3){
+            next_is_seq = FALSE;
+            wavID = firstWavID + sNwavBattleOverrides[selectionOverride]; //selected 0, 1, or 2
+        }
+        else{
+            next_is_seq = FALSE;
+            wavID = firstWavID + gf_rand() % 3; //randomly select one each battle
+        }
+    }
 
     if (current_is_nwav) {
         sound_debug_printf("Current is nwav\n");

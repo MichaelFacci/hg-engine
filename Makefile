@@ -1,7 +1,7 @@
 # Makefile
 
-ROMNAME = withfeather.nds
-BUILDROM = testingFloat.nds
+ROMNAME = CURRENTSCRIPTING.nds
+BUILDROM = testingFloatNewsavv.nds
 
 define n
 
